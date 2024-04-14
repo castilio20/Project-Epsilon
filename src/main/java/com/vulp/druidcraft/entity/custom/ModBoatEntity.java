@@ -1,7 +1,7 @@
-package com.vulp.druidcraft.common.block.entity.custom;
+package com.vulp.druidcraft.entity.custom;
 
 import com.vulp.druidcraft.common.block.ModBlocks;
-import com.vulp.druidcraft.common.block.entity.ModEntities;
+import com.vulp.druidcraft.entity.ModEntities;
 import com.vulp.druidcraft.common.item.ModItems;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.syncher.EntityDataAccessor;

@@ -1,11 +1,11 @@
-package com.vulp.druidcraft.common.block.entity;
+package com.vulp.druidcraft.entity;
 
 
 
 
 import com.vulp.druidcraft.Druidcraft;
-import com.vulp.druidcraft.common.block.entity.custom.ModBoatEntity;
-import com.vulp.druidcraft.common.block.entity.custom.ModChestBoatEntity;
+import com.vulp.druidcraft.entity.custom.ModBoatEntity;
+import com.vulp.druidcraft.entity.custom.ModChestBoatEntity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
 import net.minecraftforge.eventbus.api.IEventBus;

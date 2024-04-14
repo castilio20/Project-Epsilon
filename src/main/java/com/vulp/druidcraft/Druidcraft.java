@@ -1,6 +1,6 @@
 package com.vulp.druidcraft;
 
-import com.vulp.druidcraft.common.block.entity.ModBlockEntities;
+import com.vulp.druidcraft.entity.ModBlockEntities;
 import com.vulp.druidcraft.common.item.ModItems;
 import com.vulp.druidcraft.common.itemgroup.DruidcraftItemGroup;
 import net.minecraft.world.item.CreativeModeTabs;

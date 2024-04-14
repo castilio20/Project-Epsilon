@@ -2,7 +2,7 @@ package com.vulp.druidcraft.common.item;
 
 import com.vulp.druidcraft.Druidcraft;
 import com.vulp.druidcraft.common.block.ModBlocks;
-import com.vulp.druidcraft.common.block.entity.custom.ModBoatEntity;
+import com.vulp.druidcraft.entity.custom.ModBoatEntity;
 import com.vulp.druidcraft.common.item.custom.ModBoatItem;
 import net.minecraft.world.item.*;
 import net.minecraftforge.registries.DeferredRegister;

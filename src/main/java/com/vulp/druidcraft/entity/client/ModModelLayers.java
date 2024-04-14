@@ -1,4 +1,4 @@
-package com.vulp.druidcraft.common.block.entity.client;
+package com.vulp.druidcraft.entity.client;
 
 import com.vulp.druidcraft.Druidcraft;
 import net.minecraft.client.model.geom.ModelLayerLocation;

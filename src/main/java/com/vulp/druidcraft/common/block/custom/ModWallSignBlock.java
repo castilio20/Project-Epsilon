@@ -1,6 +1,6 @@
 package com.vulp.druidcraft.common.block.custom;
 
-import com.vulp.druidcraft.common.block.entity.ModSignBlockEntity;
+import com.vulp.druidcraft.entity.ModSignBlockEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.block.WallSignBlock;
 import net.minecraft.world.level.block.entity.BlockEntity;

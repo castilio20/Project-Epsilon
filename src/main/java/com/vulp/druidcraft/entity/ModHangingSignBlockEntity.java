@@ -1,4 +1,4 @@
-package com.vulp.druidcraft.common.block.entity;
+package com.vulp.druidcraft.entity;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.block.entity.BlockEntityType;

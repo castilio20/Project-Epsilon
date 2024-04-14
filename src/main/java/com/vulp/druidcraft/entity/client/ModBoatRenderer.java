@@ -1,10 +1,10 @@
-package com.vulp.druidcraft.common.block.entity.client;
+package com.vulp.druidcraft.entity.client;
 
 import com.google.common.collect.ImmutableMap;
 import com.mojang.datafixers.util.Pair;
 import com.vulp.druidcraft.Druidcraft;
-import com.vulp.druidcraft.common.block.entity.custom.ModBoatEntity;
-import com.vulp.druidcraft.common.block.entity.custom.ModChestBoatEntity;
+import com.vulp.druidcraft.entity.custom.ModBoatEntity;
+import com.vulp.druidcraft.entity.custom.ModChestBoatEntity;
 import net.minecraft.client.model.BoatModel;
 import net.minecraft.client.model.ChestBoatModel;
 import net.minecraft.client.model.ListModel;

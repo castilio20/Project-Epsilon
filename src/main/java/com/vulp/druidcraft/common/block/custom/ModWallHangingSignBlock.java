@@ -1,6 +1,6 @@
 package com.vulp.druidcraft.common.block.custom;
 
-import com.vulp.druidcraft.common.block.entity.ModHangingSignBlockEntity;
+import com.vulp.druidcraft.entity.ModHangingSignBlockEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.block.WallHangingSignBlock;
 import net.minecraft.world.level.block.entity.BlockEntity;

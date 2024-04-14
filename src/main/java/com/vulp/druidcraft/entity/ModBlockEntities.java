@@ -1,4 +1,4 @@
-package com.vulp.druidcraft.common.block.entity;
+package com.vulp.druidcraft.entity;
 
 import com.vulp.druidcraft.Druidcraft;
 import com.vulp.druidcraft.common.block.ModBlocks;

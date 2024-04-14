@@ -1,7 +1,7 @@
 package com.vulp.druidcraft.common.item.custom;
 
-import com.vulp.druidcraft.common.block.entity.custom.ModBoatEntity;
-import com.vulp.druidcraft.common.block.entity.custom.ModChestBoatEntity;
+import com.vulp.druidcraft.entity.custom.ModBoatEntity;
+import com.vulp.druidcraft.entity.custom.ModChestBoatEntity;
 import net.minecraft.stats.Stats;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
