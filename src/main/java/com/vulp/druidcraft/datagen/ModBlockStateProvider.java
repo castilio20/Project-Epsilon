@@ -1,0 +1,159 @@
+package com.vulp.druidcraft.datagen;
+
+import com.vulp.druidcraft.Druidcraft;
+import com.vulp.druidcraft.common.block.HempCropBlock;
+import com.vulp.druidcraft.common.block.ModBlocks;
+import net.minecraft.data.PackOutput;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraftforge.client.model.generators.BlockStateProvider;
+import net.minecraftforge.client.model.generators.ConfiguredModel;
+import net.minecraftforge.client.model.generators.ModelFile;
+import net.minecraftforge.common.data.ExistingFileHelper;
+import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.RegistryObject;
+
+import java.util.Locale;
+import java.util.function.Function;
+
+public class ModBlockStateProvider extends BlockStateProvider {
+    public ModBlockStateProvider(PackOutput output, ExistingFileHelper exFileHelper) {
+        super(output, Druidcraft.MODID, exFileHelper);
+    }
+
+    @Override
+    protected void registerStatesAndModels() {
+        blockWithItem(ModBlocks.AMBER_BLOCK);
+        //blockWithItem(ModBlocks.DARKWOOD_LOG);
+        blockWithItem(ModBlocks.DARKWOOD_PLANKS);
+        blockWithItem(ModBlocks.MOONSTONE_BLOCK);
+        blockWithItem(ModBlocks.FIERY_GLASS_BLOCK);
+        //blockWithItem(ModBlocks.DARKWOOD_BEEHIVE);
+        //blockWithItem(ModBlocks.DARKWOOD_BOOKSHELF);
+        blockWithItem(ModBlocks.ROCKROOT_BLOCK);
+        //blockWithItem(ModBlocks.STRIPPED_DARKWOOD_LOG);
+        //blockWithItem(ModBlocks.STRIPPED_DARKWOOD_WOOD);
+        //blockWithItem(ModBlocks.ELDER_LOG);
+        blockWithItem(ModBlocks.ELDER_PLANKS);
+
+
+
+
+
+
+
+
+
+
+        //DarkWood
+        logBlock(((RotatedPillarBlock) ModBlocks.DARKWOOD_LOG.get()));
+        logBlock(((RotatedPillarBlock) ModBlocks.STRIPPED_DARKWOOD_LOG.get()));
+
+        stairsBlock(((StairBlock) ModBlocks.DARKWOOD_STAIRS.get()), blockTexture(ModBlocks.DARKWOOD_PLANKS.get()));
+        slabBlock(((SlabBlock) ModBlocks.DARKWOOD_SLAB.get()), blockTexture(ModBlocks.DARKWOOD_PLANKS.get()), blockTexture(ModBlocks.DARKWOOD_PLANKS.get()));
+        simpleBlock(ModBlocks.DARKWOOD_WOOD.get(), models().cubeAll(ModBlocks.DARKWOOD_WOOD.getId().getPath(), prefix("block/" + ModBlocks.DARKWOOD_LOG.getId().getPath())));
+        simpleBlock(ModBlocks.STRIPPED_DARKWOOD_WOOD.get(), models().cubeAll(ModBlocks.STRIPPED_DARKWOOD_WOOD.getId().getPath(), prefix("block/" + ModBlocks.STRIPPED_DARKWOOD_LOG.getId().getPath())));
+
+        buttonBlock(((ButtonBlock) ModBlocks.DARKWOOD_BUTTON.get()), blockTexture(ModBlocks.DARKWOOD_PLANKS.get()));
+        pressurePlateBlock(((PressurePlateBlock) ModBlocks.DARKWOOD_PRESSURE_PLATE.get()), blockTexture(ModBlocks.DARKWOOD_PLANKS.get()));
+
+        fenceBlock(((FenceBlock) ModBlocks.DARKWOOD_FENCE.get()), blockTexture(ModBlocks.DARKWOOD_PLANKS.get()));
+        fenceGateBlock(((FenceGateBlock) ModBlocks.DARKWOOD_FENCE_GATE.get()), blockTexture(ModBlocks.DARKWOOD_PLANKS.get()));
+
+        doorBlockWithRenderType(((DoorBlock) ModBlocks.DARKWOOD_DOOR.get()), modLoc("block/darkwood_door_bottom"), modLoc("block/darkwood_door_top"), "cutout");
+        trapdoorBlockWithRenderType(((TrapDoorBlock) ModBlocks.DARKWOOD_TRAPDOOR.get()), modLoc("block/darkwood_trapdoor"), true, "cutout");
+        makeStrawberryCrop((CropBlock) ModBlocks.HEMP_CROP.get(), "hemp_stage", "hemp_stage");
+        //signBlock(((StandingSignBlock) ModBlocks.DARKWOOD_SIGN.get()), ((WallSignBlock) ModBlocks.DARKWOOD_WALL_SIGN.get()),
+               // blockTexture(ModBlocks.DARKWOOD_PLANKS.get()));
+
+        //hangingSignBlock(ModBlocks.DARKWOOD_HANGING_SIGN.get(), ModBlocks.DARKWOOD_WALL_HANGING_SIGN.get(), blockTexture(ModBlocks.DARKWOOD_PLANKS.get()));
+        //ElderWood
+        simpleBlock(ModBlocks.ELDER_WOOD.get(), models().cubeAll(ModBlocks.ELDER_WOOD.getId().getPath(), prefix("block/" + ModBlocks.ELDER_LOG.getId().getPath())));
+        simpleBlock(ModBlocks.STRIPPED_ELDER_WOOD.get(), models().cubeAll(ModBlocks.STRIPPED_ELDER_WOOD.getId().getPath(), prefix("block/" + ModBlocks.STRIPPED_ELDER_LOG.getId().getPath())));
+
+        stairsBlock(((StairBlock) ModBlocks.ELDER_STAIRS.get()), blockTexture(ModBlocks.ELDER_PLANKS.get()));
+        slabBlock(((SlabBlock) ModBlocks.ELDER_SLAB.get()), blockTexture(ModBlocks.ELDER_PLANKS.get()), blockTexture(ModBlocks.ELDER_PLANKS.get()));
+
+        buttonBlock(((ButtonBlock) ModBlocks.ELDER_BUTTON.get()), blockTexture(ModBlocks.ELDER_PLANKS.get()));
+        pressurePlateBlock(((PressurePlateBlock) ModBlocks.ELDER_PRESSURE_PLATE.get()), blockTexture(ModBlocks.ELDER_PLANKS.get()));
+
+        fenceBlock(((FenceBlock) ModBlocks.ELDER_FENCE.get()), blockTexture(ModBlocks.ELDER_PLANKS.get()));
+        fenceGateBlock(((FenceGateBlock) ModBlocks.ELDER_FENCE_GATE.get()), blockTexture(ModBlocks.ELDER_PLANKS.get()));
+        doorBlockWithRenderType(((DoorBlock) ModBlocks.ELDER_DOOR.get()), modLoc("block/elder_door_bottom"), modLoc("block/elder_door_top"), "cutout");
+        trapdoorBlockWithRenderType(((TrapDoorBlock) ModBlocks.ELDER_TRAPDOOR.get()), modLoc("block/elder_trapdoor"), true, "cutout");
+        logBlock(((RotatedPillarBlock) ModBlocks.ELDER_LOG.get()));
+        logBlock(((RotatedPillarBlock) ModBlocks.STRIPPED_ELDER_LOG.get()));
+
+
+        //axisBlock(((RotatedPillarBlock) ModBlocks.DARKWOOD_WOOD.get()), blockTexture(ModBlocks.DARKWOOD_LOG.get()), blockTexture(ModBlocks.DARKWOOD_LOG.get()));
+
+       // doorBlockWithRenderType(((DoorBlock) ModBlocks.Elder_DOOR.get()), modLoc("block/Elder_door_bottom"), modLoc("block/Elder_door_top"), "cutout");
+        //trapdoorBlockWithRenderType(((TrapDoorBlock) ModBlocks.Elder_TRAPDOOR.get()), modLoc("block/Elder_trapdoor"), true, "cutout");
+        blockItem(ModBlocks.DARKWOOD_LOG);
+        blockItem(ModBlocks.STRIPPED_DARKWOOD_LOG);
+        blockItem(ModBlocks.STRIPPED_DARKWOOD_WOOD);
+
+
+
+        blockItem(ModBlocks.ELDER_LOG);
+        blockItem(ModBlocks.STRIPPED_ELDER_LOG);
+        blockItem(ModBlocks.STRIPPED_ELDER_WOOD);
+
+        //
+        leavesBlock(ModBlocks.DARKWOOD_LEAVES);
+        leavesBlock(ModBlocks.ELDER_LEAVES);
+
+
+    }
+
+
+
+
+    private void leavesBlock(RegistryObject<Block> blockRegistryObject) {
+        simpleBlockWithItem(blockRegistryObject.get(),
+                models().singleTexture(ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath(), new ResourceLocation("minecraft:block/leaves"),
+                        "all", blockTexture(blockRegistryObject.get())).renderType("cutout"));
+    }
+    private void blockItem(RegistryObject<Block> blockRegistryObject) {
+        simpleBlockItem(blockRegistryObject.get(), new ModelFile.UncheckedModelFile(Druidcraft.MODID +
+                ":block/" + ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath()));
+    }
+
+    public void makeStrawberryCrop(CropBlock block, String modelName, String textureName) {
+        Function<BlockState, ConfiguredModel[]> function = state -> strawberryStates(state, block, modelName, textureName);
+
+        getVariantBuilder(block).forAllStates(function);
+    }
+
+    private ConfiguredModel[] strawberryStates(BlockState state, CropBlock block, String modelName, String textureName) {
+        ConfiguredModel[] models = new ConfiguredModel[1];
+        models[0] = new ConfiguredModel(models().crop(modelName + state.getValue(((HempCropBlock) block).getAgeProperty()),
+                new ResourceLocation(Druidcraft.MODID, "block/" + textureName + state.getValue(((HempCropBlock) block).getAgeProperty()))).renderType("cutout"));
+
+        return models;
+    }
+    public void hangingSignBlock(Block signBlock, Block wallSignBlock, ResourceLocation texture) {
+        ModelFile sign = models().sign(name(signBlock), texture);
+        hangingSignBlock(signBlock, wallSignBlock, sign);
+    }
+
+    public void hangingSignBlock(Block signBlock, Block wallSignBlock, ModelFile sign) {
+        simpleBlock(signBlock, sign);
+        simpleBlock(wallSignBlock, sign);
+    }
+
+    private String name(Block block) {
+        return key(block).getPath();
+    }
+
+    private ResourceLocation key(Block block) {
+        return ForgeRegistries.BLOCKS.getKey(block);
+    }
+    private void blockWithItem(RegistryObject<Block> blockRegistryObject) {
+        simpleBlockWithItem(blockRegistryObject.get(), cubeAll(blockRegistryObject.get()));
+    }
+
+    public static ResourceLocation prefix(String name) {
+        return new ResourceLocation(Druidcraft.MODID, name.toLowerCase(Locale.ROOT));
+}}

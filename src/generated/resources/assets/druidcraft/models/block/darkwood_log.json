@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "druidcraft:block/darkwood_log_top",
+    "side": "druidcraft:block/darkwood_log"
+  }
+}
