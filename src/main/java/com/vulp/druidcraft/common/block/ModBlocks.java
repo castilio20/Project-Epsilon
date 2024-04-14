@@ -87,8 +87,6 @@ public class ModBlocks {
             () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.AMETHYST).noOcclusion(), BlockSetType.IRON));
     public static final RegistryObject<Block> DARKWOOD_DOOR = registerBlock("darkwood_door",
             () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.AMETHYST).noOcclusion(), BlockSetType.OAK));
-    public static final RegistryObject<Block> DARKWOOD_BOAT = registerBlock("darkwood_boat",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.AMETHYST)));
     public static final RegistryObject<Block> DARKWOOD_SIGN = BLOCKS.register("darkwood_sign",
             () -> new ModStandingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SIGN), ModWoodTypes.DARKWOOD));
     public static final RegistryObject<Block> DARKWOOD_WALL_SIGN = BLOCKS.register("darkwood_wall_sign",

@@ -1,4 +1,4 @@
-// 1.20.1	2024-04-13T23:02:46.9267288	Item Models: druidcraft
+// 1.20.1	2024-04-14T22:22:21.3170294	Item Models: druidcraft
 6a2ab59be104570443e870ffe85f6fcf85379d6b assets/druidcraft/models/item/amber.json
 85740c9734079b5c09b535c9f9a70d66a19f3dc2 assets/druidcraft/models/item/blazing_steel.json
 d102aa0f1e3c4bb697119e5bf7ddab63592d4572 assets/druidcraft/models/item/blueberries.json
@@ -100,11 +100,13 @@ ca3c75a915d6ab8e3857897f23d900ddf6539339 assets/druidcraft/models/item/chitin_le
 493490a348a87cd867678b1e154494ed3d14f9a7 assets/druidcraft/models/item/chitin_leggings_quartz_trim.json
 dbb9406842ec1ab50560594300aedfb6aef55f57 assets/druidcraft/models/item/chitin_leggings_redstone_trim.json
 8cd3cf2c91a64bc5565df45b8a89671c60fbdd73 assets/druidcraft/models/item/crushed_fiery_glass.json
+561e093a5fe8b2d06a3aa5d225090b4ad1d4e784 assets/druidcraft/models/item/darkwood_boat.json
 3a74987fbf2cbd57fa7cc43582317ff101e3c568 assets/druidcraft/models/item/darkwood_button.json
 aa96b7210d622cfedd3d0a4eeab81eeebd0238bb assets/druidcraft/models/item/darkwood_door.json
 6da00557927aa063c3f3e7e52bc28bf7e5adec8f assets/druidcraft/models/item/darkwood_fence.json
 c3551f3c65caedfa7411c817b4822bc67a187281 assets/druidcraft/models/item/darkwood_fence_gate.json
 cd4d5fdf8e62f97100e529a202a224a28d921953 assets/druidcraft/models/item/darkwood_pressure_plate.json
+864918c7046e8cf0a4a88397e3892bdc5162d502 assets/druidcraft/models/item/darkwood_sign.json
 a6d8cc540966c664af5cd677130895b9d8b969ff assets/druidcraft/models/item/darkwood_slab.json
 5d4a376cccb5d4632c98b0572b2cfa6121297931 assets/druidcraft/models/item/darkwood_stairs.json
 0120db0777fa3b54ae5c55bd5522173e6fc3b510 assets/druidcraft/models/item/darkwood_trapdoor.json

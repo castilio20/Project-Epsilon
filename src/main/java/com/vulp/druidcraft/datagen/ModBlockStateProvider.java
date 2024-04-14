@@ -64,10 +64,10 @@ public class ModBlockStateProvider extends BlockStateProvider {
         doorBlockWithRenderType(((DoorBlock) ModBlocks.DARKWOOD_DOOR.get()), modLoc("block/darkwood_door_bottom"), modLoc("block/darkwood_door_top"), "cutout");
         trapdoorBlockWithRenderType(((TrapDoorBlock) ModBlocks.DARKWOOD_TRAPDOOR.get()), modLoc("block/darkwood_trapdoor"), true, "cutout");
         makeStrawberryCrop((CropBlock) ModBlocks.HEMP_CROP.get(), "hemp_stage", "hemp_stage");
-        //signBlock(((StandingSignBlock) ModBlocks.DARKWOOD_SIGN.get()), ((WallSignBlock) ModBlocks.DARKWOOD_WALL_SIGN.get()),
-               // blockTexture(ModBlocks.DARKWOOD_PLANKS.get()));
+        signBlock(((StandingSignBlock) ModBlocks.DARKWOOD_SIGN.get()), ((WallSignBlock) ModBlocks.DARKWOOD_WALL_SIGN.get()),
+               blockTexture(ModBlocks.DARKWOOD_PLANKS.get()));
 
-        //hangingSignBlock(ModBlocks.DARKWOOD_HANGING_SIGN.get(), ModBlocks.DARKWOOD_WALL_HANGING_SIGN.get(), blockTexture(ModBlocks.DARKWOOD_PLANKS.get()));
+        hangingSignBlock(ModBlocks.DARKWOOD_HANGING_SIGN.get(), ModBlocks.DARKWOOD_WALL_HANGING_SIGN.get(), blockTexture(ModBlocks.DARKWOOD_PLANKS.get()));
         //ElderWood
         simpleBlock(ModBlocks.ELDER_WOOD.get(), models().cubeAll(ModBlocks.ELDER_WOOD.getId().getPath(), prefix("block/" + ModBlocks.ELDER_LOG.getId().getPath())));
         simpleBlock(ModBlocks.STRIPPED_ELDER_WOOD.get(), models().cubeAll(ModBlocks.STRIPPED_ELDER_WOOD.getId().getPath(), prefix("block/" + ModBlocks.STRIPPED_ELDER_LOG.getId().getPath())));

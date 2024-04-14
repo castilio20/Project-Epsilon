@@ -70,7 +70,8 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         //DarkWood
         toBlock(ModBlocks.DARKWOOD_WOOD.get());
-
+        simpleItem(ModItems.DARKWOOD_SIGN);
+        //simpleItem(ModItems.DARKWOOD_HANGING_SIGN);
         simpleBlockItem(ModBlocks.DARKWOOD_DOOR);
 
         fenceItem(ModBlocks.DARKWOOD_FENCE, ModBlocks.DARKWOOD_PLANKS);
@@ -79,7 +80,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         evenSimplerBlockItem(ModBlocks.DARKWOOD_SLAB);
         evenSimplerBlockItem(ModBlocks.DARKWOOD_PRESSURE_PLATE);
         evenSimplerBlockItem(ModBlocks.DARKWOOD_FENCE_GATE);
-
+        simpleItem(ModItems.DARKWOOD_BOAT);
+        //simpleItem(ModItems.PINE_CHEST_BOAT);
         trapdoorItem(ModBlocks.DARKWOOD_TRAPDOOR);
         //ElderWood
         simpleBlockItem(ModBlocks.ELDER_DOOR);

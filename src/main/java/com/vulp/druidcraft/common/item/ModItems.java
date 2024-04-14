@@ -2,6 +2,8 @@ package com.vulp.druidcraft.common.item;
 
 import com.vulp.druidcraft.Druidcraft;
 import com.vulp.druidcraft.common.block.ModBlocks;
+import com.vulp.druidcraft.common.block.entity.custom.ModBoatEntity;
+import com.vulp.druidcraft.common.item.custom.ModBoatItem;
 import net.minecraft.world.item.*;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -44,7 +46,10 @@ public class ModItems {
             () -> new SignItem(new Item.Properties().stacksTo(16), ModBlocks.DARKWOOD_SIGN.get(), ModBlocks.DARKWOOD_WALL_SIGN.get()));
     public static final RegistryObject<Item> DARKWOOD_HANGING_SIGN = ITEMS.register("darkwood_hanging_sign",
             () -> new HangingSignItem(ModBlocks.DARKWOOD_HANGING_SIGN.get(), ModBlocks.DARKWOOD_WALL_HANGING_SIGN.get(), new Item.Properties().stacksTo(16)));
-
+    public static final RegistryObject<Item> DARKWOOD_BOAT = ITEMS.register("darkwood_boat",
+        () -> new ModBoatItem(false, ModBoatEntity.Type.DARKWOOD, new Item.Properties()));
+    public static final RegistryObject<Item> DARKWOOD_CHEST_BOAT = ITEMS.register("darkwood_chest_boat",
+            () -> new ModBoatItem(true, ModBoatEntity.Type.DARKWOOD, new Item.Properties()));
     public static final RegistryObject<Item> ELDER_SIGN = ITEMS.register("elder_sign",
             () -> new SignItem(new Item.Properties().stacksTo(16), ModBlocks.DARKWOOD_SIGN.get(), ModBlocks.DARKWOOD_WALL_SIGN.get()));
     public static final RegistryObject<Item> ELDER_HANGING_SIGN = ITEMS.register("elder_hanging_sign",
