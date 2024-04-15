@@ -1,12 +1,8 @@
 package com.vulp.druidcraft;
 
-import com.vulp.druidcraft.entity.ModBlockEntities;
+import com.vulp.druidcraft.common.block.custom.ModBlockEntities;
 import com.vulp.druidcraft.common.item.ModItems;
 import com.vulp.druidcraft.common.itemgroup.DruidcraftItemGroup;
-import com.vulp.druidcraft.entity.ModEntities;
-import com.vulp.druidcraft.entity.client.ModBoatRenderer;
-import net.minecraft.client.renderer.Sheets;
-import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -55,7 +51,7 @@ public class Druidcraft
         // Register the Deferred Register to the mod event bus so items get registered
         ITEMS.register(modEventBus);
         ModBlockEntities.register(modEventBus);
-        ModEntities.register(modEventBus);
+      // ModEntities.register(modEventBus);
 
         // Register the Deferred Register to the mod event bus so tabs get registered
         DruidcraftItemGroup.register(modEventBus);
@@ -101,8 +97,7 @@ public class Druidcraft
         public static void onClientSetup(FMLClientSetupEvent event)
         {
             // Some client setup code
-            EntityRenderers.register(ModEntities.MOD_BOAT.get(), pContext -> new ModBoatRenderer(pContext, false));
-            EntityRenderers.register(ModEntities.MOD_CHEST_BOAT.get(), pContext -> new ModBoatRenderer(pContext, true));
+
         }
     }
 }

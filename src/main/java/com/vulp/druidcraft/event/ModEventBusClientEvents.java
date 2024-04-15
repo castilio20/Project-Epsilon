@@ -1,7 +1,7 @@
 package com.vulp.druidcraft.event;
 
 import com.vulp.druidcraft.Druidcraft;
-import com.vulp.druidcraft.entity.ModBlockEntities;
+import com.vulp.druidcraft.common.block.custom.ModBlockEntities;
 import net.minecraft.client.renderer.blockentity.HangingSignRenderer;
 import net.minecraft.client.renderer.blockentity.SignRenderer;
 import net.minecraftforge.api.distmarker.Dist;

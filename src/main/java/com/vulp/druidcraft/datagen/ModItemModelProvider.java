@@ -80,7 +80,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         evenSimplerBlockItem(ModBlocks.DARKWOOD_SLAB);
         evenSimplerBlockItem(ModBlocks.DARKWOOD_PRESSURE_PLATE);
         evenSimplerBlockItem(ModBlocks.DARKWOOD_FENCE_GATE);
-        simpleItem(ModItems.DARKWOOD_BOAT);
+        //simpleItem(ModItems.DARKWOOD_BOAT);
         //simpleItem(ModItems.PINE_CHEST_BOAT);
         trapdoorItem(ModBlocks.DARKWOOD_TRAPDOOR);
         //ElderWood

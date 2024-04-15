@@ -2,8 +2,8 @@ package com.vulp.druidcraft.common.item;
 
 import com.vulp.druidcraft.Druidcraft;
 import com.vulp.druidcraft.common.block.ModBlocks;
-import com.vulp.druidcraft.entity.custom.ModBoatEntity;
-import com.vulp.druidcraft.common.item.custom.ModBoatItem;
+
+import com.vulp.druidcraft.common.item.custom.BaseSickleItem;
 import net.minecraft.world.item.*;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -46,10 +46,10 @@ public class ModItems {
             () -> new SignItem(new Item.Properties().stacksTo(16), ModBlocks.DARKWOOD_SIGN.get(), ModBlocks.DARKWOOD_WALL_SIGN.get()));
     public static final RegistryObject<Item> DARKWOOD_HANGING_SIGN = ITEMS.register("darkwood_hanging_sign",
             () -> new HangingSignItem(ModBlocks.DARKWOOD_HANGING_SIGN.get(), ModBlocks.DARKWOOD_WALL_HANGING_SIGN.get(), new Item.Properties().stacksTo(16)));
-    public static final RegistryObject<Item> DARKWOOD_BOAT = ITEMS.register("darkwood_boat",
-        () -> new ModBoatItem(false, ModBoatEntity.Type.DARKWOOD, new Item.Properties()));
-    public static final RegistryObject<Item> DARKWOOD_CHEST_BOAT = ITEMS.register("darkwood_chest_boat",
-            () -> new ModBoatItem(true, ModBoatEntity.Type.DARKWOOD, new Item.Properties()));
+    //public static final RegistryObject<Item> DARKWOOD_BOAT = ITEMS.register("darkwood_boat",
+        //() -> new ModBoatItem(false, ModBoat.Type., new Item.Properties()));
+    //public static final RegistryObject<Item> DARKWOOD_CHEST_BOAT = ITEMS.register("darkwood_chest_boat",
+           // () -> new ModBoatItem(true, ModBoat.Type.OAK, new Item.Properties()));
     public static final RegistryObject<Item> ELDER_SIGN = ITEMS.register("elder_sign",
             () -> new SignItem(new Item.Properties().stacksTo(16), ModBlocks.DARKWOOD_SIGN.get(), ModBlocks.DARKWOOD_WALL_SIGN.get()));
     public static final RegistryObject<Item> ELDER_HANGING_SIGN = ITEMS.register("elder_hanging_sign",
@@ -122,15 +122,15 @@ public class ModItems {
     public static final RegistryObject<Item> CHITIN_SHIELD = ITEMS.register("chitin_shield",
             () -> new ArmorItem(ArmorMaterial.CHITIN, ArmorItem.Type.BOOTS, new Item.Properties()));
     public static final RegistryObject<Item> WOODEN_SICKLE = ITEMS.register("wooden_sickle",
-            () -> new HoeItem(ModToolTiers.MOOONSTONE, 1, -1.5f, new Item.Properties()));
+            () -> new BaseSickleItem(Tiers.WOOD, 1));
     public static final RegistryObject<Item> STONE_SICKLE = ITEMS.register("stone_sickle",
-            () -> new HoeItem(ModToolTiers.MOOONSTONE, 1, -1.5f, new Item.Properties()));
+            () -> new BaseSickleItem(Tiers.STONE, 1));
     public static final RegistryObject<Item> IRON_SICKLE = ITEMS.register("iron_sickle",
-            () -> new HoeItem(ModToolTiers.MOOONSTONE, 1, -1.5f, new Item.Properties()));
+            () -> new BaseSickleItem(Tiers.IRON, 2));
     public static final RegistryObject<Item> GOLD_SICKLE = ITEMS.register("gold_sickle",
-            () -> new HoeItem(ModToolTiers.MOOONSTONE, 1, -1.5f, new Item.Properties()));
+            () -> new BaseSickleItem(Tiers.GOLD, 2));
     public static final RegistryObject<Item> DIAMOND_SICKLE = ITEMS.register("diamond_sickle",
-            () -> new HoeItem(ModToolTiers.MOOONSTONE, 1, -1.5f, new Item.Properties()));
+            () -> new BaseSickleItem(Tiers.DIAMOND, 3));
     //public static final RegistryObject<Item> Netherite_SICKLE = ITEMS.register("netherite_sickle",
             //() -> new HoeItem(ModToolTiers.MOOONSTONE, 1, -1.5f, new Item.Properties()));
     // Item-blocks:

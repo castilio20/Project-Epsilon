@@ -1,7 +1,9 @@
-package com.vulp.druidcraft.entity;
+package com.vulp.druidcraft.common.block.custom;
 
 import com.vulp.druidcraft.Druidcraft;
 import com.vulp.druidcraft.common.block.ModBlocks;
+import com.vulp.druidcraft.entity.ModHangingSignBlockEntity;
+import com.vulp.druidcraft.entity.ModSignBlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
