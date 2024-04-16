@@ -117,7 +117,7 @@ public class DruidcraftItemGroup {public static final DeferredRegister<CreativeM
                         pOutput.accept(ModBlocks.ELDER_BUTTON.get());
                         pOutput.accept(ModBlocks.ELDER_TRAPDOOR.get());
                         pOutput.accept(ModBlocks.ELDER_DOOR.get());
-                        pOutput.accept(ModBlocks.ELDER_BOAT.get());
+                        //pOutput.accept(ModBlocks.ELDER_BOAT.get());
                         //pOutput.accept(ModItems.ELDER_SIGN.get());
                         //pOutput.accept(ModItems.ELDER_HANGING_SIGN.get());
                         pOutput.accept(ModBlocks.ELDER_CHEST.get());
@@ -126,7 +126,7 @@ public class DruidcraftItemGroup {public static final DeferredRegister<CreativeM
                         pOutput.accept(ModBlocks.ELDER_LADDER.get());
                         pOutput.accept(ModBlocks.ELDER_BEEHIVE.get());
                         //Food
-                        //pOutput.accept(ModItems.APPLE_ELDERBERRY.get());
+                        pOutput.accept(ModItems.APPLE_ELDERBERRY_CRUMBLE.get());
                         pOutput.accept(ModItems.BLUEBERRIES.get());
                         pOutput.accept(ModItems.BLUEBERRY_MUFFIN.get());
                         pOutput.accept(ModItems.ELDERBERRIES.get());

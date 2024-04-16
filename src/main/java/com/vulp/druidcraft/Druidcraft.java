@@ -3,11 +3,15 @@ package com.vulp.druidcraft;
 import com.vulp.druidcraft.common.block.custom.ModBlockEntities;
 import com.vulp.druidcraft.common.item.ModItems;
 import com.vulp.druidcraft.common.itemgroup.DruidcraftItemGroup;
-import com.vulp.druidcraft.entity.ModEntities;
-import com.vulp.druidcraft.entity.client.ModBoatRenderer;
+import com.vulp.druidcraft.entity.Entities;
+import com.vulp.druidcraft.entity.client.render.CustomBoatModel;
+import com.vulp.druidcraft.entity.custom.CustomBoatEntity;
+import net.minecraft.client.model.BoatModel;
+import net.minecraft.client.model.ChestBoatModel;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
@@ -53,7 +57,8 @@ public class Druidcraft
         BLOCKS.register(modEventBus);
         // Register the Deferred Register to the mod event bus so items get registered
         ITEMS.register(modEventBus);
-        ModEntities.register(modEventBus);
+        Entities.ENTITIES.register(modEventBus);
+        //ModEntities.register(modEventBus);
 
         ModBlockEntities.register(modEventBus);
       // ModEntities.register(modEventBus);
@@ -93,18 +98,31 @@ public class Druidcraft
     {
         // Do something when the server starts
     }
-
-    // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
-    @Mod.EventBusSubscriber(modid = MODID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
-    public static class ClientModEvents
-    {
+    @Mod.EventBusSubscriber(bus=Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+    public static class RegistryEvents {
         @SubscribeEvent
-        public static void onClientSetup(FMLClientSetupEvent event)
-        {
-            EntityRenderers.register(ModEntities.MOD_BOAT.get(), pContext -> new ModBoatRenderer(pContext, false));
-            EntityRenderers.register(ModEntities.MOD_CHEST_BOAT.get(), pContext -> new ModBoatRenderer(pContext, true));
-            // Some client setup code
+        public static void onRenderTypeSetup(FMLClientSetupEvent event) {
+            EntityRenderers.register(Entities.BOAT.get(), m -> new CustomBoatModel(m, false));
+            EntityRenderers.register(Entities.CHEST_BOAT.get(), m -> new CustomBoatModel(m, true));
+        }
+}
+    @SubscribeEvent
+    public static void onRegisterLayers(EntityRenderersEvent.RegisterLayerDefinitions event) {
+        for (CustomBoatEntity.Type boatType : CustomBoatEntity.Type.values()) {
+            event.registerLayerDefinition(CustomBoatModel.createBoatModelName(boatType), BoatModel::createBodyModel);
+            event.registerLayerDefinition(CustomBoatModel.createChestBoatModelName(boatType), ChestBoatModel::createBodyModel);
+        }
 
+        // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
+
+
+    {
+
+          //  Sheets.addWoodType(ModWoodTypes.DARKWOOD);
+           // EntityRenderers.register(ModEntities.MOD_BOAT.get(), pContext -> new ModBoatRenderer(pContext, false));
+            //EntityRenderers.register(ModEntities.MOD_CHEST_BOAT.get(), pContext -> new ModBoatRenderer(pContext, true));
+            // Some client setup code
+            };
         }
     }
-}
+

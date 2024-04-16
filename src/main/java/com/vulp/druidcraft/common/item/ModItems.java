@@ -3,9 +3,9 @@ package com.vulp.druidcraft.common.item;
 import com.vulp.druidcraft.Druidcraft;
 import com.vulp.druidcraft.common.block.ModBlocks;
 
-import com.vulp.druidcraft.common.item.custom.ModBoatItem;
+import com.vulp.druidcraft.common.item.custom.CustomBoatItem;
 import com.vulp.druidcraft.common.item.custom.SickleItem;
-import com.vulp.druidcraft.entity.custom.ModBoatEntity;
+import com.vulp.druidcraft.entity.custom.CustomBoatEntity;
 import net.minecraft.world.item.*;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -49,9 +49,10 @@ public class ModItems {
     public static final RegistryObject<Item> DARKWOOD_HANGING_SIGN = ITEMS.register("darkwood_hanging_sign",
             () -> new HangingSignItem(ModBlocks.DARKWOOD_HANGING_SIGN.get(), ModBlocks.DARKWOOD_WALL_HANGING_SIGN.get(), new Item.Properties().stacksTo(16)));
     public static final RegistryObject<Item> DARKWOOD_WOOD_BOAT_ITEM = ITEMS.register("darkwood_boat",
-            () -> new ModBoatItem(false, ModBoatEntity.Type.PINE, new Item.Properties()));
+            () -> new CustomBoatItem(false, CustomBoatEntity.Type.DARKWOOD_WOOD, new Item.Properties().stacksTo(1)));
     public static final RegistryObject<Item> DARKWOOD_WOOD_CHEST_BOAT_ITEM = ITEMS.register("darkwood_chest_boat",
-            () -> new ModBoatItem(false, ModBoatEntity.Type.PINE, new Item.Properties()));
+            () -> new CustomBoatItem(true, CustomBoatEntity.Type.DARKWOOD_WOOD, new Item.Properties().stacksTo(1)));
+
     public static final RegistryObject<Item> ELDER_SIGN = ITEMS.register("elder_sign",
             () -> new SignItem(new Item.Properties().stacksTo(16), ModBlocks.DARKWOOD_SIGN.get(), ModBlocks.DARKWOOD_WALL_SIGN.get()));
     public static final RegistryObject<Item> ELDER_HANGING_SIGN = ITEMS.register("elder_hanging_sign",
@@ -63,8 +64,8 @@ public class ModItems {
             () -> new Item(new Item.Properties().food(ModFoods.ELDERBERRIES)));
     public static final RegistryObject<Item> BLUEBERRY_MUFFIN = ITEMS.register("blueberry_muffin",
             () -> new Item(new Item.Properties().food(ModFoods.BLUEBERRY_MUFFIN)));
-    //public static final RegistryObject<Item> APPLE_ELDERBERRY = ITEMS.register("apple_elderberry",
-            //() -> new Item(new Item.Properties().food(ModFoods.APPLE_ELDERBERRY)));
+    public static final RegistryObject<Item> APPLE_ELDERBERRY_CRUMBLE = ITEMS.register("apple_elderberry_crumble",
+            () -> new Item(new Item.Properties().food(ModFoods.APPLE_ELDERBERRY_CRUMBLE)));
     public static final RegistryObject<Item> SKYBERRIES = ITEMS.register("skyberries",
             () -> new Item(new Item.Properties().food(ModFoods.SKYBERRIES)));
     public static final RegistryObject<Item> DOUGH = ITEMS.register("dough",

@@ -57,7 +57,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.HEART_OF_BLAZE);
         simpleItem(ModItems.HEMP_SEEDS);
         //Food
-        //simpleItem(ModItems.APPLE_ELDERBERRY);
+        simpleItem(ModItems.APPLE_ELDERBERRY_CRUMBLE);
         simpleItem(ModItems.BLUEBERRIES);
         simpleItem(ModItems.BLUEBERRY_MUFFIN);
         simpleItem(ModItems.ELDERBERRIES);
@@ -80,7 +80,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         evenSimplerBlockItem(ModBlocks.DARKWOOD_SLAB);
         evenSimplerBlockItem(ModBlocks.DARKWOOD_PRESSURE_PLATE);
         evenSimplerBlockItem(ModBlocks.DARKWOOD_FENCE_GATE);
-        //simpleItem(ModItems.DARKWOOD_WOOD_BOAT_ITEM);
+        simpleItem(ModItems.DARKWOOD_WOOD_BOAT_ITEM);
         //simpleItem(ModItems.PINE_CHEST_BOAT);
         trapdoorItem(ModBlocks.DARKWOOD_TRAPDOOR);
         //ElderWood

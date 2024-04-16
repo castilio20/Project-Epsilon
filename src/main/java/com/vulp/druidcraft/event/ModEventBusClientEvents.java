@@ -2,7 +2,6 @@ package com.vulp.druidcraft.event;
 
 import com.vulp.druidcraft.Druidcraft;
 import com.vulp.druidcraft.common.block.custom.ModBlockEntities;
-import com.vulp.druidcraft.entity.client.ModModelLayers;
 import net.minecraft.client.model.BoatModel;
 import net.minecraft.client.model.ChestBoatModel;
 import net.minecraft.client.renderer.blockentity.HangingSignRenderer;
@@ -17,8 +16,8 @@ public class ModEventBusClientEvents {
     @SubscribeEvent
     public static void registerLayer(EntityRenderersEvent.RegisterLayerDefinitions event) {
 
-        event.registerLayerDefinition(ModModelLayers.DARKWOOD_BOAT_LAYER, BoatModel::createBodyModel);
-        event.registerLayerDefinition(ModModelLayers.DARKWOOD_CHEST_BOAT_LAYER, ChestBoatModel::createBodyModel);
+        //event.registerLayerDefinition(ModModelLayers.DARKWOOD_BOAT_LAYER, BoatModel::createBodyModel);
+        //event.registerLayerDefinition(ModModelLayers.DARKWOOD_CHEST_BOAT_LAYER, ChestBoatModel::createBodyModel);
     }
 
     @SubscribeEvent
