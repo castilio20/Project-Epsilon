@@ -86,10 +86,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         logBlock(((RotatedPillarBlock) ModBlocks.STRIPPED_ELDER_LOG.get()));
 
 
-        //axisBlock(((RotatedPillarBlock) ModBlocks.DARKWOOD_WOOD.get()), blockTexture(ModBlocks.DARKWOOD_LOG.get()), blockTexture(ModBlocks.DARKWOOD_LOG.get()));
 
-       // doorBlockWithRenderType(((DoorBlock) ModBlocks.Elder_DOOR.get()), modLoc("block/Elder_door_bottom"), modLoc("block/Elder_door_top"), "cutout");
-        //trapdoorBlockWithRenderType(((TrapDoorBlock) ModBlocks.Elder_TRAPDOOR.get()), modLoc("block/Elder_trapdoor"), true, "cutout");
         blockItem(ModBlocks.DARKWOOD_LOG);
         blockItem(ModBlocks.STRIPPED_DARKWOOD_LOG);
         blockItem(ModBlocks.STRIPPED_DARKWOOD_WOOD);

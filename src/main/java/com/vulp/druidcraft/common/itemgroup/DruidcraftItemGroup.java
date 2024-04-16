@@ -68,6 +68,10 @@ public class DruidcraftItemGroup {public static final DeferredRegister<CreativeM
                         pOutput.accept(ModItems.DIAMOND_SICKLE.get());
                         //pOutput.accept(ModItems.Netherite_SICKLE.get());
 
+                        pOutput.accept(ModItems.FIERY_HELMET.get());
+                        pOutput.accept(ModItems.FIERY_CHESTPLATE.get());
+                        pOutput.accept(ModItems.FIERY_LEGGINGS.get());
+                        pOutput.accept(ModItems.FIERY_BOOTS.get());
                    //blocks and items
                         pOutput.accept(ModBlocks.AMBER_BLOCK.get());
                         pOutput.accept(ModBlocks.MOONSTONE_BLOCK.get());
@@ -89,7 +93,7 @@ public class DruidcraftItemGroup {public static final DeferredRegister<CreativeM
                         pOutput.accept(ModBlocks.DARKWOOD_BUTTON.get());
                         pOutput.accept(ModBlocks.DARKWOOD_TRAPDOOR.get());
                         pOutput.accept(ModBlocks.DARKWOOD_DOOR.get());
-                        //pOutput.accept(ModItems.DARKWOOD_BOAT.get());
+                        pOutput.accept(ModItems.DARKWOOD_WOOD_BOAT_ITEM.get());
                         pOutput.accept(ModItems.DARKWOOD_SIGN.get());
                         pOutput.accept(ModItems.DARKWOOD_HANGING_SIGN.get());
                         pOutput.accept(ModBlocks.DARKWOOD_CHEST.get());

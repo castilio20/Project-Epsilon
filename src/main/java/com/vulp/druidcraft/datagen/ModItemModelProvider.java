@@ -80,7 +80,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         evenSimplerBlockItem(ModBlocks.DARKWOOD_SLAB);
         evenSimplerBlockItem(ModBlocks.DARKWOOD_PRESSURE_PLATE);
         evenSimplerBlockItem(ModBlocks.DARKWOOD_FENCE_GATE);
-        //simpleItem(ModItems.DARKWOOD_BOAT);
+        //simpleItem(ModItems.DARKWOOD_WOOD_BOAT_ITEM);
         //simpleItem(ModItems.PINE_CHEST_BOAT);
         trapdoorItem(ModBlocks.DARKWOOD_TRAPDOOR);
         //ElderWood
@@ -111,6 +111,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         handheldItem(ModItems.MOONSTONE_SHOVEL);
         handheldItem(ModItems.MOONSTONE_HOE);
         handheldItem(ModItems.MOONSTONE_SICKLE);
+        //handheldItem(ModItems.CHITIN_SHIELD);
+
 
         trimmedArmorItem(ModItems.BONE_HELMET);
         trimmedArmorItem(ModItems.BONE_CHESTPLATE);
@@ -121,6 +123,11 @@ public class ModItemModelProvider extends ItemModelProvider {
         trimmedArmorItem(ModItems.CHITIN_CHESTPLATE);
         trimmedArmorItem(ModItems.CHITIN_LEGGINGS);
         trimmedArmorItem(ModItems.CHITIN_BOOTS);
+
+        trimmedArmorItem(ModItems.FIERY_HELMET);
+        trimmedArmorItem(ModItems.FIERY_CHESTPLATE);
+        trimmedArmorItem(ModItems.FIERY_LEGGINGS);
+        trimmedArmorItem(ModItems.FIERY_BOOTS);
 
         trimmedArmorItem(ModItems.MOONSTONE_HELMET);
         trimmedArmorItem(ModItems.MOONSTONE_CHESTPLATE);

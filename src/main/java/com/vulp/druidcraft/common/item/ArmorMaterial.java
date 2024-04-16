@@ -32,6 +32,15 @@ public class ArmorMaterial {
             "chitin",
             0,
             0f);
+    public static final ModArmorMaterial FIERY = new ModArmorMaterial(
+            new int[] { 500, 1200, 600, 400 },
+            new int[] { 2, 5, 4, 1 },
+            20,
+            SoundEvents.FOX_TELEPORT,
+            () -> Ingredient.of(ModItems.FIERY_GLASS::get),
+            "fiery",
+            0,
+            0f);
 
 
 }

@@ -13,16 +13,16 @@ import net.minecraft.world.level.block.state.BlockState;
 
 import java.util.function.Function;
 
-public class BaseSickleItem extends DiggerItem {
+public class SickleItem extends DiggerItem {
     private final float attackDamage;
     private final float attackSpeed;
     private final int range;
 
-    public BaseSickleItem(Tier tier, int range) {
+    public SickleItem(Tier tier, int range) {
         this(tier, range, p -> p);
     }
 
-    public BaseSickleItem(Tier tier, int range, Function<Properties, Properties> properties) {
+    public SickleItem(Tier tier, int range, Function<Properties, Properties> properties) {
         super(4.0F, -3.0F, tier, ModTags.Blocks.MINEABLE_WITH_SICKLE, properties.apply(new Properties()));
         this.attackDamage = 4.0F;
         this.attackSpeed = -3.0F;
