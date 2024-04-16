@@ -1,4 +1,4 @@
-// 1.20.1	2024-04-16T18:22:57.5803608	Item Models: druidcraft
+// 1.20.1	2024-04-16T19:35:29.9222806	Item Models: druidcraft
 6a2ab59be104570443e870ffe85f6fcf85379d6b assets/druidcraft/models/item/amber.json
 19fa048e346b08ee4fe9df940b29711784686fc6 assets/druidcraft/models/item/apple_elderberry_crumble.json
 85740c9734079b5c09b535c9f9a70d66a19f3dc2 assets/druidcraft/models/item/blazing_steel.json
@@ -101,6 +101,7 @@ ca3c75a915d6ab8e3857897f23d900ddf6539339 assets/druidcraft/models/item/chitin_le
 493490a348a87cd867678b1e154494ed3d14f9a7 assets/druidcraft/models/item/chitin_leggings_quartz_trim.json
 dbb9406842ec1ab50560594300aedfb6aef55f57 assets/druidcraft/models/item/chitin_leggings_redstone_trim.json
 8cd3cf2c91a64bc5565df45b8a89671c60fbdd73 assets/druidcraft/models/item/crushed_fiery_glass.json
+561e093a5fe8b2d06a3aa5d225090b4ad1d4e784 assets/druidcraft/models/item/darkwood_boat.json
 3a74987fbf2cbd57fa7cc43582317ff101e3c568 assets/druidcraft/models/item/darkwood_button.json
 aa96b7210d622cfedd3d0a4eeab81eeebd0238bb assets/druidcraft/models/item/darkwood_door.json
 6da00557927aa063c3f3e7e52bc28bf7e5adec8f assets/druidcraft/models/item/darkwood_fence.json

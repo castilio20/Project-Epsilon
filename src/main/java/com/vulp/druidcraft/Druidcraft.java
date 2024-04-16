@@ -102,8 +102,8 @@ public class Druidcraft
     public static class RegistryEvents {
         @SubscribeEvent
         public static void onRenderTypeSetup(FMLClientSetupEvent event) {
-            EntityRenderers.register(Entities.BOAT.get(), m -> new CustomBoatModel(m, false));
-            EntityRenderers.register(Entities.CHEST_BOAT.get(), m -> new CustomBoatModel(m, true));
+            EntityRenderers.register(Entities.MOD_BOAT.get(), m -> new CustomBoatModel(m, false));
+            EntityRenderers.register(Entities.MOD_CHEST_BOAT.get(), m -> new CustomBoatModel(m, true));
         }
 }
     @SubscribeEvent

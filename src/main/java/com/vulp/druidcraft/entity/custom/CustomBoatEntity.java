@@ -25,7 +25,7 @@ public class CustomBoatEntity extends Boat {
     }
 
     public CustomBoatEntity(Level level, double x, double y, double z) {
-        this(Entities.BOAT.get(), level);
+        this(Entities.MOD_BOAT.get(), level);
         this.setPos(x, y, z);
         this.xo = x;
         this.yo = y;
