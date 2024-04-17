@@ -36,19 +36,23 @@ public class ModBlockStateProvider extends BlockStateProvider {
         //blockWithItem(ModBlocks.STRIPPED_DARKWOOD_WOOD);
         //blockWithItem(ModBlocks.ELDER_LOG);
         blockWithItem(ModBlocks.ELDER_PLANKS);
-
-
-
-
-
-
-
-
-
+        //Panels
+        blockWithItem(ModBlocks.OAK_PANELS);
+        blockWithItem(ModBlocks.SPRUCE_PANELS);
+        blockWithItem(ModBlocks.BIRCH_PANELS);
+        blockWithItem(ModBlocks.JUNGLE_PANELS);
+        blockWithItem(ModBlocks.ACACIA_PANELS);
+        blockWithItem(ModBlocks.DARK_OAK_PANELS);
+        blockWithItem(ModBlocks.DARKWOOD_PANELS);
+        blockWithItem(ModBlocks.ELDER_PANELS);
+        //Mud
+        blockWithItem(ModBlocks.WET_MUD_BRICKS);
+        blockWithItem(ModBlocks.DRY_MUD_BRICKS);
 
         //DarkWood
         logBlock(((RotatedPillarBlock) ModBlocks.DARKWOOD_LOG.get()));
         logBlock(((RotatedPillarBlock) ModBlocks.STRIPPED_DARKWOOD_LOG.get()));
+        logBlock(((RotatedPillarBlock) ModBlocks.DARKWOOD_BOOKSHELF.get()));
 
         stairsBlock(((StairBlock) ModBlocks.DARKWOOD_STAIRS.get()), blockTexture(ModBlocks.DARKWOOD_PLANKS.get()));
         slabBlock(((SlabBlock) ModBlocks.DARKWOOD_SLAB.get()), blockTexture(ModBlocks.DARKWOOD_PLANKS.get()), blockTexture(ModBlocks.DARKWOOD_PLANKS.get()));
@@ -84,6 +88,22 @@ public class ModBlockStateProvider extends BlockStateProvider {
         trapdoorBlockWithRenderType(((TrapDoorBlock) ModBlocks.ELDER_TRAPDOOR.get()), modLoc("block/elder_trapdoor"), true, "cutout");
         logBlock(((RotatedPillarBlock) ModBlocks.ELDER_LOG.get()));
         logBlock(((RotatedPillarBlock) ModBlocks.STRIPPED_ELDER_LOG.get()));
+        //Mud
+        stairsBlock(((StairBlock) ModBlocks.DRY_MUD_BRICK_STAIRS.get()), blockTexture(ModBlocks.DRY_MUD_BRICKS.get()));
+        slabBlock(((SlabBlock) ModBlocks.DRY_MUD_BRICK_SLAB.get()), blockTexture(ModBlocks.DRY_MUD_BRICKS.get()), blockTexture(ModBlocks.DRY_MUD_BRICKS.get()));
+        wallBlock(((WallBlock) ModBlocks.DRY_MUD_BRICK_WALL.get()), blockTexture(ModBlocks.DRY_MUD_BRICKS.get()));
+
+        //Beam
+        logBlock(((RotatedPillarBlock) ModBlocks.OAK_BEAM.get()));
+        logBlock(((RotatedPillarBlock) ModBlocks.SPRUCE_BEAM.get()));
+        logBlock(((RotatedPillarBlock) ModBlocks.BIRCH_BEAM.get()));
+        logBlock(((RotatedPillarBlock) ModBlocks.JUNGLE_BEAM.get()));
+        logBlock(((RotatedPillarBlock) ModBlocks.ACACIA_BEAM.get()));
+        logBlock(((RotatedPillarBlock) ModBlocks.DARK_OAK_BEAM.get()));
+        logBlock(((RotatedPillarBlock) ModBlocks.DARKWOOD_BEAM.get()));
+        logBlock(((RotatedPillarBlock) ModBlocks.STRIPPED_DARKWOOD_BEAM.get()));
+        logBlock(((RotatedPillarBlock) ModBlocks.ELDER_BEAM.get()));
+
 
 
 

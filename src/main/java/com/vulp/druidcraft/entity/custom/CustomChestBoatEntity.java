@@ -110,6 +110,8 @@ public class CustomChestBoatEntity extends CustomBoatEntity implements HasCustom
     public Item getDropItem() {
         return switch (this.getCustomBoatEntityType()) {
             case DARKWOOD_WOOD -> ModItems.DARKWOOD_WOOD_CHEST_BOAT_ITEM.get();
+            case ELDER_WOOD -> ModItems.ELDER_WOOD_CHEST_BOAT_ITEM.get();
+
         };
     }
 

@@ -52,6 +52,27 @@ public class ModFlammableRotatedPillarBlock extends RotatedPillarBlock {
             }
             if(state.is(ModBlocks.ELDER_PLANKS.get())) {
             }
+            //Beam
+            if(state.is(ModBlocks.OAK_BEAM.get())) {
+            }
+            if(state.is(ModBlocks.SPRUCE_BEAM.get())) {
+            }
+            if(state.is(ModBlocks.BIRCH_BEAM.get())) {
+            }
+            if(state.is(ModBlocks.JUNGLE_BEAM.get())) {
+            }
+            if(state.is(ModBlocks.ACACIA_BEAM.get())) {
+            }
+            if(state.is(ModBlocks.DARK_OAK_BEAM.get())) {
+            }
+            if(state.is(ModBlocks.DARKWOOD_BEAM.get())) {
+            }
+            if(state.is(ModBlocks.STRIPPED_DARKWOOD_BEAM.get())) {
+            }
+            if(state.is(ModBlocks.ELDER_BEAM.get())) {
+            }
+            if(state.is(ModBlocks.DARKWOOD_BOOKSHELF.get())) {
+            }
         }
 
         return super.getToolModifiedState(state, context, toolAction, simulate);

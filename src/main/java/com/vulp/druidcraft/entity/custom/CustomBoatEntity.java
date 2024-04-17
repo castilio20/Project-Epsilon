@@ -40,6 +40,8 @@ public class CustomBoatEntity extends Boat {
     public Item getDropItem() {
         return switch (this.getCustomBoatEntityType()) {
             case DARKWOOD_WOOD -> ModItems.DARKWOOD_WOOD_BOAT_ITEM.get();
+            case ELDER_WOOD -> ModItems.ELDER_WOOD_BOAT_ITEM.get();
+
 
         };
     }
@@ -72,7 +74,9 @@ public class CustomBoatEntity extends Boat {
     }
 
     public enum Type {
-        DARKWOOD_WOOD(ModBlocks.DARKWOOD_PLANKS.get(), "darkwood_wood"),;
+        DARKWOOD_WOOD(ModBlocks.DARKWOOD_WOOD.get(), "darkwood_wood"),
+        ELDER_WOOD(ModBlocks.ELDER_WOOD.get(), "elder_wood"),;
+
 
         private final String name;
         private final Block block;

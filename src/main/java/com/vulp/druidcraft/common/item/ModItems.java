@@ -57,6 +57,11 @@ public class ModItems {
             () -> new SignItem(new Item.Properties().stacksTo(16), ModBlocks.DARKWOOD_SIGN.get(), ModBlocks.DARKWOOD_WALL_SIGN.get()));
     public static final RegistryObject<Item> ELDER_HANGING_SIGN = ITEMS.register("elder_hanging_sign",
             () -> new HangingSignItem(ModBlocks.DARKWOOD_HANGING_SIGN.get(), ModBlocks.DARKWOOD_WALL_HANGING_SIGN.get(), new Item.Properties().stacksTo(16)));
+    public static final RegistryObject<Item> ELDER_WOOD_BOAT_ITEM = ITEMS.register("elder_boat",
+            () -> new CustomBoatItem(false, CustomBoatEntity.Type.ELDER_WOOD, new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> ELDER_WOOD_CHEST_BOAT_ITEM = ITEMS.register("elder_chest_boat",
+            () -> new CustomBoatItem(true, CustomBoatEntity.Type.ELDER_WOOD, new Item.Properties().stacksTo(1)));
+
     //Food
     public static final RegistryObject<Item> BLUEBERRIES = ITEMS.register("blueberries",
             () -> new Item(new Item.Properties().food(ModFoods.BLUEBERRIES)));

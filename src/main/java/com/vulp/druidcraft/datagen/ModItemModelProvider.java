@@ -71,7 +71,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         //DarkWood
         toBlock(ModBlocks.DARKWOOD_WOOD.get());
         simpleItem(ModItems.DARKWOOD_SIGN);
-        //simpleItem(ModItems.DARKWOOD_HANGING_SIGN);
+        simpleItem(ModItems.DARKWOOD_HANGING_SIGN);
         simpleBlockItem(ModBlocks.DARKWOOD_DOOR);
 
         fenceItem(ModBlocks.DARKWOOD_FENCE, ModBlocks.DARKWOOD_PLANKS);
@@ -87,6 +87,9 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleBlockItem(ModBlocks.ELDER_DOOR);
         toBlock(ModBlocks.ELDER_WOOD.get());
         toBlock(ModBlocks.STRIPPED_ELDER_WOOD.get());
+        simpleItem(ModItems.ELDER_SIGN);
+        simpleItem(ModItems.ELDER_WOOD_BOAT_ITEM);
+
 
 
         fenceItem(ModBlocks.ELDER_FENCE, ModBlocks.ELDER_PLANKS);
@@ -97,6 +100,22 @@ public class ModItemModelProvider extends ItemModelProvider {
         evenSimplerBlockItem(ModBlocks.ELDER_FENCE_GATE);
 
         trapdoorItem(ModBlocks.ELDER_TRAPDOOR);
+        //Mud
+        evenSimplerBlockItem(ModBlocks.DRY_MUD_BRICK_SLAB);
+        evenSimplerBlockItem(ModBlocks.DRY_MUD_BRICK_STAIRS);
+        wallItem(ModBlocks.DRY_MUD_BRICK_WALL, ModBlocks.DRY_MUD_BRICKS);
+
+        //Beam
+        toBlock(ModBlocks.OAK_BEAM.get());
+        toBlock(ModBlocks.SPRUCE_BEAM.get());
+        toBlock(ModBlocks.BIRCH_BEAM.get());
+        toBlock(ModBlocks.JUNGLE_BEAM.get());
+        toBlock(ModBlocks.ACACIA_BEAM.get());
+        toBlock(ModBlocks.DARK_OAK_BEAM.get());
+        toBlock(ModBlocks.DARKWOOD_BEAM.get());
+        toBlock(ModBlocks.STRIPPED_DARKWOOD_BEAM.get());
+        toBlock(ModBlocks.ELDER_BEAM.get());
+
         //TOOLS
         handheldItem(ModItems.BONE_SWORD);
         handheldItem(ModItems.BONE_PICKAXE);
@@ -242,7 +261,10 @@ public class ModItemModelProvider extends ItemModelProvider {
     private void woodBlockModel(Block b, String model, String variant) {
         toBlockModel(b, prefix("block/wood/" + variant + "/" + model));
     }
-
+    public void wallItem(RegistryObject<Block> block, RegistryObject<Block> baseBlock) {
+        this.withExistingParent(ForgeRegistries.BLOCKS.getKey(block.get()).getPath(), mcLoc("block/wall_inventory"))
+                .texture("wall",  new ResourceLocation(Druidcraft.MODID, "block/" + ForgeRegistries.BLOCKS.getKey(baseBlock.get()).getPath()));
+    }
     private void toBlockModel(Block b, ResourceLocation model) {
         withExistingParent(BuiltInRegistries.BLOCK.getKey(b).getPath(), model);
     }

@@ -117,14 +117,39 @@ public class DruidcraftItemGroup {public static final DeferredRegister<CreativeM
                         pOutput.accept(ModBlocks.ELDER_BUTTON.get());
                         pOutput.accept(ModBlocks.ELDER_TRAPDOOR.get());
                         pOutput.accept(ModBlocks.ELDER_DOOR.get());
-                        //pOutput.accept(ModBlocks.ELDER_BOAT.get());
-                        //pOutput.accept(ModItems.ELDER_SIGN.get());
+                        pOutput.accept(ModItems.ELDER_WOOD_BOAT_ITEM.get());
+                        pOutput.accept(ModItems.ELDER_SIGN.get());
                         //pOutput.accept(ModItems.ELDER_HANGING_SIGN.get());
                         pOutput.accept(ModBlocks.ELDER_CHEST.get());
                         pOutput.accept(ModBlocks.TRAPPED_ELDER_CHEST.get());
                         pOutput.accept(ModBlocks.ELDER_BOOKSHELF.get());
                         pOutput.accept(ModBlocks.ELDER_LADDER.get());
                         pOutput.accept(ModBlocks.ELDER_BEEHIVE.get());
+                        //Beam
+                        pOutput.accept(ModBlocks.OAK_BEAM.get());
+                        pOutput.accept(ModBlocks.SPRUCE_BEAM.get());
+                        pOutput.accept(ModBlocks.BIRCH_BEAM.get());
+                        pOutput.accept(ModBlocks.JUNGLE_BEAM.get());
+                        pOutput.accept(ModBlocks.ACACIA_BEAM.get());
+                        pOutput.accept(ModBlocks.DARK_OAK_BEAM.get());
+                        pOutput.accept(ModBlocks.DARKWOOD_BEAM.get());
+                        pOutput.accept(ModBlocks.STRIPPED_DARKWOOD_BEAM.get());
+                        pOutput.accept(ModBlocks.ELDER_BEAM.get());
+                        //Panels
+                        pOutput.accept(ModBlocks.OAK_PANELS.get());
+                        pOutput.accept(ModBlocks.SPRUCE_PANELS.get());
+                        pOutput.accept(ModBlocks.BIRCH_PANELS.get());
+                        pOutput.accept(ModBlocks.JUNGLE_PANELS.get());
+                        pOutput.accept(ModBlocks.ACACIA_PANELS.get());
+                        pOutput.accept(ModBlocks.DARK_OAK_PANELS.get());
+                        pOutput.accept(ModBlocks.DARKWOOD_PANELS.get());
+                        pOutput.accept(ModBlocks.ELDER_PANELS.get());
+                        //Mud
+                        pOutput.accept(ModBlocks.WET_MUD_BRICKS.get());
+                        pOutput.accept(ModBlocks.DRY_MUD_BRICKS.get());
+                        pOutput.accept(ModBlocks.DRY_MUD_BRICK_SLAB.get());
+                        pOutput.accept(ModBlocks.DRY_MUD_BRICK_STAIRS.get());
+                        pOutput.accept(ModBlocks.DRY_MUD_BRICK_WALL.get());
                         //Food
                         pOutput.accept(ModItems.APPLE_ELDERBERRY_CRUMBLE.get());
                         pOutput.accept(ModItems.BLUEBERRIES.get());
