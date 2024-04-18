@@ -1,4 +1,4 @@
-package com.vulp.druidcraft.api;
+package com.vulp.druidcraft.worldgen.tree.growers;
 
 import com.vulp.druidcraft.worldgen.WorldGen;
 import net.minecraft.resources.ResourceKey;

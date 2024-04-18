@@ -1,12 +1,9 @@
 package com.vulp.druidcraft.common.block;
 
 import com.vulp.druidcraft.Druidcraft;
-import com.vulp.druidcraft.api.DarkwoodWoodTree;
-import com.vulp.druidcraft.api.ElderWoodTree;
-import com.vulp.druidcraft.common.block.custom.ModHangingSignBlock;
-import com.vulp.druidcraft.common.block.custom.ModStandingSignBlock;
-import com.vulp.druidcraft.common.block.custom.ModWallHangingSignBlock;
-import com.vulp.druidcraft.common.block.custom.ModWallSignBlock;
+import com.vulp.druidcraft.worldgen.tree.growers.DarkwoodWoodTree;
+import com.vulp.druidcraft.worldgen.tree.growers.ElderWoodTree;
+import com.vulp.druidcraft.common.block.custom.*;
 import com.vulp.druidcraft.common.item.ModItems;
 import com.vulp.druidcraft.common.util.ModWoodTypes;
 import net.minecraft.core.BlockPos;
@@ -17,20 +14,26 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
+import net.minecraft.world.level.material.MapColor;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.function.Supplier;
 
 
 public class ModBlocks {
         public static final DeferredRegister<Block> BLOCKS =
                 DeferredRegister.create(ForgeRegistries.BLOCKS, Druidcraft.MODID);
+    private static final DeferredRegister<BlockEntityType<?>> BLOCKS_ENTITIES = DeferredRegister.create(ForgeRegistries.BLOCK_ENTITY_TYPES, Druidcraft.MODID);
+
     public static final RegistryObject<Block> AMBER_BLOCK = registerBlock("amber_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.AMETHYST)));
     public static final RegistryObject<Block> HEMP_CROP = BLOCKS.register("hemp_crop",
@@ -104,10 +107,9 @@ public class ModBlocks {
     public static final RegistryObject<Block> DARKWOOD_WALL_HANGING_SIGN = BLOCKS.register("darkwood_wall_hanging_sign",
             () -> new ModWallHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_HANGING_SIGN), ModWoodTypes.DARKWOOD));
 
-    public static final RegistryObject<Block> DARKWOOD_CHEST = registerBlock("darkwood_chest",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.AMETHYST)));
-    public static final RegistryObject<Block> TRAPPED_DARKWOOD_CHEST = registerBlock("trapped_darkwood_chest",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.AMETHYST)));
+    public static final RegistryObject<Block> DARKWOOD_CHEST = registerChest("oak", () -> new ModChestBlock(MapColor.WOOD, "darkwood"));
+    public static final RegistryObject<Block> DARKWOOD_TRAPPED_CHEST = registerChest("darkwood_trapped", () -> new ModTrappedChestBlock(MapColor.WOOD, "darkwood"));
+
     public static final RegistryObject<Block> DARKWOOD_BOOKSHELF = registerBlock("darkwood_bookshelf",
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).strength(3f)));
     public static final RegistryObject<Block> DARKWOOD_LADDER = registerBlock("darkwood_ladder",
@@ -171,10 +173,9 @@ public class ModBlocks {
             () -> new ModHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_HANGING_SIGN), ModWoodTypes.ELDER));
     public static final RegistryObject<Block> ELDER_WALL_HANGING_SIGN = BLOCKS.register("elder_wall_hanging_sign",
             () -> new ModWallHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_HANGING_SIGN), ModWoodTypes.ELDER));
-    public static final RegistryObject<Block> ELDER_CHEST = registerBlock("elder_chest",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.AMETHYST)));
-    public static final RegistryObject<Block> TRAPPED_ELDER_CHEST = registerBlock("trapped_elder_chest",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.AMETHYST)));
+    public static final RegistryObject<Block> ELDER_CHEST = registerChest("oak", () -> new ModChestBlock(MapColor.WOOD, "elder"));
+    public static final RegistryObject<Block> ELDER_TRAPPED_CHEST = registerChest("elder_trapped", () -> new ModTrappedChestBlock(MapColor.WOOD, "elder"));
+
     public static final RegistryObject<Block> ELDER_BOOKSHELF = registerBlock("elder_bookshelf",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.AMETHYST)));
     public static final RegistryObject<Block> ELDER_LADDER = registerBlock("elder_ladder",
@@ -246,9 +247,21 @@ public class ModBlocks {
     //Bricks
     public static final RegistryObject<Block> MOSSY_BRICKS = registerBlock("mossy_bricks",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.BRICKS).sound(SoundType.AMETHYST)));
+    //Cloud
+    public static final RegistryObject<Block> CLOUD_BLOCK = registerBlock("cloud_block",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.BRICKS).sound(SoundType.AMETHYST)));
+    public static final RegistryObject<Block> THUNDERCLOUD_BLOCK = registerBlock("thundercloud",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.BRICKS).sound(SoundType.AMETHYST)));
+    public static final RegistryObject<Block> CRYSTALIZED_THUNDERCLOUD_BLOCK = registerBlock("crystalized_thundercloud",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.BRICKS).sound(SoundType.AMETHYST)));
+    public static final RegistryObject<Block> SULFUR_CLOUD_BLOCK = registerBlock("sulfur_cloud",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.BRICKS).sound(SoundType.AMETHYST)));
     //Misc
     public static final RegistryObject<Block> MORTAR_AND_PESTLE = registerBlock("mortar_and_pestle",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).sound(SoundType.AMETHYST)));
+    //public static final RegistryObject<Block> ALPHA_LAMP = BLOCKS.register("alpha_lamp",
+            //() -> new Infernal_Lamp(NORMAL, Infernal_Lamp.Tier.));
+
     //Flowers
     public static final RegistryObject<Block> LAVENDER = registerBlock("lavender",
             () -> new FlowerBlock(() -> MobEffects.LUCK, 5,
@@ -262,15 +275,24 @@ public class ModBlocks {
         registerBlockItem(name, toReturn);
         return toReturn;
     }
+    public static void registerBlocks(IEventBus modBus) {
+        addToArray(DARKWOOD_CHEST, DARKWOOD_TRAPPED_CHEST);
+        addToArray(ELDER_CHEST, ELDER_TRAPPED_CHEST);
+    }
 
     private static <T extends Block> RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block) {
         return ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
     }
+    private static RegistryObject<Block> registerChest(String name, Supplier<Block> block) {
+        return BLOCKS.register(name + "_chest", block);
 
-    public static void register(IEventBus eventBus) {
-        BLOCKS.register(eventBus);
     }
-}
+    public static final List<RegistryObject<Block>> mod_chest = new ArrayList<>();
+    public static final List<RegistryObject<Block>> mod_trapped_chest = new ArrayList<>();
+    private static void addToArray(RegistryObject<Block> chest, RegistryObject<Block> trappedChest) {
+        mod_chest.add(chest);
+        mod_trapped_chest.add(trappedChest);
+}}
 
 
 

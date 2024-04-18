@@ -2,6 +2,8 @@ package com.vulp.druidcraft;
 
 import com.vulp.druidcraft.common.block.ModBlocks;
 import com.vulp.druidcraft.common.block.custom.ModBlockEntities;
+import com.vulp.druidcraft.common.block.render.ModChestRenderer;
+import com.vulp.druidcraft.common.block.render.ModTrappedChestRenderer;
 import com.vulp.druidcraft.common.item.ModItems;
 import com.vulp.druidcraft.common.itemgroup.DruidcraftItemGroup;
 import com.vulp.druidcraft.common.util.ModWoodTypes;
@@ -13,11 +15,13 @@ import com.vulp.druidcraft.worldgen.tree.ModTrunkPlacerTypes;
 import net.minecraft.client.model.BoatModel;
 import net.minecraft.client.model.ChestBoatModel;
 import net.minecraft.client.renderer.Sheets;
+import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.FlowerPotBlock;
 import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -81,6 +85,8 @@ public class Druidcraft {
 
             EntityRenderers.register(Entities.MOD_BOAT.get(), m -> new CustomBoatModel(m, false));
             EntityRenderers.register(Entities.MOD_CHEST_BOAT.get(), m -> new CustomBoatModel(m, true));
+            BlockEntityRenderers.register(ModBlockEntities.MOD_CHEST_BLOCK_ENTITY.get(), ModChestRenderer::new);
+            BlockEntityRenderers.register(ModBlockEntities.MOD_TRAPPED_CHEST_BLOCK_ENTITY.get(), ModTrappedChestRenderer::new);
         }
 
         @SubscribeEvent
@@ -88,8 +94,10 @@ public class Druidcraft {
             for (CustomBoatEntity.Type boatType : CustomBoatEntity.Type.values()) {
                 event.registerLayerDefinition(CustomBoatModel.createBoatModelName(boatType), BoatModel::createBodyModel);
                 event.registerLayerDefinition(CustomBoatModel.createChestBoatModelName(boatType), ChestBoatModel::createBodyModel);
+
+                }
             }
         }
     }
-}
+
 

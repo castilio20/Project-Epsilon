@@ -55,6 +55,11 @@ public class ModBlockStateProvider extends BlockStateProvider {
         //Sow
         blockWithItem(ModBlocks.SNOW_BRICKS);
         blockWithItem(ModBlocks.SNOW_TILES);
+        //Cloud
+        blockWithItem(ModBlocks.CLOUD_BLOCK);
+        blockWithItem(ModBlocks.THUNDERCLOUD_BLOCK);
+        blockWithItem(ModBlocks.CRYSTALIZED_THUNDERCLOUD_BLOCK);
+        blockWithItem(ModBlocks.SULFUR_CLOUD_BLOCK);
         //Bricks
         blockWithItem(ModBlocks.MOSSY_BRICKS);
 
@@ -76,7 +81,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         doorBlockWithRenderType(((DoorBlock) ModBlocks.DARKWOOD_DOOR.get()), modLoc("block/darkwood_door_bottom"), modLoc("block/darkwood_door_top"), "cutout");
         trapdoorBlockWithRenderType(((TrapDoorBlock) ModBlocks.DARKWOOD_TRAPDOOR.get()), modLoc("block/darkwood_trapdoor"), true, "cutout");
-        signBlock(((StandingSignBlock) ModBlocks.DARKWOOD_SIGN.get()), ((WallSignBlock) ModBlocks.DARKWOOD_WALL_SIGN.get()),
+        signBlock(((StandingSignBlock) ModBlocks.DARKWOOD_SIGN.get()),
+                ((WallSignBlock) ModBlocks.DARKWOOD_WALL_SIGN.get()),
                blockTexture(ModBlocks.DARKWOOD_PLANKS.get()));
 
         hangingSignBlock(ModBlocks.DARKWOOD_HANGING_SIGN.get(), ModBlocks.DARKWOOD_WALL_HANGING_SIGN.get(), blockTexture(ModBlocks.DARKWOOD_PLANKS.get()));

@@ -7,6 +7,8 @@ import com.vulp.druidcraft.common.item.custom.CustomBoatItem;
 import com.vulp.druidcraft.common.item.custom.SickleItem;
 import com.vulp.druidcraft.entity.custom.CustomBoatEntity;
 import net.minecraft.world.item.*;
+import net.minecraft.world.level.block.Block;
+import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -52,6 +54,8 @@ public class ModItems {
             () -> new CustomBoatItem(false, CustomBoatEntity.Type.DARKWOOD_WOOD, new Item.Properties().stacksTo(1)));
     public static final RegistryObject<Item> DARKWOOD_WOOD_CHEST_BOAT_ITEM = ITEMS.register("darkwood_chest_boat",
             () -> new CustomBoatItem(true, CustomBoatEntity.Type.DARKWOOD_WOOD, new Item.Properties().stacksTo(1)));
+    //public static final RegistryObject<BlockItem> DARKWOOD_CHEST_I = registerItem("darkwood", ModBlocks.DARKWOOD_CHEST);
+    //public static final RegistryObject<BlockItem> DARKWOOD_TRAPPED_CHEST_I = registerItem("darkwood_trapped", ModBlocks.DARKWOOD_TRAPPED_CHEST);
 
     public static final RegistryObject<Item> ELDER_SIGN = ITEMS.register("elder_sign",
             () -> new SignItem(new Item.Properties().stacksTo(16), ModBlocks.DARKWOOD_SIGN.get(), ModBlocks.DARKWOOD_WALL_SIGN.get()));
@@ -61,6 +65,8 @@ public class ModItems {
             () -> new CustomBoatItem(false, CustomBoatEntity.Type.ELDER_WOOD, new Item.Properties().stacksTo(1)));
     public static final RegistryObject<Item> ELDER_WOOD_CHEST_BOAT_ITEM = ITEMS.register("elder_chest_boat",
             () -> new CustomBoatItem(true, CustomBoatEntity.Type.ELDER_WOOD, new Item.Properties().stacksTo(1)));
+    //public static final RegistryObject<BlockItem> ELDER_CHEST_I = registerItem("elder", ModBlocks.ELDER_CHEST);
+    //public static final RegistryObject<BlockItem> ELDER_TRAPPED_CHEST_I = registerItem("elder_trapped", ModBlocks.ELDER_TRAPPED_CHEST);
 
     //Food
     public static final RegistryObject<Item> BLUEBERRIES = ITEMS.register("blueberries",
@@ -150,6 +156,9 @@ public class ModItems {
     //public static final RegistryObject<Item> Netherite_SICKLE = ITEMS.register("netherite_sickle",
             //() -> new HoeItem(ModToolTiers.MOOONSTONE, 1, -1.5f, new Item.Properties()));
     // Item-blocks:
-
-
-}
+    public static void registerItems(IEventBus modBus) {
+        ITEMS.register(modBus);
+    }
+    public static RegistryObject<BlockItem> registerItem(String name, RegistryObject<Block> block) {
+        return ITEMS.register(name + "_chest", ()-> new BlockItem(block.get(), new Item.Properties()));
+    }}

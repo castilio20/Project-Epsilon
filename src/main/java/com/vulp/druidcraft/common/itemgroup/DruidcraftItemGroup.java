@@ -94,10 +94,12 @@ public class DruidcraftItemGroup {public static final DeferredRegister<CreativeM
                         pOutput.accept(ModBlocks.DARKWOOD_TRAPDOOR.get());
                         pOutput.accept(ModBlocks.DARKWOOD_DOOR.get());
                         pOutput.accept(ModItems.DARKWOOD_WOOD_BOAT_ITEM.get());
+                        pOutput.accept(ModItems.DARKWOOD_WOOD_CHEST_BOAT_ITEM.get());
+
                         pOutput.accept(ModItems.DARKWOOD_SIGN.get());
                         pOutput.accept(ModItems.DARKWOOD_HANGING_SIGN.get());
                         pOutput.accept(ModBlocks.DARKWOOD_CHEST.get());
-                        pOutput.accept(ModBlocks.TRAPPED_DARKWOOD_CHEST.get());
+                        pOutput.accept(ModBlocks.DARKWOOD_TRAPPED_CHEST.get());
                         pOutput.accept(ModBlocks.DARKWOOD_BOOKSHELF.get());
                         pOutput.accept(ModBlocks.DARKWOOD_LADDER.get());
                         pOutput.accept(ModBlocks.DARKWOOD_BEEHIVE.get());
@@ -118,13 +120,15 @@ public class DruidcraftItemGroup {public static final DeferredRegister<CreativeM
                         pOutput.accept(ModBlocks.ELDER_TRAPDOOR.get());
                         pOutput.accept(ModBlocks.ELDER_DOOR.get());
                         pOutput.accept(ModItems.ELDER_WOOD_BOAT_ITEM.get());
+                        pOutput.accept(ModItems.ELDER_WOOD_CHEST_BOAT_ITEM.get());
                         pOutput.accept(ModItems.ELDER_SIGN.get());
                         pOutput.accept(ModItems.ELDER_HANGING_SIGN.get());
                         pOutput.accept(ModBlocks.ELDER_CHEST.get());
-                        pOutput.accept(ModBlocks.TRAPPED_ELDER_CHEST.get());
+                        pOutput.accept(ModBlocks.ELDER_TRAPPED_CHEST.get());
                         pOutput.accept(ModBlocks.ELDER_BOOKSHELF.get());
                         pOutput.accept(ModBlocks.ELDER_LADDER.get());
                         pOutput.accept(ModBlocks.ELDER_BEEHIVE.get());
+
                         //Beam
                         pOutput.accept(ModBlocks.OAK_BEAM.get());
                         pOutput.accept(ModBlocks.SPRUCE_BEAM.get());
@@ -160,6 +164,12 @@ public class DruidcraftItemGroup {public static final DeferredRegister<CreativeM
                         pOutput.accept(ModBlocks.SNOW_TILES.get());
                         //Bricks
                         pOutput.accept(ModBlocks.MOSSY_BRICKS.get());
+                        //Cloud
+                        pOutput.accept(ModBlocks.CLOUD_BLOCK.get());
+                        pOutput.accept(ModBlocks.THUNDERCLOUD_BLOCK.get());
+                        pOutput.accept(ModBlocks.CRYSTALIZED_THUNDERCLOUD_BLOCK.get());
+                        pOutput.accept(ModBlocks.SULFUR_CLOUD_BLOCK.get());
+
                         //Misc
                         pOutput.accept(ModBlocks.MORTAR_AND_PESTLE.get());
 
