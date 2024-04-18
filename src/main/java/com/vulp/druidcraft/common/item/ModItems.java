@@ -89,13 +89,13 @@ public class ModItems {
     public static final RegistryObject<Item> BONE_SICKLE = ITEMS.register("bone_sickle",
             () -> new SwordItem(ModToolTiers.BONE, 0, -1.5f, new Item.Properties()));
     public static final RegistryObject<Item> BONE_HELMET = ITEMS.register("bone_helmet",
-            () -> new ArmorItem(ArmorMaterial.BONE, ArmorItem.Type.HELMET, new Item.Properties()));
+            () -> new ArmorItem(ModArmorMaterials.BONE, ArmorItem.Type.HELMET, new Item.Properties()));
     public static final RegistryObject<Item> BONE_CHESTPLATE = ITEMS.register("bone_chestplate",
-            () -> new ArmorItem(ArmorMaterial.BONE, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
+            () -> new ArmorItem(ModArmorMaterials.BONE, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
     public static final RegistryObject<Item> BONE_LEGGINGS = ITEMS.register("bone_leggings",
-            () -> new ArmorItem(ArmorMaterial.BONE, ArmorItem.Type.LEGGINGS, new Item.Properties()));
+            () -> new ArmorItem(ModArmorMaterials.BONE, ArmorItem.Type.LEGGINGS, new Item.Properties()));
     public static final RegistryObject<Item> BONE_BOOTS = ITEMS.register("bone_boots",
-            () -> new ArmorItem(ArmorMaterial.BONE, ArmorItem.Type.BOOTS , new Item.Properties()));
+            () -> new ArmorItem(ModArmorMaterials.BONE, ArmorItem.Type.BOOTS , new Item.Properties()));
     public static final RegistryObject<Item> MOONSTONE_SWORD = ITEMS.register("moonstone_sword",
             () -> new SwordItem(ModToolTiers.MOOONSTONE, 4, -2.4f, new Item.Properties()));
     public static final RegistryObject<Item> MOONSTONE_SHOVEL = ITEMS.register("moonstone_shovel",
@@ -109,32 +109,32 @@ public class ModItems {
     public static final RegistryObject<Item> MOONSTONE_SICKLE = ITEMS.register("moonstone_sickle",
             () -> new HoeItem(ModToolTiers.MOOONSTONE, 1, -1.5f, new Item.Properties()));
     public static final RegistryObject<Item> MOONSTONE_HELMET = ITEMS.register("moonstone_helmet",
-            () -> new ArmorItem(ArmorMaterial.MOONSTONE, ArmorItem.Type.HELMET, new Item.Properties()));
+            () -> new ArmorItem(ModArmorMaterials.MOONSTONE, ArmorItem.Type.HELMET, new Item.Properties()));
     public static final RegistryObject<Item> MOONSTONE_CHESTPLATE = ITEMS.register("moonstone_chestplate",
-            () -> new ArmorItem(ArmorMaterial.MOONSTONE, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
+            () -> new ArmorItem(ModArmorMaterials.MOONSTONE, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
     public static final RegistryObject<Item> MOONSTONE_LEGGINGS = ITEMS.register("moonstone_leggings",
-            () -> new ArmorItem(ArmorMaterial.MOONSTONE, ArmorItem.Type.LEGGINGS, new Item.Properties()));
+            () -> new ArmorItem(ModArmorMaterials.MOONSTONE, ArmorItem.Type.LEGGINGS, new Item.Properties()));
     public static final RegistryObject<Item> MOONSTONE_BOOTS = ITEMS.register("moonstone_boots",
-            () -> new ArmorItem(ArmorMaterial.MOONSTONE, ArmorItem.Type.BOOTS, new Item.Properties()));
+            () -> new ArmorItem(ModArmorMaterials.MOONSTONE, ArmorItem.Type.BOOTS, new Item.Properties()));
     public static final RegistryObject<Item> MOONSTONE_SHIELD = ITEMS.register("moonstone_shield",
-            () -> new ArmorItem(ArmorMaterial.MOONSTONE, ArmorItem.Type.HELMET, new Item.Properties()));
+            () -> new ArmorItem(ModArmorMaterials.MOONSTONE, ArmorItem.Type.HELMET, new Item.Properties()));
 
     public static final RegistryObject<Item> CHITIN_HELMET = ITEMS.register("chitin_helmet",
-            () -> new ArmorItem(ArmorMaterial.CHITIN, ArmorItem.Type.HELMET, new Item.Properties()));
+            () -> new ArmorItem(ModArmorMaterials.CHITIN, ArmorItem.Type.HELMET, new Item.Properties()));
     public static final RegistryObject<Item> CHITIN_CHESTPLATE = ITEMS.register("chitin_chestplate",
-            () -> new ArmorItem(ArmorMaterial.CHITIN, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
+            () -> new ArmorItem(ModArmorMaterials.CHITIN, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
     public static final RegistryObject<Item> CHITIN_LEGGINGS = ITEMS.register("chitin_leggings",
-            () -> new ArmorItem(ArmorMaterial.CHITIN, ArmorItem.Type.LEGGINGS, new Item.Properties()));
+            () -> new ArmorItem(ModArmorMaterials.CHITIN, ArmorItem.Type.LEGGINGS, new Item.Properties()));
     public static final RegistryObject<Item> CHITIN_BOOTS = ITEMS.register("chitin_boots",
-            () -> new ArmorItem(ArmorMaterial.CHITIN, ArmorItem.Type.BOOTS, new Item.Properties()));
+            () -> new ArmorItem(ModArmorMaterials.CHITIN, ArmorItem.Type.BOOTS, new Item.Properties()));
     public static final RegistryObject<Item> FIERY_HELMET = ITEMS.register("fiery_helmet",
-            () -> new ArmorItem(ArmorMaterial.FIERY, ArmorItem.Type.HELMET, new Item.Properties()));
+            () -> new ArmorItem(ModArmorMaterials.FIERY, ArmorItem.Type.HELMET, new Item.Properties()));
     public static final RegistryObject<Item> FIERY_CHESTPLATE = ITEMS.register("fiery_chestplate",
-            () -> new ArmorItem(ArmorMaterial.FIERY, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
+            () -> new ArmorItem(ModArmorMaterials.FIERY, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
     public static final RegistryObject<Item> FIERY_LEGGINGS = ITEMS.register("fiery_leggings",
-            () -> new ArmorItem(ArmorMaterial.FIERY, ArmorItem.Type.LEGGINGS, new Item.Properties()));
+            () -> new ArmorItem(ModArmorMaterials.FIERY, ArmorItem.Type.LEGGINGS, new Item.Properties()));
     public static final RegistryObject<Item> FIERY_BOOTS = ITEMS.register("fiery_boots",
-            () -> new ArmorItem(ArmorMaterial.FIERY, ArmorItem.Type.BOOTS, new Item.Properties()));
+            () -> new ArmorItem(ModArmorMaterials.FIERY, ArmorItem.Type.BOOTS, new Item.Properties()));
     public static final RegistryObject<Item> CHITIN_SHIELD = ITEMS.register("chitin_shield",
             () -> new ShieldItem(new Item.Properties()));
     public static final RegistryObject<Item> WOODEN_SICKLE = ITEMS.register("wooden_sickle",

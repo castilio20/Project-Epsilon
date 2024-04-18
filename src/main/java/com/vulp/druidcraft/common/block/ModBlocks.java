@@ -1,6 +1,8 @@
 package com.vulp.druidcraft.common.block;
 
 import com.vulp.druidcraft.Druidcraft;
+import com.vulp.druidcraft.api.DarkwoodWoodTree;
+import com.vulp.druidcraft.api.ElderWoodTree;
 import com.vulp.druidcraft.common.block.custom.ModHangingSignBlock;
 import com.vulp.druidcraft.common.block.custom.ModStandingSignBlock;
 import com.vulp.druidcraft.common.block.custom.ModWallHangingSignBlock;
@@ -10,6 +12,7 @@ import com.vulp.druidcraft.common.util.ModWoodTypes;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.sounds.SoundEvents;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.BlockGetter;
@@ -61,8 +64,9 @@ public class ModBlocks {
                     return 30;
                 }
             });
+
     public static final RegistryObject<Block> DARKWOOD_SAPLING = registerBlock("darkwood_sapling",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.AMETHYST)));
+            () -> new SaplingBlock(new DarkwoodWoodTree(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
     public static final RegistryObject<Block> DARKWOOD_PLANKS = registerBlock("darkwood_planks",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.AMETHYST)));
     public static final RegistryObject<Block> STRIPPED_DARKWOOD_WOOD = registerBlock("stripped_darkwood_wood",
@@ -132,7 +136,7 @@ public class ModBlocks {
                 }
             });
     public static final RegistryObject<Block> ELDER_SAPLING = registerBlock("elder_sapling",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.AMETHYST)));
+            () -> new SaplingBlock(new ElderWoodTree(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
     public static final RegistryObject<Block> ELDER_PLANKS = registerBlock("elder_planks",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.AMETHYST)));
     public static final RegistryObject<Block> STRIPPED_ELDER_WOOD = registerBlock("stripped_elder_wood",
@@ -156,8 +160,6 @@ public class ModBlocks {
             () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.AMETHYST).noOcclusion(), BlockSetType.IRON));
     public static final RegistryObject<Block> ELDER_DOOR = registerBlock("elder_door",
             () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.AMETHYST).noOcclusion(), BlockSetType.OAK));
-    //public static final RegistryObject<Block> ELDER_BOAT = registerBlock("elder_boat",
-            //() -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.AMETHYST)));
     public static final RegistryObject<Block> ELDER_SIGN = BLOCKS.register("elder_sign",
             () -> new ModStandingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SIGN), ModWoodTypes.ELDER));
     public static final RegistryObject<Block> ELDER_WALL_SIGN = BLOCKS.register("elder_wall_sign",
@@ -225,12 +227,12 @@ public class ModBlocks {
     public static final RegistryObject<Block> DRY_MUD_BRICK_WALL= registerBlock("dry_mud_brick_wall",
             () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.AMETHYST)));
     //Flowers
-    //public static final RegistryObject<Block> ELDERFLOWER_CORDIAL = registerBlock("elderflower_cordial",
-           // () -> new FlowerBlock(() -> MobEffects.LUCK, 5,
-                    //BlockBehaviour.Properties.copy(Blocks.ALLIUM).noOcclusion().noCollission()));
-    //public static final RegistryObject<Block> POTTED_ELDERFLOWER_CORDIAL = BLOCKS.register("potted_elderflower_cordial",
-            //() -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), ModBlocks.ELDERFLOWER_CORDIAL,
-                    //BlockBehaviour.Properties.copy(Blocks.POTTED_ALLIUM).noOcclusion()));
+    public static final RegistryObject<Block> LAVENDER = registerBlock("lavender",
+            () -> new FlowerBlock(() -> MobEffects.LUCK, 5,
+                    BlockBehaviour.Properties.copy(Blocks.ALLIUM).noOcclusion().noCollission()));
+    public static final RegistryObject<Block> POTTED_LAVENDER = BLOCKS.register("potted_lavender",
+            () -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), ModBlocks.LAVENDER,
+                    BlockBehaviour.Properties.copy(Blocks.POTTED_ALLIUM).noOcclusion()));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

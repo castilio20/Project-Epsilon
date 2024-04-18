@@ -43,6 +43,8 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.ELDER_FENCE_GATE.get());
         this.tag(BlockTags.WALLS)
                 .add(ModBlocks.DRY_MUD_BRICK_WALL.get());
+        this.tag(Tags.Blocks.BOOKSHELVES)
+        .add(ModBlocks.DARKWOOD_BOOKSHELF.get());
 
     }
 }

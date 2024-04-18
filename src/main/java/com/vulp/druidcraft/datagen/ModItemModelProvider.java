@@ -73,6 +73,9 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.DARKWOOD_SIGN);
         simpleItem(ModItems.DARKWOOD_HANGING_SIGN);
         simpleBlockItem(ModBlocks.DARKWOOD_DOOR);
+        toBlock(ModBlocks.DARKWOOD_BOOKSHELF.get());
+        saplingItem(ModBlocks.DARKWOOD_SAPLING);
+        saplingItem(ModBlocks.ELDER_SAPLING);
 
         fenceItem(ModBlocks.DARKWOOD_FENCE, ModBlocks.DARKWOOD_PLANKS);
         buttonItem(ModBlocks.DARKWOOD_BUTTON, ModBlocks.DARKWOOD_PLANKS);
@@ -217,7 +220,11 @@ public class ModItemModelProvider extends ItemModelProvider {
         this.withExistingParent(Druidcraft.MODID + ":" + ForgeRegistries.BLOCKS.getKey(block.get()).getPath(),
                 modLoc("block/" + ForgeRegistries.BLOCKS.getKey(block.get()).getPath()));
     }
-
+    private ItemModelBuilder saplingItem(RegistryObject<Block> item) {
+        return withExistingParent(item.getId().getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(Druidcraft.MODID,"block/" + item.getId().getPath()));
+    }
     public void trapdoorItem(RegistryObject<Block> block) {
         this.withExistingParent(ForgeRegistries.BLOCKS.getKey(block.get()).getPath(),
                 modLoc("block/" + ForgeRegistries.BLOCKS.getKey(block.get()).getPath() + "_bottom"));

@@ -119,7 +119,7 @@ public class DruidcraftItemGroup {public static final DeferredRegister<CreativeM
                         pOutput.accept(ModBlocks.ELDER_DOOR.get());
                         pOutput.accept(ModItems.ELDER_WOOD_BOAT_ITEM.get());
                         pOutput.accept(ModItems.ELDER_SIGN.get());
-                        //pOutput.accept(ModItems.ELDER_HANGING_SIGN.get());
+                        pOutput.accept(ModItems.ELDER_HANGING_SIGN.get());
                         pOutput.accept(ModBlocks.ELDER_CHEST.get());
                         pOutput.accept(ModBlocks.TRAPPED_ELDER_CHEST.get());
                         pOutput.accept(ModBlocks.ELDER_BOOKSHELF.get());

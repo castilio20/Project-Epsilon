@@ -7,6 +7,8 @@ import com.vulp.druidcraft.common.util.ModWoodTypes;
 import com.vulp.druidcraft.entity.Entities;
 import com.vulp.druidcraft.entity.client.render.CustomBoatModel;
 import com.vulp.druidcraft.entity.custom.CustomBoatEntity;
+import com.vulp.druidcraft.worldgen.tree.ModFoliagePlacers;
+import com.vulp.druidcraft.worldgen.tree.ModTrunkPlacerTypes;
 import net.minecraft.client.model.BoatModel;
 import net.minecraft.client.model.ChestBoatModel;
 import net.minecraft.client.renderer.Sheets;
@@ -40,8 +42,10 @@ public class Druidcraft {
 
         BLOCKS.register(modEventBus);
         ITEMS.register(modEventBus);
-
         Entities.ENTITIES.register(modEventBus);
+        ModTrunkPlacerTypes.register(modEventBus);
+        ModFoliagePlacers.register(modEventBus);
+
         ModBlockEntities.register(modEventBus);
         DruidcraftItemGroup.register(modEventBus);
         MinecraftForge.EVENT_BUS.register(this);
@@ -69,6 +73,7 @@ public class Druidcraft {
         @SubscribeEvent
         public static void onRenderTypeSetup(FMLClientSetupEvent event) {
             Sheets.addWoodType(ModWoodTypes.DARKWOOD);
+            Sheets.addWoodType(ModWoodTypes.ELDER);
 
             EntityRenderers.register(Entities.MOD_BOAT.get(), m -> new CustomBoatModel(m, false));
             EntityRenderers.register(Entities.MOD_CHEST_BOAT.get(), m -> new CustomBoatModel(m, true));
