@@ -1,0 +1,7 @@
+{
+    "parent": "block/flower_pot_cross",
+    "render_type": "minecraft:cutout",
+    "textures": {
+        "plant": "druidcraft:block/potted_lavender_a"
+    }
+}

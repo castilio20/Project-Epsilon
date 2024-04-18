@@ -118,6 +118,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         toBlock(ModBlocks.DARKWOOD_BEAM.get());
         toBlock(ModBlocks.STRIPPED_DARKWOOD_BEAM.get());
         toBlock(ModBlocks.ELDER_BEAM.get());
+        //Flowers
 
         //TOOLS
         handheldItem(ModItems.BONE_SWORD);
@@ -274,6 +275,11 @@ public class ModItemModelProvider extends ItemModelProvider {
     }
     private void toBlockModel(Block b, ResourceLocation model) {
         withExistingParent(BuiltInRegistries.BLOCK.getKey(b).getPath(), model);
+    }
+    private ItemModelBuilder simpleBlockItemBlockTexture(RegistryObject<Block> item) {
+        return withExistingParent(item.getId().getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(Druidcraft.MODID,"block/" + item.getId().getPath()));
     }
     public static ResourceLocation prefix(String name) {
         return new ResourceLocation(Druidcraft.MODID, name.toLowerCase(Locale.ROOT));

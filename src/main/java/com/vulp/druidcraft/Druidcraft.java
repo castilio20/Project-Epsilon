@@ -1,5 +1,6 @@
 package com.vulp.druidcraft;
 
+import com.vulp.druidcraft.common.block.ModBlocks;
 import com.vulp.druidcraft.common.block.custom.ModBlockEntities;
 import com.vulp.druidcraft.common.item.ModItems;
 import com.vulp.druidcraft.common.itemgroup.DruidcraftItemGroup;
@@ -14,6 +15,8 @@ import net.minecraft.client.model.ChestBoatModel;
 import net.minecraft.client.renderer.Sheets;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.FlowerPotBlock;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.common.MinecraftForge;
@@ -54,8 +57,9 @@ public class Druidcraft {
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
+        ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.LAVENDER.getId(), ModBlocks.POTTED_LAVENDER);
+    };
 
-    }
 
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {

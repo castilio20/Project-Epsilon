@@ -34,7 +34,10 @@ public class ModBlocks {
     public static final RegistryObject<Block> AMBER_BLOCK = registerBlock("amber_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.AMETHYST)));
     public static final RegistryObject<Block> HEMP_CROP = BLOCKS.register("hemp_crop",
-            () -> new HempCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion().noCollission()));
+            () -> new HempCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion().randomTicks()
+                    .offsetType(BlockBehaviour.OffsetType.NONE)
+                    .instabreak()
+                    .sound(SoundType.CROP)));
     public static final RegistryObject<Block> MOONSTONE_BLOCK = registerBlock("moonstone_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.AMETHYST)));
     public static final RegistryObject<Block> FIERY_GLASS_BLOCK = registerBlock("fiery_glass_block",
@@ -226,6 +229,26 @@ public class ModBlocks {
                     BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.AMETHYST)));
     public static final RegistryObject<Block> DRY_MUD_BRICK_WALL= registerBlock("dry_mud_brick_wall",
             () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.AMETHYST)));
+    //Ice
+    public static final RegistryObject<Block> ICE_BRICKS = registerBlock("ice_bricks",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.ICE).sound(SoundType.AMETHYST)));
+    public static final RegistryObject<Block> WORKED_ICE = registerBlock("worked_ice",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.ICE).sound(SoundType.AMETHYST)));
+    public static final RegistryObject<Block> PACKED_ICE_BRICKS = registerBlock("packed_ice_bricks",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.ICE).sound(SoundType.AMETHYST)));
+    public static final RegistryObject<Block> WORKED_PACKED_ICE = registerBlock("worked_packed_ice",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.ICE).sound(SoundType.AMETHYST)));
+    //Snow
+    public static final RegistryObject<Block> SNOW_BRICKS = registerBlock("snow_bricks",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.ICE).sound(SoundType.AMETHYST)));
+    public static final RegistryObject<Block> SNOW_TILES = registerBlock("snow_tiles",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.ICE).sound(SoundType.AMETHYST)));
+    //Bricks
+    public static final RegistryObject<Block> MOSSY_BRICKS = registerBlock("mossy_bricks",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.BRICKS).sound(SoundType.AMETHYST)));
+    //Misc
+    public static final RegistryObject<Block> MORTAR_AND_PESTLE = registerBlock("mortar_and_pestle",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).sound(SoundType.AMETHYST)));
     //Flowers
     public static final RegistryObject<Block> LAVENDER = registerBlock("lavender",
             () -> new FlowerBlock(() -> MobEffects.LUCK, 5,

@@ -25,19 +25,15 @@ public class ModBlockStateProvider extends BlockStateProvider {
     @Override
     protected void registerStatesAndModels() {
         blockWithItem(ModBlocks.AMBER_BLOCK);
-        //blockWithItem(ModBlocks.DARKWOOD_LOG);
         blockWithItem(ModBlocks.DARKWOOD_PLANKS);
         blockWithItem(ModBlocks.MOONSTONE_BLOCK);
         blockWithItem(ModBlocks.FIERY_GLASS_BLOCK);
-        //blockWithItem(ModBlocks.DARKWOOD_BEEHIVE);
-        //blockWithItem(ModBlocks.DARKWOOD_BOOKSHELF);
+
         saplingBlock(ModBlocks.DARKWOOD_SAPLING);
         saplingBlock(ModBlocks.ELDER_SAPLING);
 
         blockWithItem(ModBlocks.ROCKROOT_BLOCK);
-        //blockWithItem(ModBlocks.STRIPPED_DARKWOOD_LOG);
-        //blockWithItem(ModBlocks.STRIPPED_DARKWOOD_WOOD);
-        //blockWithItem(ModBlocks.ELDER_LOG);
+
         blockWithItem(ModBlocks.ELDER_PLANKS);
         //Panels
         blockWithItem(ModBlocks.OAK_PANELS);
@@ -51,6 +47,17 @@ public class ModBlockStateProvider extends BlockStateProvider {
         //Mud
         blockWithItem(ModBlocks.WET_MUD_BRICKS);
         blockWithItem(ModBlocks.DRY_MUD_BRICKS);
+        //Ice
+        blockWithItem(ModBlocks.ICE_BRICKS);
+        blockWithItem(ModBlocks.WORKED_ICE);
+        blockWithItem(ModBlocks.PACKED_ICE_BRICKS);
+        blockWithItem(ModBlocks.WORKED_PACKED_ICE);
+        //Sow
+        blockWithItem(ModBlocks.SNOW_BRICKS);
+        blockWithItem(ModBlocks.SNOW_TILES);
+        //Bricks
+        blockWithItem(ModBlocks.MOSSY_BRICKS);
+
 
         //DarkWood
         logBlock(((RotatedPillarBlock) ModBlocks.DARKWOOD_LOG.get()));
@@ -69,7 +76,6 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         doorBlockWithRenderType(((DoorBlock) ModBlocks.DARKWOOD_DOOR.get()), modLoc("block/darkwood_door_bottom"), modLoc("block/darkwood_door_top"), "cutout");
         trapdoorBlockWithRenderType(((TrapDoorBlock) ModBlocks.DARKWOOD_TRAPDOOR.get()), modLoc("block/darkwood_trapdoor"), true, "cutout");
-        makeStrawberryCrop((CropBlock) ModBlocks.HEMP_CROP.get(), "hemp_stage", "hemp_stage");
         signBlock(((StandingSignBlock) ModBlocks.DARKWOOD_SIGN.get()), ((WallSignBlock) ModBlocks.DARKWOOD_WALL_SIGN.get()),
                blockTexture(ModBlocks.DARKWOOD_PLANKS.get()));
 
@@ -94,6 +100,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         stairsBlock(((StairBlock) ModBlocks.DRY_MUD_BRICK_STAIRS.get()), blockTexture(ModBlocks.DRY_MUD_BRICKS.get()));
         slabBlock(((SlabBlock) ModBlocks.DRY_MUD_BRICK_SLAB.get()), blockTexture(ModBlocks.DRY_MUD_BRICKS.get()), blockTexture(ModBlocks.DRY_MUD_BRICKS.get()));
         wallBlock(((WallBlock) ModBlocks.DRY_MUD_BRICK_WALL.get()), blockTexture(ModBlocks.DRY_MUD_BRICKS.get()));
+        //Flowers
 
         //Beam
         logBlock(((RotatedPillarBlock) ModBlocks.OAK_BEAM.get()));
@@ -139,22 +146,12 @@ public class ModBlockStateProvider extends BlockStateProvider {
                 ":block/" + ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath()));
     }
 
-    public void makeStrawberryCrop(CropBlock block, String modelName, String textureName) {
-        Function<BlockState, ConfiguredModel[]> function = state -> strawberryStates(state, block, modelName, textureName);
 
-        getVariantBuilder(block).forAllStates(function);
-    }
     private void saplingBlock(RegistryObject<Block> blockRegistryObject) {
         simpleBlock(blockRegistryObject.get(),
                 models().cross(ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath(), blockTexture(blockRegistryObject.get())).renderType("cutout"));
     }
-    private ConfiguredModel[] strawberryStates(BlockState state, CropBlock block, String modelName, String textureName) {
-        ConfiguredModel[] models = new ConfiguredModel[1];
-        models[0] = new ConfiguredModel(models().crop(modelName + state.getValue(((HempCropBlock) block).getAgeProperty()),
-                new ResourceLocation(Druidcraft.MODID, "block/" + textureName + state.getValue(((HempCropBlock) block).getAgeProperty()))).renderType("cutout"));
 
-        return models;
-    }
     public void hangingSignBlock(Block signBlock, Block wallSignBlock, ResourceLocation texture) {
         ModelFile sign = models().sign(name(signBlock), texture);
         hangingSignBlock(signBlock, wallSignBlock, sign);

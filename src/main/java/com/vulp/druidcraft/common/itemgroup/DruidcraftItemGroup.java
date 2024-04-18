@@ -150,6 +150,19 @@ public class DruidcraftItemGroup {public static final DeferredRegister<CreativeM
                         pOutput.accept(ModBlocks.DRY_MUD_BRICK_SLAB.get());
                         pOutput.accept(ModBlocks.DRY_MUD_BRICK_STAIRS.get());
                         pOutput.accept(ModBlocks.DRY_MUD_BRICK_WALL.get());
+                        //Ice
+                        pOutput.accept(ModBlocks.ICE_BRICKS.get());
+                        pOutput.accept(ModBlocks.WORKED_ICE.get());
+                        pOutput.accept(ModBlocks.PACKED_ICE_BRICKS.get());
+                        pOutput.accept(ModBlocks.WORKED_PACKED_ICE.get());
+                        //Snow
+                        pOutput.accept(ModBlocks.SNOW_BRICKS.get());
+                        pOutput.accept(ModBlocks.SNOW_TILES.get());
+                        //Bricks
+                        pOutput.accept(ModBlocks.MOSSY_BRICKS.get());
+                        //Misc
+                        pOutput.accept(ModBlocks.MORTAR_AND_PESTLE.get());
+
                         //Food
                         pOutput.accept(ModItems.APPLE_ELDERBERRY_CRUMBLE.get());
                         pOutput.accept(ModItems.BLUEBERRIES.get());
@@ -159,7 +172,7 @@ public class DruidcraftItemGroup {public static final DeferredRegister<CreativeM
                         pOutput.accept(ModItems.FLOUR.get());
                         pOutput.accept(ModItems.DOUGH.get());
                         //Flowers
-                        //pOutput.accept(ModBlocks.ELDERFLOWER_CORDIAL.get());
+                        pOutput.accept(ModBlocks.LAVENDER.get());
                         //pOutput.accept(ModBlocks.DOUGH.get());
 
 
