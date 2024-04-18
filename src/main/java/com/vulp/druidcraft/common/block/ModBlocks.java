@@ -1,6 +1,8 @@
 package com.vulp.druidcraft.common.block;
 
 import com.vulp.druidcraft.Druidcraft;
+import com.vulp.druidcraft.common.block.entities.ModChestBlockEntity;
+import com.vulp.druidcraft.common.block.entities.ModTrappedChestBlockEntity;
 import com.vulp.druidcraft.worldgen.tree.growers.DarkwoodWoodTree;
 import com.vulp.druidcraft.worldgen.tree.growers.ElderWoodTree;
 import com.vulp.druidcraft.common.block.custom.*;
@@ -32,6 +34,8 @@ import java.util.function.Supplier;
 public class ModBlocks {
         public static final DeferredRegister<Block> BLOCKS =
                 DeferredRegister.create(ForgeRegistries.BLOCKS, Druidcraft.MODID);
+    public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES = DeferredRegister.create(ForgeRegistries.BLOCK_ENTITY_TYPES, Druidcraft.MODID);
+
     private static final DeferredRegister<BlockEntityType<?>> BLOCKS_ENTITIES = DeferredRegister.create(ForgeRegistries.BLOCK_ENTITY_TYPES, Druidcraft.MODID);
 
     public static final RegistryObject<Block> AMBER_BLOCK = registerBlock("amber_block",
@@ -107,8 +111,8 @@ public class ModBlocks {
     public static final RegistryObject<Block> DARKWOOD_WALL_HANGING_SIGN = BLOCKS.register("darkwood_wall_hanging_sign",
             () -> new ModWallHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_HANGING_SIGN), ModWoodTypes.DARKWOOD));
 
-    public static final RegistryObject<Block> DARKWOOD_CHEST = registerChest("oak", () -> new ModChestBlock(MapColor.WOOD, "darkwood"));
-    public static final RegistryObject<Block> DARKWOOD_TRAPPED_CHEST = registerChest("darkwood_trapped", () -> new ModTrappedChestBlock(MapColor.WOOD, "darkwood"));
+    public static final RegistryObject<Block> DARKWOOD_CHEST = registerChest("darkwood", () -> new ModChestBlock(MapColor.WOOD, "darkwood"));
+    public static final RegistryObject<Block> DARKWOOD_TRAPPED_CHEST = registerChest("darkwood_trapped", () -> new ModTrappedChestBlock(MapColor.WOOD, "darkwood_trapped"));
 
     public static final RegistryObject<Block> DARKWOOD_BOOKSHELF = registerBlock("darkwood_bookshelf",
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).strength(3f)));
@@ -173,8 +177,8 @@ public class ModBlocks {
             () -> new ModHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_HANGING_SIGN), ModWoodTypes.ELDER));
     public static final RegistryObject<Block> ELDER_WALL_HANGING_SIGN = BLOCKS.register("elder_wall_hanging_sign",
             () -> new ModWallHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_HANGING_SIGN), ModWoodTypes.ELDER));
-    public static final RegistryObject<Block> ELDER_CHEST = registerChest("oak", () -> new ModChestBlock(MapColor.WOOD, "elder"));
-    public static final RegistryObject<Block> ELDER_TRAPPED_CHEST = registerChest("elder_trapped", () -> new ModTrappedChestBlock(MapColor.WOOD, "elder"));
+    public static final RegistryObject<Block> ELDER_CHEST = registerChest("elder", () -> new ModChestBlock(MapColor.WOOD, "elder"));
+   public static final RegistryObject<Block> ELDER_TRAPPED_CHEST = registerChest("elder_trapped", () -> new ModTrappedChestBlock(MapColor.WOOD, "elder_traped"));
 
     public static final RegistryObject<Block> ELDER_BOOKSHELF = registerBlock("elder_bookshelf",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.AMETHYST)));
@@ -286,7 +290,16 @@ public class ModBlocks {
     private static RegistryObject<Block> registerChest(String name, Supplier<Block> block) {
         return BLOCKS.register(name + "_chest", block);
 
-    }
+    }public static void register(IEventBus eventBus) {
+    MOD_CHEST_BLOCK_ENTITY = BLOCKS_ENTITIES.register("chest_tile",
+            () -> BlockEntityType.Builder.of(ModChestBlockEntity::new, mod_chest.stream().map(RegistryObject::get).toArray(Block[]::new)).build(null));
+    MOD_TRAPPED_CHEST_BLOCK_ENTITY = BLOCKS_ENTITIES.register("trapped_chest_tile",
+            () -> BlockEntityType.Builder.of(ModTrappedChestBlockEntity::new, mod_trapped_chest.stream().map(RegistryObject::get).toArray(Block[]::new)).build(null));
+        BLOCK_ENTITIES.register(eventBus);
+
+}
+    public static RegistryObject<BlockEntityType<ModChestBlockEntity>> MOD_CHEST_BLOCK_ENTITY;
+    public static RegistryObject<BlockEntityType<ModTrappedChestBlockEntity>> MOD_TRAPPED_CHEST_BLOCK_ENTITY;
     public static final List<RegistryObject<Block>> mod_chest = new ArrayList<>();
     public static final List<RegistryObject<Block>> mod_trapped_chest = new ArrayList<>();
     private static void addToArray(RegistryObject<Block> chest, RegistryObject<Block> trappedChest) {

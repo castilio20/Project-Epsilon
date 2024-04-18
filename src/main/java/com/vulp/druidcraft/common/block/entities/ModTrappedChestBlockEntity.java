@@ -1,5 +1,6 @@
 package com.vulp.druidcraft.common.block.entities;
 
+import com.vulp.druidcraft.common.block.ModBlocks;
 import com.vulp.druidcraft.common.block.custom.ModBlockEntities;
 import com.vulp.druidcraft.common.block.custom.ModTrappedChestBlock;
 import net.minecraft.core.BlockPos;
@@ -11,7 +12,7 @@ import net.minecraft.world.level.block.state.BlockState;
 
 public class ModTrappedChestBlockEntity extends ChestBlockEntity {
     public ModTrappedChestBlockEntity(BlockPos blockPos, BlockState blockState) {
-        super(ModBlockEntities.MOD_TRAPPED_CHEST_BLOCK_ENTITY.get(), blockPos, blockState);
+        super(ModBlocks.MOD_TRAPPED_CHEST_BLOCK_ENTITY.get(), blockPos, blockState);
     }
 
     protected void signalOpenCount(Level level, BlockPos pos, BlockState state, int i, int j) {
@@ -23,10 +24,10 @@ public class ModTrappedChestBlockEntity extends ChestBlockEntity {
         }
     }
 
-    @Override
-    protected Component getDefaultName() {
-        return Component.translatable("container.lolmcv." + getBlock().getChestType() + "_chest");
-    }
+    //@Override
+    //protected Component getDefaultName() {
+       // return Component.translatable("container.lolmcv." + getBlock().getChestType() + "_chest");
+    //}
 
     public ModTrappedChestBlock getBlock() {
         return (ModTrappedChestBlock) getBlockState().getBlock();

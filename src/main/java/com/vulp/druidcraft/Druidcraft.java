@@ -85,10 +85,14 @@ public class Druidcraft {
 
             EntityRenderers.register(Entities.MOD_BOAT.get(), m -> new CustomBoatModel(m, false));
             EntityRenderers.register(Entities.MOD_CHEST_BOAT.get(), m -> new CustomBoatModel(m, true));
-            BlockEntityRenderers.register(ModBlockEntities.MOD_CHEST_BLOCK_ENTITY.get(), ModChestRenderer::new);
-            BlockEntityRenderers.register(ModBlockEntities.MOD_TRAPPED_CHEST_BLOCK_ENTITY.get(), ModTrappedChestRenderer::new);
-        }
 
+        }
+        @SubscribeEvent
+        public static void doClientStuff(FMLClientSetupEvent event) {
+            BlockEntityRenderers.register(ModBlocks.MOD_CHEST_BLOCK_ENTITY.get(), ModChestRenderer::new);
+            BlockEntityRenderers.register(ModBlocks.MOD_TRAPPED_CHEST_BLOCK_ENTITY.get(), ModTrappedChestRenderer::new);
+        }
+    }
         @SubscribeEvent
         public static void onRegisterLayers(EntityRenderersEvent.RegisterLayerDefinitions event) {
             for (CustomBoatEntity.Type boatType : CustomBoatEntity.Type.values()) {
@@ -98,6 +102,5 @@ public class Druidcraft {
                 }
             }
         }
-    }
 
 

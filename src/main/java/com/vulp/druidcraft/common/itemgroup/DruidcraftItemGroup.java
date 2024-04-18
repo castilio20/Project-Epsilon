@@ -98,7 +98,7 @@ public class DruidcraftItemGroup {public static final DeferredRegister<CreativeM
 
                         pOutput.accept(ModItems.DARKWOOD_SIGN.get());
                         pOutput.accept(ModItems.DARKWOOD_HANGING_SIGN.get());
-                        pOutput.accept(ModBlocks.DARKWOOD_CHEST.get());
+                        //pOutput.accept(ModBlocks.DARKWOOD_CHEST.get());
                         pOutput.accept(ModBlocks.DARKWOOD_TRAPPED_CHEST.get());
                         pOutput.accept(ModBlocks.DARKWOOD_BOOKSHELF.get());
                         pOutput.accept(ModBlocks.DARKWOOD_LADDER.get());
@@ -123,8 +123,8 @@ public class DruidcraftItemGroup {public static final DeferredRegister<CreativeM
                         pOutput.accept(ModItems.ELDER_WOOD_CHEST_BOAT_ITEM.get());
                         pOutput.accept(ModItems.ELDER_SIGN.get());
                         pOutput.accept(ModItems.ELDER_HANGING_SIGN.get());
-                        pOutput.accept(ModBlocks.ELDER_CHEST.get());
-                        pOutput.accept(ModBlocks.ELDER_TRAPPED_CHEST.get());
+                        //pOutput.accept(ModBlocks.ELDER_CHEST.get());
+                        //pOutput.accept(ModBlocks.ELDER_TRAPPED_CHEST.get());
                         pOutput.accept(ModBlocks.ELDER_BOOKSHELF.get());
                         pOutput.accept(ModBlocks.ELDER_LADDER.get());
                         pOutput.accept(ModBlocks.ELDER_BEEHIVE.get());

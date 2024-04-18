@@ -1,5 +1,6 @@
 package com.vulp.druidcraft.common.block.custom;
 
+import com.vulp.druidcraft.common.block.ModBlocks;
 import com.vulp.druidcraft.common.block.entities.ModTrappedChestBlockEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -34,14 +35,14 @@ public class ModTrappedChestBlock extends ChestBlock {
     public final String chestType;
 
     public ModTrappedChestBlock(MapColor colour, String chestType) {
-        super(Properties.copy(Blocks.TRAPPED_CHEST).mapColor(colour), () -> ModBlockEntities.MOD_TRAPPED_CHEST_BLOCK_ENTITY.get());
+        super(Properties.copy(Blocks.TRAPPED_CHEST).mapColor(colour), () -> ModBlocks.MOD_TRAPPED_CHEST_BLOCK_ENTITY.get());
         this.chestType = chestType;
 
         registerMaterialNameRetriever();
     }
 
     public ModTrappedChestBlock(MapColor colour, SoundType sound, String chestType) {
-        super(Properties.copy(Blocks.TRAPPED_CHEST).mapColor(colour).sound(sound), () -> ModBlockEntities.MOD_CHEST_BLOCK_ENTITY.get());
+        super(Properties.copy(Blocks.TRAPPED_CHEST).mapColor(colour).sound(sound), () -> ModBlocks.MOD_CHEST_BLOCK_ENTITY.get());
         this.chestType = chestType;
 
         registerMaterialNameRetriever();

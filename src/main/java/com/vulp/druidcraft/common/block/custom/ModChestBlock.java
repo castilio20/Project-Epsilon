@@ -1,5 +1,6 @@
 package com.vulp.druidcraft.common.block.custom;
 
+import com.vulp.druidcraft.common.block.ModBlocks;
 import com.vulp.druidcraft.common.block.entities.ModChestBlockEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
@@ -28,14 +29,14 @@ public class ModChestBlock extends ChestBlock {
     public final String chestType;
 
     public ModChestBlock(MapColor colour, String chestType) {
-        super(Properties.copy(Blocks.CHEST).mapColor(colour), () -> ModBlockEntities.MOD_CHEST_BLOCK_ENTITY.get());
+        super(Properties.copy(Blocks.CHEST).mapColor(colour), () -> ModBlocks.MOD_CHEST_BLOCK_ENTITY.get());
         this.chestType = chestType;
 
         registerMaterialNameRetriever();
     }
 
     public ModChestBlock(MapColor colour, SoundType sound, String chestType) {
-        super(Properties.copy(Blocks.CHEST).mapColor(colour).sound(sound), () -> ModBlockEntities.MOD_CHEST_BLOCK_ENTITY.get());
+        super(Properties.copy(Blocks.CHEST).mapColor(colour).sound(sound), () -> ModBlocks.MOD_CHEST_BLOCK_ENTITY.get());
         this.chestType = chestType;
 
         registerMaterialNameRetriever();

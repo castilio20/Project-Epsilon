@@ -31,12 +31,9 @@ public class ModBlockEntities {
                     ModBlocks.ELDER_HANGING_SIGN.get(), ModBlocks.ELDER_WALL_HANGING_SIGN.get())
             .build(null));
     public static void register(IEventBus eventBus) {
-
         BLOCK_ENTITIES.register(eventBus);
     }
 
-    public static RegistryObject<BlockEntityType<ModChestBlockEntity>> MOD_CHEST_BLOCK_ENTITY;
-    public static RegistryObject<BlockEntityType<ModTrappedChestBlockEntity>> MOD_TRAPPED_CHEST_BLOCK_ENTITY;
 
 
 
