@@ -99,7 +99,7 @@ public class DruidcraftItemGroup {public static final DeferredRegister<CreativeM
                         pOutput.accept(ModItems.DARKWOOD_SIGN.get());
                         pOutput.accept(ModItems.DARKWOOD_HANGING_SIGN.get());
                         //pOutput.accept(ModBlocks.DARKWOOD_CHEST.get());
-                        pOutput.accept(ModBlocks.DARKWOOD_TRAPPED_CHEST.get());
+                        //pOutput.accept(ModBlocks.DARKWOOD_TRAPPED_CHEST.get());
                         pOutput.accept(ModBlocks.DARKWOOD_BOOKSHELF.get());
                         pOutput.accept(ModBlocks.DARKWOOD_LADDER.get());
                         pOutput.accept(ModBlocks.DARKWOOD_BEEHIVE.get());

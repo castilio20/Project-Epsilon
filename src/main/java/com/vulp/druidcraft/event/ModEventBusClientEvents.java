@@ -13,12 +13,9 @@ import net.minecraftforge.fml.common.Mod;
 
 @Mod.EventBusSubscriber(modid = Druidcraft.MODID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class ModEventBusClientEvents {
-    @SubscribeEvent
-    public static void registerLayer(EntityRenderersEvent.RegisterLayerDefinitions event) {
 
-        //event.registerLayerDefinition(ModModelLayers.DARKWOOD_BOAT_LAYER, BoatModel::createBodyModel);
-        //event.registerLayerDefinition(ModModelLayers.DARKWOOD_CHEST_BOAT_LAYER, ChestBoatModel::createBodyModel);
-    }
+
+
 
     @SubscribeEvent
     public static void registerBER(EntityRenderersEvent.RegisterRenderers event) {

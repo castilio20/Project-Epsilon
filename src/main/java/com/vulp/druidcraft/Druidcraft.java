@@ -1,9 +1,6 @@
 package com.vulp.druidcraft;
 
-import com.vulp.druidcraft.common.block.ModBlocks;
 import com.vulp.druidcraft.common.block.custom.ModBlockEntities;
-import com.vulp.druidcraft.common.block.render.ModChestRenderer;
-import com.vulp.druidcraft.common.block.render.ModTrappedChestRenderer;
 import com.vulp.druidcraft.common.item.ModItems;
 import com.vulp.druidcraft.common.itemgroup.DruidcraftItemGroup;
 import com.vulp.druidcraft.common.util.ModWoodTypes;
@@ -15,13 +12,9 @@ import com.vulp.druidcraft.worldgen.tree.ModTrunkPlacerTypes;
 import net.minecraft.client.model.BoatModel;
 import net.minecraft.client.model.ChestBoatModel;
 import net.minecraft.client.renderer.Sheets;
-import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.CreativeModeTabs;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.FlowerPotBlock;
 import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -49,10 +42,9 @@ public class Druidcraft {
 
         BLOCKS.register(modEventBus);
         ITEMS.register(modEventBus);
-        Entities.ENTITIES.register(modEventBus);
         ModTrunkPlacerTypes.register(modEventBus);
         ModFoliagePlacers.register(modEventBus);
-
+        Entities.ENTITIES.register(modEventBus);
         ModBlockEntities.register(modEventBus);
         DruidcraftItemGroup.register(modEventBus);
         MinecraftForge.EVENT_BUS.register(this);
@@ -61,9 +53,8 @@ public class Druidcraft {
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
-        ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.LAVENDER.getId(), ModBlocks.POTTED_LAVENDER);
-    };
 
+    }
 
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
@@ -81,26 +72,19 @@ public class Druidcraft {
         @SubscribeEvent
         public static void onRenderTypeSetup(FMLClientSetupEvent event) {
             Sheets.addWoodType(ModWoodTypes.DARKWOOD);
-            Sheets.addWoodType(ModWoodTypes.ELDER);
 
             EntityRenderers.register(Entities.MOD_BOAT.get(), m -> new CustomBoatModel(m, false));
             EntityRenderers.register(Entities.MOD_CHEST_BOAT.get(), m -> new CustomBoatModel(m, true));
+        }
 
-        }
-        @SubscribeEvent
-        public static void doClientStuff(FMLClientSetupEvent event) {
-            BlockEntityRenderers.register(ModBlocks.MOD_CHEST_BLOCK_ENTITY.get(), ModChestRenderer::new);
-            BlockEntityRenderers.register(ModBlocks.MOD_TRAPPED_CHEST_BLOCK_ENTITY.get(), ModTrappedChestRenderer::new);
-        }
-    }
         @SubscribeEvent
         public static void onRegisterLayers(EntityRenderersEvent.RegisterLayerDefinitions event) {
             for (CustomBoatEntity.Type boatType : CustomBoatEntity.Type.values()) {
                 event.registerLayerDefinition(CustomBoatModel.createBoatModelName(boatType), BoatModel::createBodyModel);
                 event.registerLayerDefinition(CustomBoatModel.createChestBoatModelName(boatType), ChestBoatModel::createBodyModel);
-
-                }
             }
         }
+    }
+}
 
 
