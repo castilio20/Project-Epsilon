@@ -1,6 +1,8 @@
 package com.vulp.druidcraft;
 
 import com.vulp.druidcraft.common.block.custom.ModBlockEntities;
+import com.vulp.druidcraft.common.fluid.ModFluidTypes;
+import com.vulp.druidcraft.common.fluid.ModFluids;
 import com.vulp.druidcraft.common.item.ModItems;
 import com.vulp.druidcraft.common.itemgroup.DruidcraftItemGroup;
 import com.vulp.druidcraft.common.util.ModWoodTypes;
@@ -45,6 +47,8 @@ public class Druidcraft {
         ModTrunkPlacerTypes.register(modEventBus);
         ModFoliagePlacers.register(modEventBus);
         Entities.ENTITIES.register(modEventBus);
+        ModFluids.register(modEventBus);
+        ModFluidTypes.register(modEventBus);
         ModBlockEntities.register(modEventBus);
         DruidcraftItemGroup.register(modEventBus);
         MinecraftForge.EVENT_BUS.register(this);

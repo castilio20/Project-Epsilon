@@ -33,6 +33,7 @@ public class DruidcraftItemGroup {public static final DeferredRegister<CreativeM
                         pOutput.accept(ModItems.CHITIN.get());
                         pOutput.accept(ModItems.CRUSHED_FIERY_GLASS.get());
                         pOutput.accept(ModItems.HEART_OF_BLAZE.get());
+                        pOutput.accept(ModItems.BISMUTH.get());
                         pOutput.accept(ModItems.KNIFE.get());
                         //TOOLS ARMOR
                         pOutput.accept(ModItems.BONE_SWORD.get());
@@ -72,11 +73,33 @@ public class DruidcraftItemGroup {public static final DeferredRegister<CreativeM
                         pOutput.accept(ModItems.FIERY_CHESTPLATE.get());
                         pOutput.accept(ModItems.FIERY_LEGGINGS.get());
                         pOutput.accept(ModItems.FIERY_BOOTS.get());
-                   //blocks and items
+                        pOutput.accept(ModItems.FIERY_SWORD.get());
+                        pOutput.accept(ModItems.FIERY_SHOVEL.get());
+                        pOutput.accept(ModItems.FIERY_PICKAXE.get());
+                        pOutput.accept(ModItems.FIERY_AXE.get());
+                        pOutput.accept(ModItems.FIERY_HOE.get());
+                        pOutput.accept(ModItems.FIERY_SICKLE.get());
+
+                        //blocks and items
                         pOutput.accept(ModBlocks.AMBER_BLOCK.get());
                         pOutput.accept(ModBlocks.MOONSTONE_BLOCK.get());
+                        pOutput.accept(ModBlocks.DEEPSLATE_DURAGEM_ORE.get());
                         pOutput.accept(ModBlocks.FIERY_GLASS_BLOCK.get());
                         pOutput.accept(ModBlocks.ROCKROOT_BLOCK.get());
+                        pOutput.accept(ModItems.DURAGEM.get());
+                        pOutput.accept(ModItems.ENCHANTED_SOAP.get());
+                        pOutput.accept(ModItems.CRUSHED_DIAMOND.get());
+                        pOutput.accept(ModItems.CRUSHED_DURAGEM.get());
+                        pOutput.accept(ModBlocks.CERAMIC_LANTERN.get());
+
+
+                        //
+                        pOutput.accept(ModBlocks.AMBER_ORE.get());
+                        pOutput.accept(ModBlocks.MOONSTONE_ORE.get());
+                        pOutput.accept(ModBlocks.ROCKROOT_ORE.get());
+                        pOutput.accept(ModBlocks.FIERY_GLASS_ORE.get());
+                        pOutput.accept(ModBlocks.NETHER_FIERY_GLASS_ORE.get());
+
                         //DarkWood
                         pOutput.accept(ModBlocks.DARKWOOD_LOG.get());
                         pOutput.accept(ModBlocks.DARKWOOD_WOOD.get());
@@ -179,11 +202,13 @@ public class DruidcraftItemGroup {public static final DeferredRegister<CreativeM
                         pOutput.accept(ModItems.BLUEBERRY_MUFFIN.get());
                         pOutput.accept(ModItems.ELDERBERRIES.get());
                         pOutput.accept(ModItems.SKYBERRIES.get());
+                        pOutput.accept(ModItems.LIVE_SKYBERRIES.get());
                         pOutput.accept(ModItems.FLOUR.get());
                         pOutput.accept(ModItems.DOUGH.get());
                         //Flowers
                         pOutput.accept(ModBlocks.LAVENDER.get());
                         //pOutput.accept(ModBlocks.DOUGH.get());
+                        pOutput.accept(ModItems.LIQUID_RAINBOW_BUCKET.get());
 
 
 

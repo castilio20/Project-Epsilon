@@ -3,6 +3,7 @@ package com.vulp.druidcraft.common.item;
 import com.vulp.druidcraft.Druidcraft;
 import com.vulp.druidcraft.common.block.ModBlocks;
 
+import com.vulp.druidcraft.common.fluid.ModFluids;
 import com.vulp.druidcraft.common.item.custom.CustomBoatItem;
 import com.vulp.druidcraft.common.item.custom.SickleItem;
 import com.vulp.druidcraft.entity.custom.CustomBoatEntity;
@@ -42,6 +43,17 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> TEMPERED_FIERY_GLASS = ITEMS.register("tempered_fiery_glass",
             () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> DURAGEM = ITEMS.register("duragem",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> BISMUTH = ITEMS.register("bismuth",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> ENCHANTED_SOAP = ITEMS.register("enchanted_soap",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> CRUSHED_DIAMOND = ITEMS.register("crushed_diamond",
+           () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> CRUSHED_DURAGEM = ITEMS.register("crushed_duragem",
+            () -> new Item(new Item.Properties()));
+
     public static final RegistryObject<Item> KNIFE = ITEMS.register("knife",
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> FLOUR = ITEMS.register("flour",
@@ -79,6 +91,8 @@ public class ModItems {
             () -> new Item(new Item.Properties().food(ModFoods.APPLE_ELDERBERRY_CRUMBLE)));
     public static final RegistryObject<Item> SKYBERRIES = ITEMS.register("skyberries",
             () -> new Item(new Item.Properties().food(ModFoods.SKYBERRIES)));
+    public static final RegistryObject<Item> LIVE_SKYBERRIES = ITEMS.register("live_skyberries",
+            () -> new Item(new Item.Properties().food(ModFoods.LIVE_SKYBERRIES)));
     public static final RegistryObject<Item> DOUGH = ITEMS.register("dough",
             () -> new Item(new Item.Properties().food(ModFoods.DOUGH)));
     //Tools & Armour:
@@ -113,6 +127,18 @@ public class ModItems {
     public static final RegistryObject<Item> MOONSTONE_HOE = ITEMS.register("moonstone_hoe",
             () -> new HoeItem(ModToolTiers.MOOONSTONE, 1, -2.0f, new Item.Properties()));
     public static final RegistryObject<Item> MOONSTONE_SICKLE = ITEMS.register("moonstone_sickle",
+            () -> new HoeItem(ModToolTiers.MOOONSTONE, 1, -1.5f, new Item.Properties()));
+    public static final RegistryObject<Item> FIERY_SWORD = ITEMS.register("fiery_sword",
+            () -> new SwordItem(ModToolTiers.MOOONSTONE, 4, -2.4f, new Item.Properties()));
+    public static final RegistryObject<Item> FIERY_SHOVEL = ITEMS.register("fiery_shovel",
+            () -> new PickaxeItem(ModToolTiers.MOOONSTONE, 3, -3f, new Item.Properties()));
+    public static final RegistryObject<Item> FIERY_PICKAXE = ITEMS.register("fiery_pickaxe",
+            () -> new AxeItem(ModToolTiers.MOOONSTONE, 2, -2.8f, new Item.Properties()));
+    public static final RegistryObject<Item> FIERY_AXE = ITEMS.register("fiery_axe",
+            () -> new ShovelItem(ModToolTiers.MOOONSTONE, 8, -3.2f, new Item.Properties()));
+    public static final RegistryObject<Item> FIERY_HOE = ITEMS.register("fiery_hoe",
+            () -> new HoeItem(ModToolTiers.MOOONSTONE, 1, -2.0f, new Item.Properties()));
+    public static final RegistryObject<Item> FIERY_SICKLE = ITEMS.register("fiery_sickle",
             () -> new HoeItem(ModToolTiers.MOOONSTONE, 1, -1.5f, new Item.Properties()));
     public static final RegistryObject<Item> MOONSTONE_HELMET = ITEMS.register("moonstone_helmet",
             () -> new ArmorItem(ModArmorMaterials.MOONSTONE, ArmorItem.Type.HELMET, new Item.Properties()));
@@ -153,6 +179,10 @@ public class ModItems {
             () -> new SickleItem(Tiers.GOLD, 2));
     public static final RegistryObject<Item> DIAMOND_SICKLE = ITEMS.register("diamond_sickle",
             () -> new SickleItem(Tiers.DIAMOND, 3));
+    public static final RegistryObject<Item> LIQUID_RAINBOW_BUCKET = ITEMS.register("liquid_rainbow_bucket",
+            () -> new BucketItem(ModFluids.SOURCE_LIQUID_RAINBOW,
+                    new Item.Properties()));
+
     //public static final RegistryObject<Item> Netherite_SICKLE = ITEMS.register("netherite_sickle",
             //() -> new HoeItem(ModToolTiers.MOOONSTONE, 1, -1.5f, new Item.Properties()));
     // Item-blocks:

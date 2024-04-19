@@ -35,6 +35,15 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.ROCKROOT_BLOCK);
 
         blockWithItem(ModBlocks.ELDER_PLANKS);
+        //Ores
+        blockWithItem(ModBlocks.AMBER_ORE);
+        blockWithItem(ModBlocks.MOONSTONE_ORE);
+        blockWithItem(ModBlocks.DEEPSLATE_DURAGEM_ORE);
+        blockWithItem(ModBlocks.ROCKROOT_ORE);
+        blockWithItem(ModBlocks.FIERY_GLASS_ORE);
+        blockWithItem(ModBlocks.NETHER_FIERY_GLASS_ORE);
+
+
         //Panels
         blockWithItem(ModBlocks.OAK_PANELS);
         blockWithItem(ModBlocks.SPRUCE_PANELS);

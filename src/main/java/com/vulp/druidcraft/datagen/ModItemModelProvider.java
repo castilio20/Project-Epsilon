@@ -56,12 +56,19 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.CRUSHED_FIERY_GLASS);
         simpleItem(ModItems.HEART_OF_BLAZE);
         simpleItem(ModItems.HEMP_SEEDS);
+        simpleItem(ModItems.BISMUTH);
+        simpleItem(ModItems.DURAGEM);
+        simpleItem(ModItems.ENCHANTED_SOAP);
+        simpleItem(ModItems.CRUSHED_DIAMOND);
+        simpleItem(ModItems.CRUSHED_DURAGEM);
+
         //Food
         simpleItem(ModItems.APPLE_ELDERBERRY_CRUMBLE);
         simpleItem(ModItems.BLUEBERRIES);
         simpleItem(ModItems.BLUEBERRY_MUFFIN);
         simpleItem(ModItems.ELDERBERRIES);
         simpleItem(ModItems.SKYBERRIES);
+        simpleItem(ModItems.LIVE_SKYBERRIES);
         simpleItem(ModItems.FLOUR);
         simpleItem(ModItems.DOUGH);
 
@@ -134,6 +141,12 @@ public class ModItemModelProvider extends ItemModelProvider {
         handheldItem(ModItems.MOONSTONE_SHOVEL);
         handheldItem(ModItems.MOONSTONE_HOE);
         handheldItem(ModItems.MOONSTONE_SICKLE);
+        handheldItem(ModItems.FIERY_SWORD);
+        handheldItem(ModItems.FIERY_PICKAXE);
+        handheldItem(ModItems.FIERY_AXE);
+        handheldItem(ModItems.FIERY_SHOVEL);
+        handheldItem(ModItems.FIERY_HOE);
+        handheldItem(ModItems.FIERY_SICKLE);
         //handheldItem(ModItems.CHITIN_SHIELD);
 
 
@@ -151,6 +164,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         trimmedArmorItem(ModItems.FIERY_CHESTPLATE);
         trimmedArmorItem(ModItems.FIERY_LEGGINGS);
         trimmedArmorItem(ModItems.FIERY_BOOTS);
+
 
         trimmedArmorItem(ModItems.MOONSTONE_HELMET);
         trimmedArmorItem(ModItems.MOONSTONE_CHESTPLATE);

@@ -1,6 +1,6 @@
 package com.vulp.druidcraft.worldgen.tree.growers;
 
-import com.vulp.druidcraft.worldgen.WorldGen;
+import com.vulp.druidcraft.worldgen.ModConfiguredFeatures;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.block.grower.AbstractTreeGrower;
@@ -12,6 +12,6 @@ public class ElderWoodTree extends AbstractTreeGrower {
     @Nullable
     @Override
     protected ResourceKey<ConfiguredFeature<?, ?>> getConfiguredFeature(RandomSource pRandom, boolean pHasFlowers) {
-        return WorldGen.ELDER_TREE;
+        return ModConfiguredFeatures.ELDER_KEY;
     }
 }

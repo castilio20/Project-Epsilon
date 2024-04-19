@@ -1,6 +1,7 @@
 package com.vulp.druidcraft.common.block;
 
 import com.vulp.druidcraft.Druidcraft;
+import com.vulp.druidcraft.common.fluid.ModFluids;
 import com.vulp.druidcraft.worldgen.tree.growers.DarkwoodWoodTree;
 import com.vulp.druidcraft.worldgen.tree.growers.ElderWoodTree;
 import com.vulp.druidcraft.common.block.custom.*;
@@ -8,7 +9,9 @@ import com.vulp.druidcraft.common.item.ModItems;
 import com.vulp.druidcraft.common.util.ModWoodTypes;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.sounds.SoundEvents;
+import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -18,6 +21,7 @@ import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
+import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProviderType;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -32,6 +36,27 @@ public class ModBlocks {
     public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES = DeferredRegister.create(ForgeRegistries.BLOCK_ENTITY_TYPES, Druidcraft.MODID);
 
     private static final DeferredRegister<BlockEntityType<?>> BLOCKS_ENTITIES = DeferredRegister.create(ForgeRegistries.BLOCK_ENTITY_TYPES, Druidcraft.MODID);
+    public static final RegistryObject<Block> AMBER_ORE = registerBlock("amber_ore",
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.STONE)
+                    .strength(2f).requiresCorrectToolForDrops(), UniformInt.of(3, 6)));
+    public static final RegistryObject<Block> MOONSTONE_ORE = registerBlock("moonstone_ore",
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.STONE)
+                    .strength(2f).requiresCorrectToolForDrops(), UniformInt.of(3, 6)));
+    public static final RegistryObject<Block> FIERY_GLASS_ORE = registerBlock("fiery_glass_ore",
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.STONE)
+                    .strength(2f).requiresCorrectToolForDrops(), UniformInt.of(3, 6)));
+    public static final RegistryObject<Block> ROCKROOT_ORE = registerBlock("rockroot_ore",
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.STONE)
+                    .strength(2f).requiresCorrectToolForDrops(), UniformInt.of(3, 6)));
+    public static final RegistryObject<Block> DEEPSLATE_DURAGEM_ORE = registerBlock("duragem_ore",
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE)
+                    .strength(3f).requiresCorrectToolForDrops(), UniformInt.of(3, 7)));
+    public static final RegistryObject<Block> NETHER_BRIGHTSTONE_ORE = registerBlock("brightstone_ore",
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.NETHERRACK)
+                    .strength(1f).requiresCorrectToolForDrops(), UniformInt.of(3, 7)));
+    public static final RegistryObject<Block> NETHER_FIERY_GLASS_ORE = registerBlock("nether_fiery_glass_ore",
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.NETHERRACK)
+                    .strength(1f).requiresCorrectToolForDrops(), UniformInt.of(3, 7)));
 
     public static final RegistryObject<Block> AMBER_BLOCK = registerBlock("amber_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.AMETHYST)));
@@ -46,6 +71,8 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.AMETHYST)));
     public static final RegistryObject<Block> ROCKROOT_BLOCK = registerBlock("rockroot_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.AMETHYST)));
+    public static final RegistryObject<Block> CERAMIC_LANTERN = registerBlock("ceramic_lantern",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.LANTERN).lightLevel((state)->15).sound(SoundType.AMETHYST)));
     public static final RegistryObject<Block> DARKWOOD_LOG = registerBlock("darkwood_log",
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).strength(3f)));
     public static final RegistryObject<Block> DARKWOOD_WOOD = registerBlock("darkwood_wood",
@@ -110,9 +137,9 @@ public class ModBlocks {
    // public static final RegistryObject<Block> DARKWOOD_TRAPPED_CHEST = registerChest("darkwood_trapped", () -> new ModTrappedChestBlock(MapColor.WOOD, "darkwood_trapped"));
 
     public static final RegistryObject<Block> DARKWOOD_BOOKSHELF = registerBlock("darkwood_bookshelf",
-            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).strength(3f)));
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.BOOKSHELF).strength(3f)));
     public static final RegistryObject<Block> DARKWOOD_LADDER = registerBlock("darkwood_ladder",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.AMETHYST)));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.LADDER).sound(SoundType.AMETHYST)));
     public static final RegistryObject<Block> DARKWOOD_BEEHIVE = registerBlock("darkwood_beehive",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.AMETHYST)));
     //Elder
@@ -258,9 +285,11 @@ public class ModBlocks {
     //Misc
     public static final RegistryObject<Block> MORTAR_AND_PESTLE = registerBlock("mortar_and_pestle",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).sound(SoundType.AMETHYST)));
+
     //public static final RegistryObject<Block> ALPHA_LAMP = BLOCKS.register("alpha_lamp",
             //() -> new Infernal_Lamp(NORMAL, Infernal_Lamp.Tier.));
-
+    public static final RegistryObject<LiquidBlock> LIQUID_RAINBOW_BLOCK = BLOCKS.register("liquid_rainbow",
+            () -> new LiquidBlock(ModFluids.SOURCE_LIQUID_RAINBOW, BlockBehaviour.Properties.copy(Blocks.WATER)));
     //Flowers
     public static final RegistryObject<Block> LAVENDER = registerBlock("lavender",
             () -> new FlowerBlock(() -> MobEffects.LUCK, 5,

@@ -31,10 +31,10 @@ public class HempCropBlock  extends CropBlock {
     public static final int SECOND_STAGE_MAX_AGE = 1;
 
     private static final VoxelShape[] SHAPE_BY_AGE = new VoxelShape[]{
-            Block.box(4, 0, 4, 12.0d, 4.0d * 1, 12.0d),
-            Block.box(4, 0, 4, 12.0d, 4.0d * 2, 12.0d),
-            Block.box(4, 0, 4, 12.0d, 4.0d * 3, 12.0d),
-            Block.box(4, 0, 4, 12.0d, 4.0d * 4, 12.0d)};
+            Block.box(3, 0, 3, 12.0d, 3.0d * 1, 12.0d),
+            Block.box(3, 0, 3, 12.0d, 3.0d * 2, 12.0d),
+            Block.box(3, 0, 3, 12.0d, 3.0d * 3, 12.0d),
+            Block.box(3, 0, 3, 12.0d, 3.0d * 4, 12.0d)};
 
     public static final IntegerProperty AGE = IntegerProperty.create("age", 0, 3);
 
@@ -58,10 +58,10 @@ public class HempCropBlock  extends CropBlock {
                 if (net.minecraftforge.common.ForgeHooks.onCropsGrowPre(pLevel, pPos, pState, pRandom.nextInt((int)(25.0F / growthSpeed) + 1) == 0)) {
                     if(currentAge == FIRST_STAGE_MAX_AGE) {
                         if(pLevel.getBlockState(pPos.above(1)).is(Blocks.AIR)) {
-                            pLevel.setBlock(pPos.above(1), this.getStateForAge(currentAge + 1), 4);
+                            pLevel.setBlock(pPos.above(1), this.getStateForAge(currentAge + 1), 3);
                         }
                     } else {
-                        pLevel.setBlock(pPos, this.getStateForAge(currentAge + 1), 4);
+                        pLevel.setBlock(pPos, this.getStateForAge(currentAge + 1), 3);
                     }
 
                     net.minecraftforge.common.ForgeHooks.onCropsGrowPost(pLevel, pPos, pState);
@@ -90,9 +90,9 @@ public class HempCropBlock  extends CropBlock {
         }
 
         if(this.getAge(pState) == FIRST_STAGE_MAX_AGE && pLevel.getBlockState(pPos.above(2)).is(Blocks.AIR)) {
-            pLevel.setBlock(pPos.above(1), this.getStateForAge(nextAge), 4);
+            pLevel.setBlock(pPos.above(1), this.getStateForAge(nextAge), 3);
         } else {
-            pLevel.setBlock(pPos, this.getStateForAge(nextAge - SECOND_STAGE_MAX_AGE), 4);
+            pLevel.setBlock(pPos, this.getStateForAge(nextAge - SECOND_STAGE_MAX_AGE), 3);
         }
     }
 

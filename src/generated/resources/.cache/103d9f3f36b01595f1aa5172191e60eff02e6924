@@ -1,3 +1,6 @@
-// 1.20.1	2024-04-18T11:19:21.7726037	Registries
-8b9bf9526899504e14fc3950f92231b7f8e63fe1 data/druidcraft/worldgen/configured_feature/darkwood.json
-a8c6a23a7899b0f7bb6a9376a757f545d93c853c data/druidcraft/worldgen/placed_feature/darkwood_placed.json
+// 1.20.1	2024-04-19T23:05:05.1954943	Registries
+a6a311d841af40a1038929af9fafb0797941e7f7 data/druidcraft/worldgen/configured_feature/amber_ore.json
+659735672994abbf355a06fef0cdd3635dc2deaa data/druidcraft/worldgen/configured_feature/darkwood.json
+d633bb2015df3716f8829250bdf86e5cf6f11bea data/druidcraft/worldgen/configured_feature/nether_fiery_glass_ore.json
+8fa0c2f33d1161b1bf4aa8c6a42856c88af2b546 data/druidcraft/worldgen/placed_feature/amber_ore_placed.json
+7ebfa509407583d7f1b293f73f6c8af240519d5e data/druidcraft/worldgen/placed_feature/nether_fiery_glass_placed.json
