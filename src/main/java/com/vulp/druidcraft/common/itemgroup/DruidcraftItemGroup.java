@@ -51,6 +51,8 @@ public class DruidcraftItemGroup {public static final DeferredRegister<CreativeM
                         pOutput.accept(ModItems.CHITIN_CHESTPLATE.get());
                         pOutput.accept(ModItems.CHITIN_LEGGINGS.get());
                         pOutput.accept(ModItems.CHITIN_BOOTS.get());
+                        pOutput.accept(ModItems.CHITIN_SHIELD.get());
+
 
                         pOutput.accept(ModItems.MOONSTONE_SWORD.get());
                         pOutput.accept(ModItems.MOONSTONE_SHOVEL.get());
@@ -151,6 +153,13 @@ public class DruidcraftItemGroup {public static final DeferredRegister<CreativeM
                         pOutput.accept(ModBlocks.ELDER_BOOKSHELF.get());
                         pOutput.accept(ModBlocks.ELDER_LADDER.get());
                         pOutput.accept(ModBlocks.ELDER_BEEHIVE.get());
+                        //Fruit
+                        pOutput.accept(ModBlocks.FRUIT_LOG.get());
+                        pOutput.accept(ModBlocks.FRUIT_PLANKS.get());
+                        pOutput.accept(ModBlocks.STRIPPED_FRUIT_LOG.get());
+                        pOutput.accept(ModBlocks.FRUIT_WOOD.get());
+                        pOutput.accept(ModBlocks.STRIPPED_FRUIT_WOOD.get());
+
 
                         //Beam
                         pOutput.accept(ModBlocks.OAK_BEAM.get());
@@ -211,6 +220,7 @@ public class DruidcraftItemGroup {public static final DeferredRegister<CreativeM
                         pOutput.accept(ModItems.LIQUID_RAINBOW_BUCKET.get());
 
 
+                        pOutput.accept(ModBlocks.OAK_SMALL_BEAM.get());
 
 
 

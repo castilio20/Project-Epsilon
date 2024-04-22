@@ -62,6 +62,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.CRUSHED_DIAMOND);
         simpleItem(ModItems.CRUSHED_DURAGEM);
 
+
         //Food
         simpleItem(ModItems.APPLE_ELDERBERRY_CRUMBLE);
         simpleItem(ModItems.BLUEBERRIES);
@@ -73,6 +74,12 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.DOUGH);
 
         //BLOCKS
+
+        toBlock(ModBlocks.FRUIT_WOOD.get());
+        toBlock(ModBlocks.FRUIT_LOG.get());
+
+        toBlock(ModBlocks.STRIPPED_FRUIT_WOOD.get());
+        toBlock(ModBlocks.STRIPPED_FRUIT_LOG.get());
 
 
         //DarkWood

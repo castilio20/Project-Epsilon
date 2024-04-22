@@ -33,48 +33,64 @@ public class ModFlammableRotatedPillarBlock extends RotatedPillarBlock {
 
     @Override
     public @Nullable BlockState getToolModifiedState(BlockState state, UseOnContext context, ToolAction toolAction, boolean simulate) {
-        if(context.getItemInHand().getItem() instanceof AxeItem) {
+        if (context.getItemInHand().getItem() instanceof AxeItem) {
             //DarkWood
-            if(state.is(ModBlocks.DARKWOOD_LOG.get())) {
+            if (state.is(ModBlocks.DARKWOOD_LOG.get())) {
             }
-            if(state.is(ModBlocks.STRIPPED_DARKWOOD_LOG.get())) {
+            if (state.is(ModBlocks.STRIPPED_DARKWOOD_LOG.get())) {
             }
-            if(state.is(ModBlocks.STRIPPED_DARKWOOD_WOOD.get())) {
+            if (state.is(ModBlocks.STRIPPED_DARKWOOD_WOOD.get())) {
             }
-            if(state.is(ModBlocks.DARKWOOD_PLANKS.get())) {
+            if (state.is(ModBlocks.DARKWOOD_PLANKS.get())) {
             }
             //Elder
-            if(state.is(ModBlocks.ELDER_LOG.get())) {
+            if (state.is(ModBlocks.ELDER_LOG.get())) {
             }
-            if(state.is(ModBlocks.STRIPPED_ELDER_LOG.get())) {
+            if (state.is(ModBlocks.STRIPPED_ELDER_LOG.get())) {
             }
-            if(state.is(ModBlocks.STRIPPED_ELDER_WOOD.get())) {
+            if (state.is(ModBlocks.STRIPPED_ELDER_WOOD.get())) {
             }
-            if(state.is(ModBlocks.ELDER_PLANKS.get())) {
-            }
-            //Beam
-            if(state.is(ModBlocks.OAK_BEAM.get())) {
-            }
-            if(state.is(ModBlocks.SPRUCE_BEAM.get())) {
-            }
-            if(state.is(ModBlocks.BIRCH_BEAM.get())) {
-            }
-            if(state.is(ModBlocks.JUNGLE_BEAM.get())) {
-            }
-            if(state.is(ModBlocks.ACACIA_BEAM.get())) {
-            }
-            if(state.is(ModBlocks.DARK_OAK_BEAM.get())) {
-            }
-            if(state.is(ModBlocks.DARKWOOD_BEAM.get())) {
-            }
-            if(state.is(ModBlocks.STRIPPED_DARKWOOD_BEAM.get())) {
-            }
-            if(state.is(ModBlocks.ELDER_BEAM.get())) {
-            }
-            if(state.is(ModBlocks.DARKWOOD_BOOKSHELF.get())) {
-            }
-        }
+            if (state.is(ModBlocks.ELDER_PLANKS.get())) {
 
-        return super.getToolModifiedState(state, context, toolAction, simulate);
+            }
+            //Fruit
+            if (state.is(ModBlocks.FRUIT_LOG.get())) {
+
+            } if (state.is(ModBlocks.FRUIT_PLANKS.get())) {
+
+            } if (state.is(ModBlocks.STRIPPED_FRUIT_LOG.get())) {
+
+            }
+            if (state.is(ModBlocks.FRUIT_WOOD.get())) {
+            }
+            if (state.is(ModBlocks.STRIPPED_FRUIT_WOOD.get())) {
+            }
+
+            }
+            if (state.is(ModBlocks.ELDER_PLANKS.get())) {
+                //Beam
+                if (state.is(ModBlocks.OAK_BEAM.get())) {
+                }
+                if (state.is(ModBlocks.SPRUCE_BEAM.get())) {
+                }
+                if (state.is(ModBlocks.BIRCH_BEAM.get())) {
+                }
+                if (state.is(ModBlocks.JUNGLE_BEAM.get())) {
+                }
+                if (state.is(ModBlocks.ACACIA_BEAM.get())) {
+                }
+                if (state.is(ModBlocks.DARK_OAK_BEAM.get())) {
+                }
+                if (state.is(ModBlocks.DARKWOOD_BEAM.get())) {
+                }
+                if (state.is(ModBlocks.STRIPPED_DARKWOOD_BEAM.get())) {
+                }
+                if (state.is(ModBlocks.ELDER_BEAM.get())) {
+                }
+                if (state.is(ModBlocks.DARKWOOD_BOOKSHELF.get())) {
+                }
+            }
+
+            return super.getToolModifiedState(state, context, toolAction, simulate);
+        }
     }
-}

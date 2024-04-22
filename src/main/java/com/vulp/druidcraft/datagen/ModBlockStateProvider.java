@@ -28,7 +28,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.DARKWOOD_PLANKS);
         blockWithItem(ModBlocks.MOONSTONE_BLOCK);
         blockWithItem(ModBlocks.FIERY_GLASS_BLOCK);
-
+        blockWithItem(ModBlocks.FRUIT_PLANKS);
         saplingBlock(ModBlocks.DARKWOOD_SAPLING);
         saplingBlock(ModBlocks.ELDER_SAPLING);
 
@@ -111,6 +111,11 @@ public class ModBlockStateProvider extends BlockStateProvider {
         trapdoorBlockWithRenderType(((TrapDoorBlock) ModBlocks.ELDER_TRAPDOOR.get()), modLoc("block/elder_trapdoor"), true, "cutout");
         logBlock(((RotatedPillarBlock) ModBlocks.ELDER_LOG.get()));
         logBlock(((RotatedPillarBlock) ModBlocks.STRIPPED_ELDER_LOG.get()));
+        //Fruit
+        logBlock(((RotatedPillarBlock) ModBlocks.FRUIT_LOG.get()));
+        logBlock(((RotatedPillarBlock) ModBlocks.STRIPPED_FRUIT_LOG.get()));
+        simpleBlock(ModBlocks.FRUIT_WOOD.get(), models().cubeAll(ModBlocks.FRUIT_WOOD.getId().getPath(), prefix("block/" + ModBlocks.FRUIT_LOG.getId().getPath())));
+        simpleBlock(ModBlocks.STRIPPED_FRUIT_WOOD.get(), models().cubeAll(ModBlocks.STRIPPED_FRUIT_WOOD.getId().getPath(), prefix("block/" + ModBlocks.STRIPPED_FRUIT_LOG.getId().getPath())));
         //Mud
         stairsBlock(((StairBlock) ModBlocks.DRY_MUD_BRICK_STAIRS.get()), blockTexture(ModBlocks.DRY_MUD_BRICKS.get()));
         slabBlock(((SlabBlock) ModBlocks.DRY_MUD_BRICK_SLAB.get()), blockTexture(ModBlocks.DRY_MUD_BRICKS.get()), blockTexture(ModBlocks.DRY_MUD_BRICKS.get()));

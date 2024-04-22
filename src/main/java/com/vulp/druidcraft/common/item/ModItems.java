@@ -149,7 +149,7 @@ public class ModItems {
     public static final RegistryObject<Item> MOONSTONE_BOOTS = ITEMS.register("moonstone_boots",
             () -> new ArmorItem(ModArmorMaterials.MOONSTONE, ArmorItem.Type.BOOTS, new Item.Properties()));
     public static final RegistryObject<Item> MOONSTONE_SHIELD = ITEMS.register("moonstone_shield",
-            () -> new ArmorItem(ModArmorMaterials.MOONSTONE, ArmorItem.Type.HELMET, new Item.Properties()));
+            () -> new ShieldItem(new  Item.Properties()));
 
     public static final RegistryObject<Item> CHITIN_HELMET = ITEMS.register("chitin_helmet",
             () -> new ArmorItem(ModArmorMaterials.CHITIN, ArmorItem.Type.HELMET, new Item.Properties()));
