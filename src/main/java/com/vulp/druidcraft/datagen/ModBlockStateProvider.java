@@ -72,11 +72,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
         //Bricks
         blockWithItem(ModBlocks.MOSSY_BRICKS);
 
-
         //DarkWood
         logBlock(((RotatedPillarBlock) ModBlocks.DARKWOOD_LOG.get()));
         logBlock(((RotatedPillarBlock) ModBlocks.STRIPPED_DARKWOOD_LOG.get()));
-        logBlock(((RotatedPillarBlock) ModBlocks.DARKWOOD_BOOKSHELF.get()));
         stairsBlock(((StairBlock) ModBlocks.DARKWOOD_STAIRS.get()), blockTexture(ModBlocks.DARKWOOD_PLANKS.get()));
         slabBlock(((SlabBlock) ModBlocks.DARKWOOD_SLAB.get()), blockTexture(ModBlocks.DARKWOOD_PLANKS.get()), blockTexture(ModBlocks.DARKWOOD_PLANKS.get()));
         simpleBlock(ModBlocks.DARKWOOD_WOOD.get(), models().cubeAll(ModBlocks.DARKWOOD_WOOD.getId().getPath(), prefix("block/" + ModBlocks.DARKWOOD_LOG.getId().getPath())));

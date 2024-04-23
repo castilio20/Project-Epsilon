@@ -1,4 +1,4 @@
-// 1.20.1	2024-04-22T14:59:29.2661407	Block States: druidcraft
+// 1.20.1	2024-04-23T23:05:34.4196831	Block States: druidcraft
 becb162464f1c819c616648897832d6642886ef3 assets/druidcraft/blockstates/acacia_beam.json
 50f41ed9f1a6f3d7681b6317d75ed5667c2b1505 assets/druidcraft/blockstates/acacia_panels.json
 14cdc5fb9a51f7a282cf539d2edec160921ae376 assets/druidcraft/blockstates/amber_block.json
@@ -8,7 +8,6 @@ ff77435618a0636f466da634eb49ceb03fff7818 assets/druidcraft/blockstates/birch_bea
 59124cbd2c731148cea2ae597870c2cc09d27e36 assets/druidcraft/blockstates/cloud_block.json
 8bac0eff8c7e4f1ad314fc01109a784c68fc70db assets/druidcraft/blockstates/crystalized_thundercloud.json
 735b12b5b8cb991c02cc916b48f5a0ebb5c8bfcd assets/druidcraft/blockstates/darkwood_beam.json
-5a557db0182f924424fb8065e2bea0aa77e81b23 assets/druidcraft/blockstates/darkwood_bookshelf.json
 b7b42f957e5421007fdc3fffa4c01b780fe50521 assets/druidcraft/blockstates/darkwood_button.json
 dba6bb46d14f03ce29eb8762d04b454c816bf9b6 assets/druidcraft/blockstates/darkwood_door.json
 93723ead88b804659eaa80c26e8347a2900c4823 assets/druidcraft/blockstates/darkwood_fence.json
@@ -94,8 +93,6 @@ bc987465351612e21520d2fb5658defac948e77e assets/druidcraft/models/block/cloud_bl
 0c50766c976e98f6c20c03abb33fac1709ee4ca7 assets/druidcraft/models/block/crystalized_thundercloud.json
 14932dd20cd4d6cee644c48cb6ecb969994dd098 assets/druidcraft/models/block/darkwood_beam.json
 f27839141d995ed28d5b1b949de0d291743b694e assets/druidcraft/models/block/darkwood_beam_horizontal.json
-46aaeba488466a40b21704da9d11f8749b2ab2eb assets/druidcraft/models/block/darkwood_bookshelf.json
-a055242abc0181ebff980bdd83868d1d1f220577 assets/druidcraft/models/block/darkwood_bookshelf_horizontal.json
 388e51c6f6c599def4573482c53ef0e44aea9cdf assets/druidcraft/models/block/darkwood_button.json
 417d02f09d8054303e6e7e373bb6e9fadf97f92b assets/druidcraft/models/block/darkwood_button_pressed.json
 f9ddc58056f7a96ef7b06a60adfb2e132f75233c assets/druidcraft/models/block/darkwood_door_bottom_left.json

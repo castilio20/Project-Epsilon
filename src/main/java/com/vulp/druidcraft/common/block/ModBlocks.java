@@ -137,9 +137,9 @@ public class ModBlocks {
    // public static final RegistryObject<Block> DARKWOOD_TRAPPED_CHEST = registerChest("darkwood_trapped", () -> new ModTrappedChestBlock(MapColor.WOOD, "darkwood_trapped"));
 
     public static final RegistryObject<Block> DARKWOOD_BOOKSHELF = registerBlock("darkwood_bookshelf",
-            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.BOOKSHELF).strength(3f)));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.BOOKSHELF).sound(SoundType.AMETHYST)));
     public static final RegistryObject<Block> DARKWOOD_LADDER = registerBlock("darkwood_ladder",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.LADDER).sound(SoundType.AMETHYST)));
+            () -> new LadderBlock(BlockBehaviour.Properties.copy(Blocks.LADDER).sound(SoundType.AMETHYST)));
     public static final RegistryObject<Block> DARKWOOD_BEEHIVE = registerBlock("darkwood_beehive",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.AMETHYST)));
     //Elder
@@ -203,7 +203,7 @@ public class ModBlocks {
    //public static final RegistryObject<Block> ELDER_TRAPPED_CHEST = registerChest("elder_trapped", () -> new ModTrappedChestBlock(MapColor.WOOD, "elder_traped"));
 
     public static final RegistryObject<Block> ELDER_BOOKSHELF = registerBlock("elder_bookshelf",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.AMETHYST)));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.BOOKSHELF).sound(SoundType.AMETHYST)));
     public static final RegistryObject<Block> ELDER_LADDER = registerBlock("elder_ladder",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.AMETHYST)));
     public static final RegistryObject<Block> ELDER_BEEHIVE = registerBlock("elder_beehive",

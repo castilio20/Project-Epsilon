@@ -6,9 +6,12 @@ import com.vulp.druidcraft.common.util.ModTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.tags.TagKey;
+import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.data.BlockTagsProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
+import net.minecraftforge.fml.common.Mod;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.concurrent.CompletableFuture;
@@ -43,8 +46,11 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.ELDER_FENCE_GATE.get());
         this.tag(BlockTags.WALLS)
                 .add(ModBlocks.DRY_MUD_BRICK_WALL.get());
-        this.tag(Tags.Blocks.BOOKSHELVES)
-        .add(ModBlocks.DARKWOOD_BOOKSHELF.get());
-
+        var bookshelves = tag(Tags.Blocks.BOOKSHELVES);
+        var enchantment = tag(BlockTags.ENCHANTMENT_POWER_PROVIDER);
+        bookshelves.add(ModBlocks.DARKWOOD_BOOKSHELF.get());
+        enchantment.add(ModBlocks.DARKWOOD_BOOKSHELF.get());
+        bookshelves.add(ModBlocks.ELDER_BOOKSHELF.get());
+        enchantment.add(ModBlocks.ELDER_BOOKSHELF.get());
     }
 }

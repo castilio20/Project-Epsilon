@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/cube_column_horizontal",
-  "textures": {
-    "end": "druidcraft:block/darkwood_bookshelf_top",
-    "side": "druidcraft:block/darkwood_bookshelf"
-  }
-}

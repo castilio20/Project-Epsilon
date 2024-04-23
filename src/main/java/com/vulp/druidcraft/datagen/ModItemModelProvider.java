@@ -87,7 +87,6 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.DARKWOOD_SIGN);
         simpleItem(ModItems.DARKWOOD_HANGING_SIGN);
         simpleBlockItem(ModBlocks.DARKWOOD_DOOR);
-        toBlock(ModBlocks.DARKWOOD_BOOKSHELF.get());
         saplingItem(ModBlocks.DARKWOOD_SAPLING);
         saplingItem(ModBlocks.ELDER_SAPLING);
 
