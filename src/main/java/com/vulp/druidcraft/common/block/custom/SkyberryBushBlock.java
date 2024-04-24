@@ -30,20 +30,20 @@ import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
-public class BlueberryBushBlock extends SweetBerryBushBlock {
+public class SkyberryBushBlock  extends SweetBerryBushBlock {
     private static final float HURT_SPEED_THRESHOLD = 0.003F;
     public static final int MAX_AGE = 3;
     public static final IntegerProperty AGE = BlockStateProperties.AGE_3;
     private static final VoxelShape SAPLING_SHAPE = Block.box(3.0D, 0.0D, 3.0D, 13.0D, 8.0D, 13.0D);
     private static final VoxelShape MID_GROWTH_SHAPE = Block.box(1.0D, 0.0D, 1.0D, 15.0D, 16.0D, 15.0D);
 
-    public BlueberryBushBlock(BlockBehaviour.Properties p_57249_) {
+    public SkyberryBushBlock(BlockBehaviour.Properties p_57249_) {
         super(p_57249_);
         this.registerDefaultState(this.stateDefinition.any().setValue(AGE, Integer.valueOf(0)));
     }
 
     public ItemStack getCloneItemStack(BlockGetter p_57256_, BlockPos p_57257_, BlockState p_57258_) {
-        return new ItemStack(ModItems.BLUEBERRIES.get());
+        return new ItemStack(ModItems.SKYBERRIES.get());
 
     }
 
@@ -91,7 +91,7 @@ public class BlueberryBushBlock extends SweetBerryBushBlock {
             return InteractionResult.PASS;
         } else if (i > 1) {
             int j = 1 + p_57276_.random.nextInt(2);
-            popResource(p_57276_, p_57277_, new ItemStack(ModItems.BLUEBERRIES.get(), j + (flag ? 1 : 0)));
+            popResource(p_57276_, p_57277_, new ItemStack(ModItems.SKYBERRIES.get(), j + (flag ? 1 : 0)));
             p_57276_.playSound((Player)null, p_57277_, SoundEvents.SWEET_BERRY_BUSH_PICK_BERRIES, SoundSource.BLOCKS, 1.0F, 0.8F + p_57276_.random.nextFloat() * 0.4F);
             BlockState blockstate = p_57275_.setValue(AGE, Integer.valueOf(1));
             p_57276_.setBlock(p_57277_, blockstate, 2);
@@ -119,5 +119,6 @@ public class BlueberryBushBlock extends SweetBerryBushBlock {
         p_222553_.setBlock(p_222555_, p_222556_.setValue(AGE, Integer.valueOf(i)), 2);
     }
 }
+
 
 

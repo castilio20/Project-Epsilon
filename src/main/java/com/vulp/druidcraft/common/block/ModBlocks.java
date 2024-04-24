@@ -271,6 +271,23 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.AMETHYST)));
     public static final RegistryObject<Block> DARK_OAK_ORNATE = registerBlock("dark_oak_ornate_planks",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.AMETHYST)));
+    //Aridstone
+    public static final RegistryObject<Block> ARIDSTONE_BRICKS = registerBlock("aridstone_bricks",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.AMETHYST)));
+    public static final RegistryObject<Block> ARIDSTONE_PILLAR_HIGH = registerBlock("aridstone_pillar_high",
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.of().mapColor(MapColor.QUARTZ).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(0.8F)));
+    public static final RegistryObject<Block> ARIDSTONE_PILLAR_LOW = registerBlock("aridstone_pillar_low",
+            () ->  new RotatedPillarBlock(BlockBehaviour.Properties.of().mapColor(MapColor.QUARTZ).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(0.8F)));
+    public static final RegistryObject<Block> ARIDSTONE_PILLAR_MID = registerBlock("aridstone_pillar_mid",
+            () ->new RotatedPillarBlock(BlockBehaviour.Properties.of().mapColor(MapColor.QUARTZ).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(0.8F)));
+    public static final RegistryObject<Block> ARIDSTONE_PILLAR_TOP = registerBlock("aridstone_pillar_top",
+            () -> new  RotatedPillarBlock(BlockBehaviour.Properties.of().mapColor(MapColor.QUARTZ).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(0.8F)));
+    public static final RegistryObject<Block> ARIDSTONE_SIDE = registerBlock("aridstone_side",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.AMETHYST)));
+    public static final RegistryObject<Block> ARIDSTONE_TOP = registerBlock("aridstone_top",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.AMETHYST)));
+    public static final RegistryObject<Block> POLISHED_ARIDSTONE = registerBlock("polished_aridstone",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.AMETHYST)));
     //Fruit
     public static final RegistryObject<Block> FRUIT_LOG = registerBlock("fruit_log",
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).strength(3f)));
@@ -338,6 +355,10 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).sound(SoundType.AMETHYST)));
     public static final RegistryObject<Block> BLUEBERRY_BUSH = registerBlock("blueberry_bush",
             () ->new BlueberryBushBlock(BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).randomTicks().noCollission().sound(SoundType.SWEET_BERRY_BUSH).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> LIVE_SKYBERRY_BUSH = registerBlock("live_skyberry_bush",
+            () ->new LiveSkyberryBushBlock(BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).randomTicks().noCollission().sound(SoundType.SWEET_BERRY_BUSH).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> SKYBERRY_BUSH = registerBlock("skyberry_bush",
+            () ->new LiveSkyberryBushBlock(BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).randomTicks().noCollission().sound(SoundType.SWEET_BERRY_BUSH).pushReaction(PushReaction.DESTROY)));
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);

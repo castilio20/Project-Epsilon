@@ -194,6 +194,15 @@ public class DruidcraftItemGroup {public static final DeferredRegister<CreativeM
                         pOutput.accept(ModBlocks.JUNGLE_ORNATE.get());
                         pOutput.accept(ModBlocks.ACACIA_ORNATE.get());
                         pOutput.accept(ModBlocks.DARK_OAK_ORNATE.get());
+                        //
+                        pOutput.accept(ModBlocks.ARIDSTONE_BRICKS.get());
+                        pOutput.accept(ModBlocks.ARIDSTONE_PILLAR_HIGH.get());
+                        pOutput.accept(ModBlocks.ARIDSTONE_PILLAR_LOW.get());
+                        pOutput.accept(ModBlocks.ARIDSTONE_PILLAR_MID.get());
+                        pOutput.accept(ModBlocks.ARIDSTONE_PILLAR_TOP.get());
+                        pOutput.accept(ModBlocks.ARIDSTONE_SIDE.get());
+                        pOutput.accept(ModBlocks.ARIDSTONE_TOP.get());
+                        pOutput.accept(ModBlocks.POLISHED_ARIDSTONE.get());
                         //Mud
                         pOutput.accept(ModBlocks.WET_MUD_BRICKS.get());
                         pOutput.accept(ModBlocks.DRY_MUD_BRICKS.get());

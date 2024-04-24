@@ -30,7 +30,7 @@ public class HempCropBlock  extends CropBlock {
             Block.box(0.0D, 0.0D, 0.0D, 16.0D, 16.0D, 16.0D),
             Block.box(0.0D, 0.0D, 0.0D, 16.0D, 16.0D, 16.0D)};
 
-    public static final IntegerProperty AGE = IntegerProperty.create("age", 0, 3);
+    public static final IntegerProperty AGE = IntegerProperty.create("age", 0, 2);
 
     public HempCropBlock(Properties pProperties) {
         super(pProperties);

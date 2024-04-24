@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "druidcraft:block/fiery_glass_block"
+  }
+}

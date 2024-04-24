@@ -95,9 +95,9 @@ public class ModItems {
     public static final RegistryObject<Item> APPLE_ELDERBERRY_CRUMBLE = ITEMS.register("apple_elderberry_crumble",
             () -> new Item(new Item.Properties().food(ModFoods.APPLE_ELDERBERRY_CRUMBLE)));
     public static final RegistryObject<Item> SKYBERRIES = ITEMS.register("skyberries",
-            () -> new Item(new Item.Properties().food(ModFoods.SKYBERRIES)));
+            () -> new ItemNameBlockItem(ModBlocks.SKYBERRY_BUSH.get(), (new Item.Properties()).food(ModFoods.SKYBERRIES)));
     public static final RegistryObject<Item> LIVE_SKYBERRIES = ITEMS.register("live_skyberries",
-            () -> new Item(new Item.Properties().food(ModFoods.LIVE_SKYBERRIES)));
+            () -> new ItemNameBlockItem(ModBlocks.LIVE_SKYBERRY_BUSH.get(), (new Item.Properties()).food(ModFoods.LIVE_SKYBERRIES)));
     public static final RegistryObject<Item> DOUGH = ITEMS.register("dough",
             () -> new Item(new Item.Properties().food(ModFoods.DOUGH)));
     //Tools & Armour:
