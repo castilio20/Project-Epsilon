@@ -25,7 +25,7 @@ public class ModTrappedChestBlockEntity extends ChestBlockEntity {
 
     @Override
     protected Component getDefaultName() {
-        return Component.translatable("container.lolmcv." + getBlock().getChestType() + "_chest");
+        return Component.translatable("container.druidcraft." + getBlock().getChestType() + "_chest");
     }
 
     public ModTrappedChestBlock getBlock() {

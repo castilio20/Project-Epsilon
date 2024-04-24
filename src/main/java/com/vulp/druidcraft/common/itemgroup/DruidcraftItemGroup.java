@@ -125,7 +125,7 @@ public class DruidcraftItemGroup {public static final DeferredRegister<CreativeM
                         pOutput.accept(ModBlocks.DARKWOOD_DOOR.get());
                         pOutput.accept(ModItems.DARKWOOD_WOOD_BOAT_ITEM.get());
                         pOutput.accept(ModItems.DARKWOOD_WOOD_CHEST_BOAT_ITEM.get());
-                        pOutput.accept(ModBlockEntities.DARKWOOD_CHEST.get());
+                        //pOutput.accept(ModBlockEntities.DARKWOOD_CHEST.get());
 
 
                         pOutput.accept(ModItems.DARKWOOD_SIGN.get());
