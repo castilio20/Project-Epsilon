@@ -24,10 +24,13 @@ import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.material.PushReaction;
+import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.function.Supplier;
 
 
@@ -144,8 +147,8 @@ public class ModBlocks {
             () -> new ModHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_HANGING_SIGN), ModWoodTypes.DARKWOOD));
     public static final RegistryObject<Block> DARKWOOD_WALL_HANGING_SIGN = BLOCKS.register("darkwood_wall_hanging_sign",
             () -> new ModWallHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_HANGING_SIGN), ModWoodTypes.DARKWOOD));
-    public static final RegistryObject<Block> DARKWOOD_CHEST = registerChest("darkwood",
-            () -> new   TrappedChestBlock(BlockBehaviour.Properties.of().mapColor(MapColor.WOOD).instrument(NoteBlockInstrument.BASS).strength(2.5F).sound(SoundType.WOOD).ignitedByLava()));
+   // public static final RegistryObject<Block> DARKWOOD_CHEST = registerChest("darkwood",
+           // () -> new   TrappedChestBlock(BlockBehaviour.Properties.of().mapColor(MapColor.WOOD).instrument(NoteBlockInstrument.BASS).strength(2.5F).sound(SoundType.WOOD).ignitedByLava()));
    // public static final RegistryObject<Block> DARKWOOD_TRAPPED_CHEST = registerChest("darkwood_trapped", () -> new ModTrappedChestBlock(MapColor.WOOD, "darkwood_trapped"));
 
     public static final RegistryObject<Block> DARKWOOD_BOOKSHELF = registerBlock("darkwood_bookshelf",
@@ -345,11 +348,9 @@ public class ModBlocks {
     private static <T extends Block> RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block) {
         return ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
     }
-    private static RegistryObject<Block> registerChest(String name, Supplier<Block> block) {
-        return BLOCKS.register(name + "_chest", block);}
+}
 
 
-    }
 
 
 

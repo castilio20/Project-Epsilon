@@ -49,7 +49,7 @@ public class Druidcraft {
         Entities.ENTITIES.register(modEventBus);
         ModFluids.register(modEventBus);
         ModFluidTypes.register(modEventBus);
-        ModBlockEntities.register(modEventBus);
+        ModBlockEntities.registerBlocks(modEventBus);
         DruidcraftItemGroup.register(modEventBus);
         MinecraftForge.EVENT_BUS.register(this);
         modEventBus.addListener(this::addCreative);

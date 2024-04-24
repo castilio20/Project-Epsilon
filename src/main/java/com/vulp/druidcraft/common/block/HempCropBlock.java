@@ -16,7 +16,7 @@ import net.minecraftforge.common.IPlantable;
 
 
 public class HempCropBlock  extends CropBlock {
-    public static final int FIRST_STAGE_MAX_AGE = 7;
+    public static final int FIRST_STAGE_MAX_AGE = 3;
     public static final int SECOND_STAGE_MAX_AGE = 1;
 
     private static final VoxelShape[] SHAPE_BY_AGE = new VoxelShape[]{
@@ -30,7 +30,7 @@ public class HempCropBlock  extends CropBlock {
             Block.box(0.0D, 0.0D, 0.0D, 16.0D, 16.0D, 16.0D),
             Block.box(0.0D, 0.0D, 0.0D, 16.0D, 16.0D, 16.0D)};
 
-    public static final IntegerProperty AGE = IntegerProperty.create("age", 0, 7);
+    public static final IntegerProperty AGE = IntegerProperty.create("age", 0, 3);
 
     public HempCropBlock(Properties pProperties) {
         super(pProperties);
