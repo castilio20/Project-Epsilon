@@ -52,5 +52,8 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
         enchantment.add(ModBlocks.DARKWOOD_BOOKSHELF.get());
         bookshelves.add(ModBlocks.ELDER_BOOKSHELF.get());
         enchantment.add(ModBlocks.ELDER_BOOKSHELF.get());
+        this.tag(BlockTags.CLIMBABLE).add(ModBlocks.DARKWOOD_LADDER.get());
+        this.tag(BlockTags.CLIMBABLE).add(ModBlocks.ELDER_LADDER.get());
+        this.tag(BlockTags.BEEHIVES).add(ModBlocks.DARKWOOD_BEEHIVE.get());
     }
 }

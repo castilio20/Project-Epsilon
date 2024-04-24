@@ -24,6 +24,8 @@ public class ModItems {
     // True items:
     public static final RegistryObject<Item> HEMP = ITEMS.register("hemp",
             () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> ALOE_VERA = ITEMS.register("aloe_vera",
+            () -> new ItemNameBlockItem(ModBlocks.ALOE_VERA_CROP.get(), new Item.Properties()));
     public static final RegistryObject<Item> HEMP_SEEDS = ITEMS.register("hemp_seeds",
             () -> new ItemNameBlockItem(ModBlocks.HEMP_CROP.get(), new Item.Properties()));
     public static final RegistryObject<Item> AMBER = ITEMS.register("amber",

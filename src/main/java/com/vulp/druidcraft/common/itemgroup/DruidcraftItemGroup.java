@@ -22,6 +22,7 @@ public class DruidcraftItemGroup {public static final DeferredRegister<CreativeM
                     .title(Component.translatable("Druidcraft"))
                     .displayItems((pParameters, pOutput) -> {
                         pOutput.accept(ModItems.HEMP.get());
+                        pOutput.accept(ModItems.ALOE_VERA.get());
                         pOutput.accept(ModItems.HEMP_SEEDS.get());
                         pOutput.accept(ModItems.MOONSTONE.get());
                         pOutput.accept(ModItems.ROCKROOT.get());
@@ -35,6 +36,8 @@ public class DruidcraftItemGroup {public static final DeferredRegister<CreativeM
                         pOutput.accept(ModItems.HEART_OF_BLAZE.get());
                         pOutput.accept(ModItems.BISMUTH.get());
                         pOutput.accept(ModItems.KNIFE.get());
+                        pOutput.accept(ModBlocks.FIERY_TORCH.get());
+
                         //TOOLS ARMOR
                         pOutput.accept(ModItems.BONE_SWORD.get());
                         pOutput.accept(ModItems.BONE_SHOVEL.get());
@@ -88,6 +91,7 @@ public class DruidcraftItemGroup {public static final DeferredRegister<CreativeM
                         pOutput.accept(ModBlocks.DEEPSLATE_DURAGEM_ORE.get());
                         pOutput.accept(ModBlocks.FIERY_GLASS_BLOCK.get());
                         pOutput.accept(ModBlocks.ROCKROOT_BLOCK.get());
+                        pOutput.accept(ModBlocks.DURAGEM_BLOCK.get());
                         pOutput.accept(ModItems.DURAGEM.get());
                         pOutput.accept(ModItems.ENCHANTED_SOAP.get());
                         pOutput.accept(ModItems.CRUSHED_DIAMOND.get());

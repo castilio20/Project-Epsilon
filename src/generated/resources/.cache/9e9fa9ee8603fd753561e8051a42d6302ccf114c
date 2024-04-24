@@ -1,7 +1,9 @@
-// 1.20.1	2024-04-23T23:31:20.1155357	Tags for minecraft:block mod id druidcraft
+// 1.20.1	2024-04-24T14:24:21.6868849	Tags for minecraft:block mod id druidcraft
 47a6105a1c6331ca9cfdcbfd2450c8f879425375 data/druidcraft/tags/blocks/needs_bone_tool.json
 12ca69124b3bf0a7af0fffdd3ae83a6488d60829 data/forge/tags/blocks/bookshelves.json
 361f84b0e0f37c391d8ef3c95b6c839511b9267e data/forge/tags/blocks/needs_netherite_tool.json
+2b1954e20817797a6a510da3d205e9787d710352 data/minecraft/tags/blocks/beehives.json
+8e9fbb00ec6113607b29300a123655c136b2146c data/minecraft/tags/blocks/climbable.json
 12ca69124b3bf0a7af0fffdd3ae83a6488d60829 data/minecraft/tags/blocks/enchantment_power_provider.json
 55d6066d0ccf142cbe76382534e6d3d613103747 data/minecraft/tags/blocks/fences.json
 be74204fa9e380d673aabf7025b84af9d3712128 data/minecraft/tags/blocks/fence_gates.json

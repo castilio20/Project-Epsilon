@@ -1,4 +1,4 @@
-// 1.20.1	2024-04-24T00:35:52.7861205	Block States: druidcraft
+// 1.20.1	2024-04-24T12:29:02.5448979	Block States: druidcraft
 becb162464f1c819c616648897832d6642886ef3 assets/druidcraft/blockstates/acacia_beam.json
 2f1c903f9952741ba2c44e294005cddcfe8af745 assets/druidcraft/blockstates/acacia_ornate_planks.json
 50f41ed9f1a6f3d7681b6317d75ed5667c2b1505 assets/druidcraft/blockstates/acacia_panels.json
@@ -35,6 +35,7 @@ e644b2387ff22cee107d826dae3e49b808a9c3e4 assets/druidcraft/blockstates/dark_oak_
 5f5a2a4831ae70a883c87dc19acedfe7d2ca36f1 assets/druidcraft/blockstates/dry_mud_brick_slab.json
 409def266c455d5e9a4ccc4fcf40e7118526abab assets/druidcraft/blockstates/dry_mud_brick_stairs.json
 24e51c75a23b87ebce9b8a42aff92b0bf164576d assets/druidcraft/blockstates/dry_mud_brick_wall.json
+bec7fcfa01e39d46f0317ace94e7097c709c20a7 assets/druidcraft/blockstates/duragem_block.json
 0322204ad1ccf360aae20ac34848684168747ee3 assets/druidcraft/blockstates/duragem_ore.json
 bd084e47dfc6160df7377a193be9216c712dca4e assets/druidcraft/blockstates/elder_beam.json
 e2dd8509f191251b86823968134e2669b47cb99f assets/druidcraft/blockstates/elder_button.json
@@ -149,6 +150,7 @@ e9bc52075962850447ee2df3f144b993158d684a assets/druidcraft/models/block/dry_mud_
 780a987ab263c3bc95dd164146d02ce06a5e2b1e assets/druidcraft/models/block/dry_mud_brick_wall_post.json
 2ae515cf825338c46888d47ecad0765356f0fb73 assets/druidcraft/models/block/dry_mud_brick_wall_side.json
 066f84a145164f51ba01575756a8cebf4c3a376e assets/druidcraft/models/block/dry_mud_brick_wall_side_tall.json
+ae92e3d62588bf4565da87539de31e342690d117 assets/druidcraft/models/block/duragem_block.json
 e6e0601c87adecd4e7ceaf7f464a17be6868edc2 assets/druidcraft/models/block/duragem_ore.json
 f1940ac7f473ead0bf9f744f5f5994186b8efe86 assets/druidcraft/models/block/elder_beam.json
 a6c9f4f9dafe7bef030e264a49361f1b650199b3 assets/druidcraft/models/block/elder_beam_horizontal.json
@@ -244,6 +246,7 @@ fc115fdaf6844079e87334e9308ecf4173587409 assets/druidcraft/models/item/darkwood_
 fc26ef06786f32b152745d05922c2ec8f2072c81 assets/druidcraft/models/item/dark_oak_ornate_planks.json
 e01971a51830807b90b535915ba32c329f54f404 assets/druidcraft/models/item/dark_oak_panels.json
 168aa59a54284dd107bfe1aa2da6a4c8cf0e0a79 assets/druidcraft/models/item/dry_mud_bricks.json
+0efb6f347278e1b5fb14edc7fc9ea5b5bb4c3da6 assets/druidcraft/models/item/duragem_block.json
 055b2b9e713c0da802a9be0867406f75ff53db4b assets/druidcraft/models/item/duragem_ore.json
 ab9b0d5293589a36b236fb60926238b251a64ddc assets/druidcraft/models/item/elder_leaves.json
 5699b7300ad4cfff773e84025e7bccb8e7d546b4 assets/druidcraft/models/item/elder_log.json

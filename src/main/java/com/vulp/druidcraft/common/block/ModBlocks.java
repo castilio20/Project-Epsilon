@@ -9,6 +9,7 @@ import com.vulp.druidcraft.common.item.ModItems;
 import com.vulp.druidcraft.common.util.ModWoodTypes;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.effect.MobEffects;
@@ -20,6 +21,7 @@ import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
+import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.material.PushReaction;
 import net.minecraftforge.registries.DeferredRegister;
@@ -64,14 +66,25 @@ public class ModBlocks {
                     .offsetType(BlockBehaviour.OffsetType.NONE)
                     .instabreak()
                     .sound(SoundType.CROP)));
+    public static final RegistryObject<Block> ALOE_VERA_CROP = BLOCKS.register("aloe_vera_crop",
+            () -> new AloeVeraCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion().randomTicks()
+                    .offsetType(BlockBehaviour.OffsetType.NONE)
+                    .instabreak()
+                    .sound(SoundType.CROP)));
     public static final RegistryObject<Block> MOONSTONE_BLOCK = registerBlock("moonstone_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.AMETHYST)));
     public static final RegistryObject<Block> FIERY_GLASS_BLOCK = registerBlock("fiery_glass_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.AMETHYST)));
     public static final RegistryObject<Block> ROCKROOT_BLOCK = registerBlock("rockroot_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.AMETHYST)));
+    public static final RegistryObject<Block> DURAGEM_BLOCK = registerBlock("duragem_block",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.AMETHYST)));
     public static final RegistryObject<Block> CERAMIC_LANTERN = registerBlock("ceramic_lantern",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.LANTERN).lightLevel((state)->15).sound(SoundType.AMETHYST)));
+    public static final RegistryObject<Block> FIERY_TORCH = registerBlock("fiery_torch",
+            () -> new TorchBlock(BlockBehaviour.Properties.of().noCollission().instabreak().lightLevel((p_50755_) -> {
+        return 14;
+    }).sound(SoundType.WOOD).pushReaction(PushReaction.DESTROY), ParticleTypes.FLAME));
     public static final RegistryObject<Block> DARKWOOD_LOG = registerBlock("darkwood_log",
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).strength(3f)));
     public static final RegistryObject<Block> DARKWOOD_WOOD = registerBlock("darkwood_wood",
@@ -131,8 +144,8 @@ public class ModBlocks {
             () -> new ModHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_HANGING_SIGN), ModWoodTypes.DARKWOOD));
     public static final RegistryObject<Block> DARKWOOD_WALL_HANGING_SIGN = BLOCKS.register("darkwood_wall_hanging_sign",
             () -> new ModWallHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_HANGING_SIGN), ModWoodTypes.DARKWOOD));
-
-    //public static final RegistryObject<Block> DARKWOOD_CHEST = registerChest("darkwood", () -> new ModChestBlock(MapColor.WOOD, "darkwood"));
+    public static final RegistryObject<Block> DARKWOOD_CHEST = registerChest("darkwood",
+            () -> new   TrappedChestBlock(BlockBehaviour.Properties.of().mapColor(MapColor.WOOD).instrument(NoteBlockInstrument.BASS).strength(2.5F).sound(SoundType.WOOD).ignitedByLava()));
    // public static final RegistryObject<Block> DARKWOOD_TRAPPED_CHEST = registerChest("darkwood_trapped", () -> new ModTrappedChestBlock(MapColor.WOOD, "darkwood_trapped"));
 
     public static final RegistryObject<Block> DARKWOOD_BOOKSHELF = registerBlock("darkwood_bookshelf",
@@ -140,7 +153,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> DARKWOOD_LADDER = registerBlock("darkwood_ladder",
             () -> new LadderBlock(BlockBehaviour.Properties.copy(Blocks.LADDER).sound(SoundType.AMETHYST)));
     public static final RegistryObject<Block> DARKWOOD_BEEHIVE = registerBlock("darkwood_beehive",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.AMETHYST)));
+            () -> new BeehiveBlock(BlockBehaviour.Properties.of().mapColor(MapColor.WOOD).instrument(NoteBlockInstrument.BASS).strength(0.6F).sound(SoundType.WOOD).ignitedByLava()));
     //Elder
     public static final RegistryObject<Block> ELDER_LOG = registerBlock("elder_log",
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).strength(3f)));

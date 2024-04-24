@@ -28,6 +28,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.DARKWOOD_PLANKS);
         blockWithItem(ModBlocks.MOONSTONE_BLOCK);
         blockWithItem(ModBlocks.FIERY_GLASS_BLOCK);
+        blockWithItem(ModBlocks.DURAGEM_BLOCK);
         blockWithItem(ModBlocks.FRUIT_PLANKS);
         saplingBlock(ModBlocks.DARKWOOD_SAPLING);
         saplingBlock(ModBlocks.ELDER_SAPLING);
