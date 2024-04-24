@@ -5,10 +5,13 @@ import com.vulp.druidcraft.common.block.ModBlocks;
 
 import com.vulp.druidcraft.common.fluid.ModFluids;
 import com.vulp.druidcraft.common.item.custom.CustomBoatItem;
+import com.vulp.druidcraft.common.item.custom.ModShield;
 import com.vulp.druidcraft.common.item.custom.SickleItem;
 import com.vulp.druidcraft.entity.custom.CustomBoatEntity;
+import net.minecraft.world.food.Foods;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -70,9 +73,9 @@ public class ModItems {
     //public static final RegistryObject<BlockItem> DARKWOOD_TRAPPED_CHEST_I = registerItem("darkwood_trapped", ModBlocks.DARKWOOD_TRAPPED_CHEST);
 
     public static final RegistryObject<Item> ELDER_SIGN = ITEMS.register("elder_sign",
-            () -> new SignItem(new Item.Properties().stacksTo(16), ModBlocks.DARKWOOD_SIGN.get(), ModBlocks.DARKWOOD_WALL_SIGN.get()));
+            () -> new SignItem(new Item.Properties().stacksTo(16), ModBlocks.ELDER_SIGN.get(), ModBlocks.ELDER_WALL_SIGN.get()));
     public static final RegistryObject<Item> ELDER_HANGING_SIGN = ITEMS.register("elder_hanging_sign",
-            () -> new HangingSignItem(ModBlocks.DARKWOOD_HANGING_SIGN.get(), ModBlocks.DARKWOOD_WALL_HANGING_SIGN.get(), new Item.Properties().stacksTo(16)));
+            () -> new HangingSignItem(ModBlocks.DARKWOOD_HANGING_SIGN.get(), ModBlocks.ELDER_WALL_HANGING_SIGN.get(), new Item.Properties().stacksTo(16)));
     public static final RegistryObject<Item> ELDER_WOOD_BOAT_ITEM = ITEMS.register("elder_boat",
             () -> new CustomBoatItem(false, CustomBoatEntity.Type.ELDER_WOOD, new Item.Properties().stacksTo(1)));
     public static final RegistryObject<Item> ELDER_WOOD_CHEST_BOAT_ITEM = ITEMS.register("elder_chest_boat",
@@ -82,7 +85,7 @@ public class ModItems {
 
     //Food
     public static final RegistryObject<Item> BLUEBERRIES = ITEMS.register("blueberries",
-            () -> new Item(new Item.Properties().food(ModFoods.BLUEBERRIES)));
+            () -> new ItemNameBlockItem(ModBlocks.BLUEBERRY_BUSH.get(), (new Item.Properties()).food(ModFoods.BLUEBERRIES)));
     public static final RegistryObject<Item> ELDERBERRIES = ITEMS.register("elderberries",
             () -> new Item(new Item.Properties().food(ModFoods.ELDERBERRIES)));
     public static final RegistryObject<Item> BLUEBERRY_MUFFIN = ITEMS.register("blueberry_muffin",
@@ -99,15 +102,15 @@ public class ModItems {
     public static final RegistryObject<Item> BONE_SWORD = ITEMS.register("bone_sword",
             () -> new SwordItem(ModToolTiers.BONE, 3, -2.6f, new Item.Properties()));
     public static final RegistryObject<Item> BONE_SHOVEL = ITEMS.register("bone_shovel",
-            () -> new SwordItem(ModToolTiers.BONE, 1, -3f, new Item.Properties()));
+            () -> new ShovelItem(ModToolTiers.BONE, 1, -3f, new Item.Properties()));
     public static final RegistryObject<Item> BONE_PICKAXE = ITEMS.register("bone_pickaxe",
-            () -> new SwordItem(ModToolTiers.BONE, 1, -2.8f, new Item.Properties()));
+            () -> new PickaxeItem(ModToolTiers.BONE, 1, -2.8f, new Item.Properties()));
     public static final RegistryObject<Item> BONE_AXE = ITEMS.register("bone_axe",
-            () -> new SwordItem(ModToolTiers.BONE, 7, -3.2f, new Item.Properties()));
+            () -> new AxeItem(ModToolTiers.BONE, 7, -3.2f, new Item.Properties()));
     public static final RegistryObject<Item> BONE_HOE = ITEMS.register("bone_hoe",
-            () -> new SwordItem(ModToolTiers.BONE, 1, 0f, new Item.Properties()));
+            () -> new HoeItem(ModToolTiers.BONE, 1, 0f, new Item.Properties()));
     public static final RegistryObject<Item> BONE_SICKLE = ITEMS.register("bone_sickle",
-            () -> new SwordItem(ModToolTiers.BONE, 0, -1.5f, new Item.Properties()));
+            () -> new SickleItem(Tiers.STONE, 1 ));
     public static final RegistryObject<Item> BONE_HELMET = ITEMS.register("bone_helmet",
             () -> new ArmorItem(ModArmorMaterials.BONE, ArmorItem.Type.HELMET, new Item.Properties()));
     public static final RegistryObject<Item> BONE_CHESTPLATE = ITEMS.register("bone_chestplate",
@@ -149,8 +152,7 @@ public class ModItems {
     public static final RegistryObject<Item> MOONSTONE_BOOTS = ITEMS.register("moonstone_boots",
             () -> new ArmorItem(ModArmorMaterials.MOONSTONE, ArmorItem.Type.BOOTS, new Item.Properties()));
     public static final RegistryObject<Item> MOONSTONE_SHIELD = ITEMS.register("moonstone_shield",
-            () -> new ShieldItem(new  Item.Properties()));
-
+            () -> new ShieldItem((new Item.Properties()).durability(336)));
     public static final RegistryObject<Item> CHITIN_HELMET = ITEMS.register("chitin_helmet",
             () -> new ArmorItem(ModArmorMaterials.CHITIN, ArmorItem.Type.HELMET, new Item.Properties()));
     public static final RegistryObject<Item> CHITIN_CHESTPLATE = ITEMS.register("chitin_chestplate",
@@ -168,7 +170,7 @@ public class ModItems {
     public static final RegistryObject<Item> FIERY_BOOTS = ITEMS.register("fiery_boots",
             () -> new ArmorItem(ModArmorMaterials.FIERY, ArmorItem.Type.BOOTS, new Item.Properties()));
     public static final RegistryObject<Item> CHITIN_SHIELD = ITEMS.register("chitin_shield",
-            () -> new ShieldItem(new Item.Properties()));
+            () -> new ModShield((new Item.Properties()).durability(336)));
     public static final RegistryObject<Item> WOODEN_SICKLE = ITEMS.register("wooden_sickle",
             () -> new SickleItem(Tiers.WOOD, 1));
     public static final RegistryObject<Item> STONE_SICKLE = ITEMS.register("stone_sickle",

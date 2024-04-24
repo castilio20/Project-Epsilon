@@ -53,6 +53,13 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.DARK_OAK_PANELS);
         blockWithItem(ModBlocks.DARKWOOD_PANELS);
         blockWithItem(ModBlocks.ELDER_PANELS);
+        //Ornate
+        blockWithItem(ModBlocks.OAK_ORNATE);
+        blockWithItem(ModBlocks.SPRUCE_ORNATE);
+        blockWithItem(ModBlocks.BIRCH_ORNATE);
+        blockWithItem(ModBlocks.JUNGLE_ORNATE);
+        blockWithItem(ModBlocks.ACACIA_ORNATE);
+        blockWithItem(ModBlocks.DARK_OAK_ORNATE);
         //Mud
         blockWithItem(ModBlocks.WET_MUD_BRICKS);
         blockWithItem(ModBlocks.DRY_MUD_BRICKS);

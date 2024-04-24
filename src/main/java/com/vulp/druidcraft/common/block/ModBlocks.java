@@ -9,7 +9,6 @@ import com.vulp.druidcraft.common.item.ModItems;
 import com.vulp.druidcraft.common.util.ModWoodTypes;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.core.registries.Registries;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.effect.MobEffects;
@@ -21,8 +20,8 @@ import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
-import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProviderType;
 import net.minecraft.world.level.material.MapColor;
+import net.minecraft.world.level.material.PushReaction;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -205,7 +204,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> ELDER_BOOKSHELF = registerBlock("elder_bookshelf",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.BOOKSHELF).sound(SoundType.AMETHYST)));
     public static final RegistryObject<Block> ELDER_LADDER = registerBlock("elder_ladder",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.AMETHYST)));
+            () -> new LadderBlock(BlockBehaviour.Properties.copy(Blocks.LADDER).sound(SoundType.AMETHYST)));
     public static final RegistryObject<Block> ELDER_BEEHIVE = registerBlock("elder_beehive",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.AMETHYST)));
     //Beam blocks
@@ -243,6 +242,18 @@ public class ModBlocks {
     public static final RegistryObject<Block> DARKWOOD_PANELS = registerBlock("darkwood_panels",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.AMETHYST)));
     public static final RegistryObject<Block> ELDER_PANELS = registerBlock("elder_panels",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.AMETHYST)));
+    public static final RegistryObject<Block> OAK_ORNATE = registerBlock("oak_ornate_planks",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.AMETHYST)));
+    public static final RegistryObject<Block> SPRUCE_ORNATE = registerBlock("spruce_ornate_planks",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.AMETHYST)));
+    public static final RegistryObject<Block> BIRCH_ORNATE = registerBlock("birch_ornate_planks",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.AMETHYST)));
+    public static final RegistryObject<Block> JUNGLE_ORNATE = registerBlock("jungle_ornate_planks",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.AMETHYST)));
+    public static final RegistryObject<Block> ACACIA_ORNATE = registerBlock("acacia_ornate_planks",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.AMETHYST)));
+    public static final RegistryObject<Block> DARK_OAK_ORNATE = registerBlock("dark_oak_ornate_planks",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.AMETHYST)));
     //Fruit
     public static final RegistryObject<Block> FRUIT_LOG = registerBlock("fruit_log",
@@ -298,8 +309,6 @@ public class ModBlocks {
     public static final RegistryObject<Block> MORTAR_AND_PESTLE = registerBlock("mortar_and_pestle",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).sound(SoundType.AMETHYST)));
 
-    //public static final RegistryObject<Block> ALPHA_LAMP = BLOCKS.register("alpha_lamp",
-            //() -> new Infernal_Lamp(NORMAL, Infernal_Lamp.Tier.));
     public static final RegistryObject<LiquidBlock> LIQUID_RAINBOW_BLOCK = BLOCKS.register("liquid_rainbow",
             () -> new LiquidBlock(ModFluids.SOURCE_LIQUID_RAINBOW, BlockBehaviour.Properties.copy(Blocks.WATER)));
     //Flowers
@@ -311,7 +320,8 @@ public class ModBlocks {
                     BlockBehaviour.Properties.copy(Blocks.POTTED_ALLIUM).noOcclusion()));
     public static final RegistryObject<Block> OAK_SMALL_BEAM = registerBlock("oak_small_beam",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).sound(SoundType.AMETHYST)));
-
+    public static final RegistryObject<Block> BLUEBERRY_BUSH = registerBlock("blueberry_bush",
+            () ->new BlueberryBushBlock(BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).randomTicks().noCollission().sound(SoundType.SWEET_BERRY_BUSH).pushReaction(PushReaction.DESTROY)));
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);

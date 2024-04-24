@@ -180,6 +180,13 @@ public class DruidcraftItemGroup {public static final DeferredRegister<CreativeM
                         pOutput.accept(ModBlocks.DARK_OAK_PANELS.get());
                         pOutput.accept(ModBlocks.DARKWOOD_PANELS.get());
                         pOutput.accept(ModBlocks.ELDER_PANELS.get());
+                        //Ornate
+                        pOutput.accept(ModBlocks.OAK_ORNATE.get());
+                        pOutput.accept(ModBlocks.SPRUCE_ORNATE.get());
+                        pOutput.accept(ModBlocks.BIRCH_ORNATE.get());
+                        pOutput.accept(ModBlocks.JUNGLE_ORNATE.get());
+                        pOutput.accept(ModBlocks.ACACIA_ORNATE.get());
+                        pOutput.accept(ModBlocks.DARK_OAK_ORNATE.get());
                         //Mud
                         pOutput.accept(ModBlocks.WET_MUD_BRICKS.get());
                         pOutput.accept(ModBlocks.DRY_MUD_BRICKS.get());

@@ -5,6 +5,8 @@ import com.vulp.druidcraft.common.block.ModBlocks;
 import com.vulp.druidcraft.entity.ModHangingSignBlockEntity;
 import com.vulp.druidcraft.entity.ModSignBlockEntity;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.entity.BeehiveBlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
